@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600&family=Play:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Courgette&family=Dancing+Script:wght@400;500;600;700&family=Yellowtail&display=swap');
+@font-face{font-family:'Open-Sans';src:url("../fonts/OpenSans-Regular.eot");src:url("../fonts/OpenSans-Regulard41d.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Regular.woff") format("woff"), url("../fonts/OpenSans-Regular.ttf") format("truetype"), url("../fonts/OpenSans-Regular.svg#OpenSans-Regular") format("svg");font-weight:normal;font-style:normal;}
+@font-face{font-family:'Brush-Script';src:url("../fonts/BrushScriptStd.eot");src:url("../fonts/BrushScriptStdd41d.eot?#iefix") format("embedded-opentype"), url("../fonts/BrushScriptStd.woff") format("woff"), url("../fonts/BrushScriptStd.ttf") format("truetype"), url("../fonts/BrushScriptStd.svg#BrushScriptStd") format("svg");font-weight:normal;font-style:normal;}
+
+@tailwind base;
+@tailwind components;
+.imgSharp:hover {
+  image-rendering: auto;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+  /* Safari seems to support, but seems deprecated and does the same thing as the others. */
+  image-rendering: -webkit-optimize-contrast;
+}
+.sharp {
+  image-rendering: auto;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+  /* Safari seems to support, but seems deprecated and does the same thing as the others. */
+  image-rendering: -webkit-optimize-contrast;
+}
+/* 
+font-family: 'Gentium Plus', serif;
+font-family: 'Proza Libre', sans-serif;
+font-family: 'Courgette', cursive;
+
+font-family: 'Dancing Script', cursive;
+font-family: 'Play', sans-serif;
+*/
+
+.scroll-hidden::-webkit-scrollbar {
+  height: 0px;
+  background: transparent;
+  /* make scrollbar transparent */
+}
+*{box-sizing:border-box;font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+body {@apply font-openSans;}
+img {@apply max-w-full w-auto;}
+
+.btn {@apply px-6 py-2 text-sm font-medium tracking-wide capitalize transition-colors duration-300 transform rounded-lg focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50;}
+.btn-light {@apply text-black bg-gradient-to-r from-slate-100 to-slate-300;}
+.btn-light:hover {@apply text-black bg-gradient-to-l;}
+.btn-dark {@apply text-white bg-gradient-to-r from-slate-900 to-slate-700;}
+.btn-dark:hover {@apply text-white bg-gradient-to-l;}
+
+.bg-gradient-primary {
+  background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+}
+.bg-gradient-primary.bgg-hover:hover {
+  background-image: linear-gradient(to top, lightgrey 0%, lightgrey 1%, #e0e0e0 26%, #efefef 48%, #d9d9d9 75%, #bcbcbc 100%);
+}
+
+@tailwind utilities;
