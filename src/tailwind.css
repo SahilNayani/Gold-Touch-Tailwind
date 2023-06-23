@@ -37,11 +37,11 @@ font-family: 'Play', sans-serif;
 body {@apply font-openSans;}
 img {@apply max-w-full w-auto;}
 
-.btn {@apply px-6 py-2 text-sm font-medium tracking-wide capitalize transition-colors duration-300 transform rounded-lg focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50;}
-.btn-light {@apply text-black bg-gradient-to-r from-slate-100 to-slate-300;}
-.btn-light:hover {@apply text-black bg-gradient-to-l;}
-.btn-dark {@apply text-white bg-gradient-to-r from-slate-900 to-slate-700;}
-.btn-dark:hover {@apply text-white bg-gradient-to-l;}
+.btn {@apply px-6 py-2 text-sm font-play uppercase font-medium tracking-wide transition-all duration-300 transform rounded-lg focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50;}
+.btn-light {@apply text-black bg-gradient-to-r from-slate-100 via-slate-400 to-slate-300 bg-[length:200%_100%] bg-left;}
+.btn-light:hover {@apply text-black  bg-right;}
+.btn-dark {@apply text-white bg-gradient-to-r from-slate-950 via-slate-500 to-slate-950 bg-[length:200%_100%] bg-left;}
+.btn-dark:hover {@apply text-white  bg-right;}
 
 .bg-gradient-primary {
   background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
