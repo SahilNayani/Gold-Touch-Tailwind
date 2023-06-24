@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en" class="dark-">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GoldTouch</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+  <!-- Header [S] -->
+  <header class="fixed top-0 left-0 right-0 z-50">
+    <nav x-data="{ isOpen: false }" class="shadow dark bg-gradient-to-r from-slate-950 via-black/50 to-slate-950 backdrop-blur-sm">
+      <div class="container px-6 py-3 mx-auto">
+        <div class="flex flex-col md:flex-row md:justify-between md:items-center">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center">
+              <a href="#">
+                <img class="w-auto h-16 sm:h-20 sharp" src="assets/images/logo/main-logo.png" alt="GoldTouch Logo" />
+                <!-- <img class="w-auto h-16 sm:h-14" src="assets/images/logo/logo-1.png" alt="GoldTouch Logo" /> -->
+                <!-- <img class="w-auto h-16 sm:h-14" src="assets/images/logo/Untitled-2.png" alt="GoldTouch Logo" /> -->
+                <!-- <img class="w-auto h-16 sm:h-14" src="assets/images/logo/logo.png" alt="GoldTouch Logo" /> -->
+              </a>
+            </div>
+  
+            <!-- Mobile menu button -->
+            <div class="flex lg:hidden">
+              <button x-cloak @click="isOpen = !isOpen" type="button" class="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400" aria-label="toggle menu">
+                <svg x-show="!isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
+                </svg>
+        
+                <svg x-show="isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+          </div>
+  
+          <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
+          <div x-cloak :class="[isOpen ? 'translate-x-0 opacity-100 ' : 'opacity-0 -translate-x-full']" class="absolute inset-x-0 z-20 w-full px-6 py-2 transition-all duration-300 ease-in-out top-24 md:mt-0 md:p-0 md:top-0 md:relative md:bg-transparent md:w-auto md:opacity-100 md:translate-x-0 md:flex md:flex-col md:items-end space-y-6 bg-gradient-to-r from-slate-900 to-slate-700 lg:bg-transparent lg:bg-none">
+            <div class="flex items-center mt-3 lg:mt-0 ml-7 space-x-4">
+              <!-- <button class="hidden text-gray-600 transition-colors duration-300 transform lg:block dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-400 focus:text-gray-700 dark:focus:text-gray-400 focus:outline-none" aria-label="show notifications">
+                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15 17H20L18.5951 15.5951C18.2141 15.2141 18 14.6973 18 14.1585V11C18 8.38757 16.3304 6.16509 14 5.34142V5C14 3.89543 13.1046 3 12 3C10.8954 3 10 3.89543 10 5V5.34142C7.66962 6.16509 6 8.38757 6 11V14.1585C6 14.6973 5.78595 15.2141 5.40493 15.5951L4 17H9M15 17V18C15 19.6569 13.6569 21 12 21C10.3431 21 9 19.6569 9 18V17M15 17H9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button> -->
+              <a class="relative text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-300" href="#">
+                <svg class="w-5 h-5" width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.62 20.81C12.28 20.93 11.72 20.93 11.38 20.81C8.48 19.82 2 15.69 2 8.68998C2 5.59998 4.49 3.09998 7.56 3.09998C9.38 3.09998 10.99 3.97998 12 5.33998C13.01 3.97998 14.63 3.09998 16.44 3.09998C19.51 3.09998 22 5.59998 22 8.68998C22 15.69 15.52 19.82 12.62 20.81Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <svg class="w-5 h-5 text-red-600 hidden" width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.44 3.10156C14.63 3.10156 13.01 3.98156 12 5.33156C10.99 3.98156 9.37 3.10156 7.56 3.10156C4.49 3.10156 2 5.60156 2 8.69156C2 9.88156 2.19 10.9816 2.52 12.0016C4.1 17.0016 8.97 19.9916 11.38 20.8116C11.72 20.9316 12.28 20.9316 12.62 20.8116C15.03 19.9916 19.9 17.0016 21.48 12.0016C21.81 10.9816 22 9.88156 22 8.69156C22 5.60156 19.51 3.10156 16.44 3.10156Z" fill="currentColor"/></svg>
+              </a>
+              <a class="relative text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-300" href="#">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 3H5L5.4 5M7 13H17L21 5H5.4M7 13L5.4 5M7 13L4.70711 15.2929C4.07714 15.9229 4.52331 17 5.41421 17H17M17 17C15.8954 17 15 17.8954 15 19C15 20.1046 15.8954 21 17 21C18.1046 21 19 20.1046 19 19C19 17.8954 18.1046 17 17 17ZM9 19C9 20.1046 8.10457 21 7 21C5.89543 21 5 20.1046 5 19C5 17.8954 5.89543 17 7 17C8.10457 17 9 17.8954 9 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="absolute top-0 left-0 p-1 text-xs text-white bg-blue-900 rounded-full"></span>
+              </a>
+              <div x-data="{ isOpen: false }" class="relative inline-block">
+                <!-- Dropdown toggle button -->
+                <button @click="isOpen = !isOpen" type="button" class="flex items-center focus:outline-none" aria-label="toggle profile dropdown">
+                  <div class="w-8 h-8 overflow-hidden border-2 border-gray-400 rounded-full">
+                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80" class="object-cover w-full h-full" alt="avatar">
+                  </div>
+                  <h3 class="mx-2 text-gray-700 dark:text-gray-200 lg:hidden">Khatab wedaa</h3>
+                </button>
+            
+                <!-- Dropdown menu -->
+                <div x-show="isOpen" 
+                  @click.away="isOpen = false"
+                  x-transition:enter="transition ease-out duration-100"
+                  x-transition:enter-start="opacity-0 scale-90"
+                  x-transition:enter-end="opacity-100 scale-100"
+                  x-transition:leave="transition ease-in duration-100"
+                  x-transition:leave-start="opacity-100 scale-100"
+                  x-transition:leave-end="opacity-0 scale-90" 
+                  class="absolute right-0 z-20 w-48 py-2 mt-2 origin-top-right rounded-md shadow-xl bg-gradient-to-r from-slate-950/85 via-black/95 to-slate-950/95 backdrop-blur-sm"
+                >
+                  <a href="#" class="block px-4 py-3 text-sm capitalize transition-colors duration-300 transform text-gray-300 hover:bg-gray-700 hover:text-white"> your profile </a>
+                  <a href="#" class="block px-4 py-3 text-sm capitalize transition-colors duration-300 transform text-gray-300 hover:bg-gray-700 hover:text-white"> Your projects </a>
+                  <a href="#" class="block px-4 py-3 text-sm capitalize transition-colors duration-300 transform text-gray-300 hover:bg-gray-700 hover:text-white"> Help </a>
+                  <a href="#" class="block px-4 py-3 text-sm capitalize transition-colors duration-300 transform text-gray-300 hover:bg-gray-700 hover:text-white"> Settings </a>
+                  <a href="#" class="block px-4 py-3 text-sm capitalize transition-colors duration-300 transform text-gray-300 hover:bg-gray-700 hover:text-white"> Sign Out </a>
+                </div>
+              </div>
+              <button class="btn btn-light">Sign In</button>
+            </div>
+            <div class="flex flex-col md:flex-row lg:space-x-8">
+              <div x-data="{ isOpen: false }" class="relative inline-block">
+                <!-- Dropdown toggle button -->
+                <div class="flex items-center justify-between space-x-3 my-1 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0">
+                  <a href="#">Home</a>
+                  <svg @click="isOpen = !isOpen" class="w-5 h-5 text-gray-800 dark:text-white cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+                </div>
+            
+                <!-- Dropdown menu -->
+                <div x-show="isOpen" 
+                  @click.away="isOpen = false"
+                  x-transition:enter="transition ease-out duration-100"
+                  x-transition:enter-start="opacity-0 scale-90"
+                  x-transition:enter-end="opacity-100 scale-100"
+                  x-transition:leave="transition ease-in duration-100"
+                  x-transition:leave-start="opacity-100 scale-100"
+                  x-transition:leave-end="opacity-0 scale-90" 
+                  class="absolute right-0 z-20 w-48 py-2 mt-2 origin-top-right bg-white rounded-md shadow-xl dark:bg-gray-800"
+                >
+                  <a href="#" class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"> your profile </a>
+                  <a href="#" class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"> Your projects </a>
+                  <a href="#" class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"> Help </a>
+                  <a href="#" class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"> Settings </a>
+                  <a href="#" class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"> Sign Out </a>
+                </div>
+              </div>
+              <a class="flex items-center justify-between space-x-3 my-2 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0" href="#">Home</a>
+              <a class="flex items-center justify-between space-x-3 my-2 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0" href="#">Ring</a>
+              <a class="flex items-center justify-between space-x-3 my-2 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0" href="#">Pendents</a>
+              <a class="flex items-center justify-between space-x-3 my-2 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0" href="#">Bracelets</a>
+              <a class="flex items-center justify-between space-x-3 my-2 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0" href="#">Earring</a>
+              <a class="flex items-center justify-between space-x-3 my-2 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0" href="#">Necklace</a>
+              <a class="flex items-center justify-between space-x-3 my-2 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0" href="#">Diamond Shapes</a>
+              <a class="flex items-center justify-between space-x-3 my-2 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0" href="#">Gift</a>
+              <a class="flex items-center justify-between space-x-3 my-2 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0" href="#">About Us</a>
+              <a class="flex items-center justify-between space-x-3 my-2 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0" href="#">Contact Us</a>
+              
+            </div>
+          </div>
+        </div>
+  
+        <div class="py-3 mt-2 -mx-3 overflow-y-auto whitespace-nowrap scroll-hidden hidden">
+          <a class="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0" href="#">News</a>
+          <a class="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0" href="#">Articles</a>
+          <a class="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0" href="#">Videos</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- Header [E] -->
+
+  <!-- Blog Section [S] -->
+  
+  <!-- Blog Section [E] -->
+
+  <!-- Contact [S] -->
+  <section class="bg-white dark:bg-gray-900">
+    <div class="container px-6 py-12 xl:py-24 mx-auto">
+      <div class="title space-y-6 text-center">
+        <div class="flex items-center justify-center space-x-4 text-yellow-600">
+          <span class="h-px bg-current w-16"></span>
+          <p class="text-current font-play">Contact us</p>
+          <span class="h-px bg-current w-16"></span>
+        </div>
+        <h2 class="text-4xl font-play font-bold text-black xl:text-5xl dark:text-white">Get in touch</h2>
+        <p class="block max-w-4xl text-gray-500 dark:text-gray-300 mx-auto">
+          Our friendly team is always here to chat.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 gap-12 mt-10 md:grid-cols-2 lg:grid-cols-3">
+        <div class="flex flex-col items-center justify-center text-center lg:p-5">
+          <span class="p-3 text-white rounded-full bg-gradient-to-r from-slate-900 to-slate-700">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+            </svg>
+          </span>
+          <h2 class="mt-4 text-lg lg:text-2xl font-bold text-gray-800 dark:text-white font-play">Email</h2>
+          <p class="mt-2 text-gray-500 dark:text-gray-400">Our friendly team is here to help.</p>
+          <p class="mt-2 text-yellow-600 dark:text-blue-400">hello@merakiui.com</p>
+        </div>
+        <div class="flex flex-col items-center justify-center text-center lg:p-5">
+          <span class="p-3 text-white rounded-full bg-gradient-to-r from-slate-900 to-slate-700">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+            </svg>
+          </span>
+          <h2 class="mt-4 text-lg lg:text-2xl font-bold text-gray-800 dark:text-white font-play">Office</h2>
+          <p class="mt-2 text-gray-500 dark:text-gray-400">Come say hello at our office HQ.</p>
+          <p class="mt-2 text-yellow-600 dark:text-blue-400">100 Smith Street Collingwood VIC 3066 AU</p>
+        </div>
+        <div class="flex flex-col items-center justify-center text-center lg:p-5">
+          <span class="p-3 text-white rounded-full bg-gradient-to-r from-slate-900 to-slate-700">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+            </svg>
+          </span>
+          <h2 class="mt-4 text-lg lg:text-2xl font-bold text-gray-800 dark:text-white font-play">Phone</h2>
+          <p class="mt-2 text-gray-500 dark:text-gray-400">Mon-Fri from 8am to 5pm.</p>
+          <p class="mt-2 text-yellow-600 dark:text-blue-400">+1 (555) 000-0000</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Contact [E] -->
+
+  <!-- Footer [S] -->
+  <footer class="dark">
+    <div class="bg-gradient-to-r from-slate-950 via-black/80 to-slate-950">
+      <div class="container p-6 mx-auto">
+        <div class="lg:flex pt-12 pb-6">
+          <div class="w-full -mx-6 lg:w-2/5">
+            <div class="px-6 space-y-6">
+              <a href="#">
+                <img class="w-auto h-28" src="assets/images/logo/main-logo.png" alt="Footer Logo" />
+              </a>
+              <p class="max-w-sm text-gray-500 dark:text-gray-400">Join 31,000+ other and never miss out on new tips, tutorials, and more.</p>
+            </div>
+          </div>
+          <div class="mt-6 lg:mt-0 lg:flex-1">
+            <div class="text-xs tracking-wider grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+              <div>
+                <h3 class="text-gray-700 uppercase dark:text-white">About</h3>
+                <a href="#" class="block mt-2 text-gray-600 dark:text-gray-400 hover:underline">Blog</a>
+                <a href="#" class="block mt-2 text-gray-600 dark:text-gray-400 hover:underline">Faq's</a>
+                <a href="#" class="block mt-2 text-gray-600 dark:text-gray-400 hover:underline">Privacy Policy</a>
+                <a href="#" class="block mt-2 text-gray-600 dark:text-gray-400 hover:underline">Terms & Condition</a>
+                <a href="#" class="block mt-2 text-gray-600 dark:text-gray-400 hover:underline">Costumer Reviews</a>
+                <a href="#" class="block mt-2 text-gray-600 dark:text-gray-400 hover:underline">HTML Sitemap</a>
+              </div>
+              <div>
+                <h3 class="text-gray-700 uppercase dark:text-white">Blog</h3>
+                <a href="#" class="block mt-2 text-gray-600 dark:text-gray-400 hover:underline">Tec</a>
+                <a href="#" class="block mt-2 text-gray-600 dark:text-gray-400 hover:underline">Music</a>
+                <a href="#" class="block mt-2 text-gray-600 dark:text-gray-400 hover:underline">Videos</a>
+              </div>
+              <div>
+                <h3 class="text-gray-700 uppercase dark:text-white">Products</h3>
+                <a href="#" class="block mt-2 text-gray-600 dark:text-gray-400 hover:underline">Mega cloud</a>
+                <a href="#" class="block mt-2 text-gray-600 dark:text-gray-400 hover:underline">Aperion UI</a>
+                <a href="#" class="block mt-2 text-gray-600 dark:text-gray-400 hover:underline">Meraki UI</a>
+              </div>
+              <div>
+                <h3 class="text-gray-700 uppercase dark:text-white">Contact</h3>
+                <span class="block mt-2 text-gray-600 dark:text-gray-400 hover:underline">+1 526 654 8965</span>
+                <span class="block mt-2 text-gray-600 dark:text-gray-400 hover:underline">example@email.com</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class="h-px my-6 bg-gray-200 border-none dark:bg-gray-700">
+        <div>
+          <p class="text-center text-gray-500 dark:text-gray-400">© <span class="font-bold text-slate-300 px-1 inline-block">Gold Touch</span> 2023 - All rights reserved</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer [E] -->
+
+  <!-- Register Popup [S] -->
+  <div class="fixed inset-0 w-screen h-screen flex items-center justify-center z-50 dark hidden">
+    <span class="fixed inset-0 w-screen h-screen bg-black/40 z-30 backdrop-blur-sm"></span>
+    <div class="flex w-full max-w-sm mx-auto overflow-hidden rounded-lg shadow-md lg:max-w-4xl relative z-40 bg-gradient-to-r from-slate-900 to-slate-700">
+      <div class="hidden bg-cover bg-center lg:block lg:w-1/2 opacity-80" style="background-image: url('assets/images/slider/slide-4.jpg');"></div>
+      <div x-data="{ isHidden: true }" class="w-full px-6 py-8 md:px-8 lg:w-1/2 max-h-[calc(100vh-100px)] overflow-y-auto space-y-4">
+        <div class="flex justify-center mx-auto">
+          <img class="w-auto h-20" src="assets/images/logo/main-logo.png" alt="Logo">
+        </div>
+        <div class="text-xs tracking-wider space-y-5" x-show="isHidden">
+          <p class="text-xl font-play text-center text-gray-600 dark:text-gray-200">Welcome back!</p>
+          <!-- <a href="#" class="flex items-center justify-center text-gray-600 transition-colors duration-300 transform border rounded-lg dark:border-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600">
+            <div class="px-4 py-2">
+              <svg class="w-6 h-6" viewBox="0 0 40 40">
+                <path d="M36.3425 16.7358H35V16.6667H20V23.3333H29.4192C28.045 27.2142 24.3525 30 20 30C14.4775 30 10 25.5225 10 20C10 14.4775 14.4775 9.99999 20 9.99999C22.5492 9.99999 24.8683 10.9617 26.6342 12.5325L31.3483 7.81833C28.3717 5.04416 24.39 3.33333 20 3.33333C10.7958 3.33333 3.33335 10.7958 3.33335 20C3.33335 29.2042 10.7958 36.6667 20 36.6667C29.2042 36.6667 36.6667 29.2042 36.6667 20C36.6667 18.8825 36.5517 17.7917 36.3425 16.7358Z" fill="#FFC107" />
+                <path d="M5.25497 12.2425L10.7308 16.2583C12.2125 12.59 15.8008 9.99999 20 9.99999C22.5491 9.99999 24.8683 10.9617 26.6341 12.5325L31.3483 7.81833C28.3716 5.04416 24.39 3.33333 20 3.33333C13.5983 3.33333 8.04663 6.94749 5.25497 12.2425Z" fill="#FF3D00" />
+                <path d="M20 36.6667C24.305 36.6667 28.2167 35.0192 31.1742 32.34L26.0159 27.975C24.3425 29.2425 22.2625 30 20 30C15.665 30 11.9842 27.2359 10.5975 23.3784L5.16254 27.5659C7.92087 32.9634 13.5225 36.6667 20 36.6667Z" fill="#4CAF50" />
+                <path d="M36.3425 16.7358H35V16.6667H20V23.3333H29.4192C28.7592 25.1975 27.56 26.805 26.0133 27.9758C26.0142 27.975 26.015 27.975 26.0158 27.9742L31.1742 32.3392C30.8092 32.6708 36.6667 28.3333 36.6667 20C36.6667 18.8825 36.5517 17.7917 36.3425 16.7358Z" fill="#1976D2" />
+              </svg>
+            </div>
+            <span class="w-5/6 px-4 py-3 font-bold text-center">Sign in with Google</span>
+          </a>
+          <div class="flex items-center justify-between">
+            <span class="w-1/5 border-b dark:border-gray-600 lg:w-1/4"></span>
+            <a href="#" class="text-xs text-center text-gray-500 uppercase dark:text-gray-400 hover:underline">or login
+            with email</a>
+            <span class="w-1/5 border-b dark:border-gray-400 lg:w-1/4"></span>
+          </div> -->
+          <div>
+            <label class="block mb-1 text-gray-600 dark:text-gray-200">Email Address</label>
+            <input type="email" placeholder="Email Address" class="block w-full px-5 py-3 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-400 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+          </div>
+          <div>
+            <label class="block mb-1 text-gray-600 dark:text-gray-200">Password</label>
+            <input type="password" placeholder="Password" class="block w-full px-5 py-3 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-400 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+          </div>
+          <div class="pt-4">
+            <button class="btn btn-light w-full py-3 text-xs font-bold">Sign In</button>
+          </div>
+          <div class="flex items-center justify-between">
+            <span class="w-1/5 border-b dark:border-gray-600 md:w-1/4"></span>
+            <span x-cloak @click="isHidden = !isHidden" class="cursor-pointer text-xs text-gray-500 uppercase dark:text-gray-400 hover:underline">or sign up</span>
+            <span class="w-1/5 border-b dark:border-gray-600 md:w-1/4"></span>
+          </div>
+        </div>
+        <div class="space-y-5" x-show="!isHidden">
+          <p class="text-xl font-play text-center text-gray-600 dark:text-gray-200">
+            Get Your Free Account Now.
+          </p>
+          <form class="text-xs tracking-wider space-y-4">
+            <div class="grid grid-cols-2 gap-4">
+              <div>
+                <label class="block mb-1 text-gray-600 dark:text-gray-200">First Name</label>
+                <input type="text" placeholder="John" class="block w-full px-5 py-3 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-400 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+              </div>
+              <div>
+                <label class="block mb-1 text-gray-600 dark:text-gray-200">Last name</label>
+                <input type="text" placeholder="Snow" class="block w-full px-5 py-3 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-400 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+              </div>
+            </div>
+            <div>
+              <label class="block mb-1 text-gray-600 dark:text-gray-200">Phone number</label>
+              <input type="text" placeholder="XXX-XX-XXXX-XXX" class="block w-full px-5 py-3 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-400 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+            </div>
+            <div>
+              <label class="block mb-1 text-gray-600 dark:text-gray-200">Email address</label>
+              <input type="email" placeholder="johnsnow@example.com" class="block w-full px-5 py-3 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-400 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+            </div>
+            <div>
+              <label class="block mb-1 text-gray-600 dark:text-gray-200">Password</label>
+              <input type="password" placeholder="Enter your password" class="block w-full px-5 py-3 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-400 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+            </div>
+            <div>
+              <label class="block mb-1 text-gray-600 dark:text-gray-200">Confirm password</label>
+              <input type="password" placeholder="Enter your password" class="block w-full px-5 py-3 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-400 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+            </div>
+            <div class="pt-4">
+              <button class="btn btn-light w-full py-3 text-xs font-bold">Sign Up</button>
+            </div> 
+          </form>
+          <div class="flex items-center justify-between">
+            <span class="w-1/5 border-b dark:border-gray-600 md:w-1/4"></span>
+            <span x-cloak @click="isHidden = !isHidden" class="cursor-pointer text-xs text-gray-500 uppercase dark:text-gray-400 hover:underline">or sign in</span>
+            <span class="w-1/5 border-b dark:border-gray-600 md:w-1/4"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Register Popup [E] -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine-ie11.min.js" integrity="sha512-Atu8sttM7mNNMon28+GHxLdz4Xo2APm1WVHwiLW9gW4bmHpHc/E2IbXrj98SmefTmbqbUTOztKl5PDPiu0LD/A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</body>
+
+</html>
