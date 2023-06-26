@@ -34,6 +34,7 @@ font-family: 'Play', sans-serif;
   /* make scrollbar transparent */
 }
 *{box-sizing:border-box;font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+h1{@apply text-xl md:text-2xl lg:text-3xl font-play font-bold dark:text-white}
 body {@apply font-openSans;}
 img {@apply max-w-full w-auto;}
 

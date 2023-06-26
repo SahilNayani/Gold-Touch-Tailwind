@@ -11,7 +11,7 @@
 <body>
 
   <!-- Header [S] -->
-  <header class="fixed top-0 left-0 right-0 z-50">
+  <header class="sticky top-0 left-0 right-0 z-50">
     <nav x-data="{ isOpen: false }" class="shadow dark bg-gradient-to-r from-slate-950 via-black/50 to-slate-950 backdrop-blur-sm">
       <div class="container px-6 py-3 mx-auto">
         <div class="flex flex-col md:flex-row md:justify-between md:items-center">
@@ -138,7 +138,71 @@
   <!-- Header [E] -->
 
   <!-- Blog Section [S] -->
-  
+  <div class="bg-white dark:bg-gray-900">
+    <div class="container px-6 py-12 xl:py-24 mx-auto">
+      <div class="w-full">
+        <div class="blog_img flex flex-wrap items-center">
+          <div class="w-full max-h-[300px] overflow-hidden px-3`">
+            <img src="assets/images/category/category-2.jpg" alt="" class="w-full md:-translate-y-1/4">
+          </div>
+        </div>
+        <div class="blog_deatils flex flex-col space-y-5 py-5">
+          <h1 class="blog_heading">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
+          <p class="text-xs md:text-sm text-justify dark:text-gray-400 \">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur obcaecati, sed nemo quas, ex possimus illum dicta a, minima deleniti ut assumenda sunt consequuntur asperiores. Optio voluptatem ex aut possimus?Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur obcaecati, sed nemo quas, ex possimus illum dicta a, minima deleniti ut assumenda sunt consequuntur asperiores. Optio voluptatem ex aut possimus?Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur obcaecati, sed nemo quas, ex possimus illum dicta a, minima deleniti ut assumenda sunt consequuntur asperiores. Optio voluptatem ex aut possimus?Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur obcaecati, sed nemo quas, ex possimus illum dicta a, minima deleniti ut assumenda sunt consequuntur asperiores. Optio voluptatem ex aut possimus?Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur obcaecati, sed nemo quas, ex possimus illum dicta a, minima deleniti ut assumenda sunt consequuntur asperiores. Optio voluptatem ex aut possimus?Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur obcaecati, sed nemo quas, ex possimus illum dicta a, minima deleniti ut assumenda sunt consequuntur asperiores. Optio voluptatem ex aut possimus?</p>
+          <p class="text-xs md:text-sm text-justify dark:text-gray-400 \">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur obcaecati, sed nemo quas, ex possimus illum dicta a, minima deleniti ut assumenda sunt consequuntur asperiores. Optio voluptatem ex aut possimus?Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur obcaecati, sed nemo quas, ex possimus illum dicta a, minima deleniti ut assumenda sunt consequuntur asperiores. Optio voluptatem ex aut possimus?Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur obcaecati, sed nemo quas, ex possimus illum dicta a, minima deleniti ut assumenda sunt consequuntur asperiores. Optio voluptatem ex aut possimus?Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur obcaecati, sed nemo quas, ex possimus illum dicta a, minima deleniti ut assumenda sunt consequuntur asperiores. Optio voluptatem ex aut possimus?Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur obcaecati, sed nemo quas, ex possimus illum dicta a, minima deleniti ut assumenda sunt consequuntur asperiores. Optio voluptatem ex aut possimus?Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur obcaecati, sed nemo quas, ex possimus illum dicta a, minima deleniti ut assumenda sunt consequuntur asperiores. Optio voluptatem ex aut possimus? </p>
+        </div>
+      </div>
+      <div class="w-full">
+        <div class="flex flex-wrap items-center -mx-3">
+          <div class="w-1/2 md:w-1/3 p-3">
+              <div class="flex flex-col items-stretch justify-between">
+                  <div class="blog_img">
+                      <img src="assets/images/category/category-2.jpg" class="w-full h-full" alt="Blog Img">
+                  </div>
+                  <div class="blog_content flex flex-col space-y-1 pt-3">
+                      <span class="block text-xs font-bold text-gold">Sahil 02/Jun/2023</span>
+                      <h1 class="font-play font-bold text-gray-800 line-clamp-2">Blog Heading</h1>
+                      <p class="text-xs font-semibold max-h-12 h-full overflow-hidden line-clamp-3 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique odio, illum explicabo deleniti minima, maxime necessitatibus iusto iure aliquid porro quidem harum ratione distinctio id esse obcaecati saepe labore dolore?</p>
+                      <a href="#" class="pt-2">
+                          <button type="button" class="btn btn-dark text-xs">Know More</button>
+                      </a>
+                  </div>
+              </div>
+          </div>
+          <div class="w-1/2 md:w-1/3 p-3">
+              <div class="flex flex-col items-stretch justify-between">
+                  <div class="blog_img">
+                      <img src="assets/images/category/category-2.jpg" class="w-full h-full" alt="Blog Img">
+                  </div>
+                  <div class="blog_content flex flex-col space-y-1 pt-3">
+                      <span class="block text-xs font-bold text-gold">Sahil 02/Jun/2023</span>
+                      <h1 class="font-play font-bold text-gray-800 line-clamp-2">Blog Heading</h1>
+                      <p class="text-xs font-semibold max-h-12 h-full overflow-hidden line-clamp-3 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique odio, illum explicabo deleniti minima, maxime necessitatibus iusto iure aliquid porro quidem harum ratione distinctio id esse obcaecati saepe labore dolore?</p>
+                      <a href="#" class="pt-2">
+                          <button type="button" class="btn btn-dark text-xs">Know More</button>
+                      </a>
+                  </div>
+              </div>
+          </div>
+          <div class="w-1/2 md:w-1/3 p-3">
+              <div class="flex flex-col items-stretch justify-between">
+                  <div class="blog_img">
+                      <img src="assets/images/category/category-2.jpg" class="w-full h-full" alt="Blog Img">
+                  </div>
+                  <div class="blog_content flex flex-col space-y-1 pt-3">
+                      <span class="block text-xs font-bold text-gold">Sahil 02/Jun/2023</span>
+                      <h1 class="font-play font-bold text-gray-800 line-clamp-2">Blog Heading</h1>
+                      <p class="text-xs font-semibold max-h-12 h-full overflow-hidden line-clamp-3 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique odio, illum explicabo deleniti minima, maxime necessitatibus iusto iure aliquid porro quidem harum ratione distinctio id esse obcaecati saepe labore dolore?</p>
+                      <a href="#" class="pt-2">
+                          <button type="button" class="btn btn-dark text-xs">Know More</button>
+                      </a>
+                  </div>
+              </div>
+          </div>          
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- Blog Section [E] -->
 
   <!-- Contact [S] -->
