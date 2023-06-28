@@ -4,8 +4,7 @@ module.exports = {
   content: ["./public/**/*.{html,js}"],
   theme: {
     fontFamily: {
-      openSans      : ['Open-Sans', 'sans-serif'],
-      brushScript   : ['Brush-Script', 'sans-serif'],
+      openSans      : ['Open Sans', 'sans-serif'],
       courgette     : ['Courgette', 'cursive'],
       dancingScript : ['Dancing Script', 'cursive'],
       play          : ['Play', 'sans-serif'],
