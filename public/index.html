@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
-<body>
+<body x-data="{ isSingInPop: true }">
 
   <!-- Header [S] -->
   <header class="fixed top-0 left-0 right-0 z-50">
@@ -85,7 +85,7 @@
                   <a href="#" class="block px-4 py-3 text-sm capitalize transition-colors duration-300 transform text-gray-300 hover:bg-gray-700 hover:text-white"> Sign Out </a>
                 </div>
               </div>
-              <button class="btn btn-light">Sign In</button>
+              <button x-on:click="isSingInPop = ! isSingInPop" class="btn btn-light">Sign In</button>
             </div>
             <div class="flex flex-col md:flex-row lg:space-x-8">
               <div x-data="{ isOpen: false }" class="relative inline-block">
@@ -197,7 +197,7 @@
 
   <!-- Products [S] -->
   <section class="bg-white dark:bg-black bg-gradient-to-r from-slate-100 to-slate-200">
-    <div class="container flex flex-col items-center px-4 py-12 xl:py-24 mx-auto text-center space-y-8">
+    <div class="container flex flex-col items-center px-4 py-7 md:py-12 lg:py-16 xl:py-24 mx-auto text-center space-y-8">
       <div class="title space-y-6">
         <div class="flex items-center justify-center space-x-4 text-yellow-600">
           <span class="h-px bg-current w-16"></span>
@@ -620,31 +620,32 @@
   <!-- Category [E] -->
 
   <!-- Video Section [S] -->
-  <section class="bg-white dark:bg-gray-900 relative h-[60vh]">
-    <video class="absolute inset-0 w-full h-full object-cover object-center" src="assets/videos/class-gold-touch.mp4" autoplay loop muted></video>
-    <div class="container px-6 py-12 xl:py-24 mx-auto relative hidden">
-      <div class="title space-y-6 text-center">
-        <div class="flex items-center justify-center space-x-4 text-yellow-600">
-          <span class="h-px bg-current w-16"></span>
-          <p class="text-current font-play">Blog</p>
-          <span class="h-px bg-current w-16"></span>
+  <section class="bg-white dark:bg-black bg-gradient-to-r from-slate-100 to-slate-200 py-7 md:py-12 lg:py-16 xl:py-24">
+    <div class="container mx-auto">
+      <h5 class="mb-5 md:mb-6 lg:mb-7 xl:mb-8 text-base md:text-lg lg:text-xl font-play font-semibold text-center">MEET THE WORLDS FIRST NON-TOXIC ODORLESS NAIL POLISH REMOVER</h5>
+      <div class="flex flex-wrap mb-2.5 md:mb-5 lg:mb-7">
+        <div class="w-full lg:w-11/12 xl:w-5/6 mx-auto">
+          <div class="video relative">
+            <video id="video1" onclick="togglePlay('video1', 'videoBtn1');" src="assets/videos/contact.mp4" class="cursor-pointer z-10" loop muted></video>
+            <img src="assets/images/blog/slide-1.jpg" alt="" class="w-full block hidden" />
+            <button id="videoBtn1" onclick="togglePlay('video1', 'videoBtn1');" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 hover:opacity-75 z-10">
+              <!-- <span class="block w-20 h-20 bg-white "></span> -->
+              <svg height="50" width="40">
+                <polygon points="0,0 0,50 40,25" style="fill:white;" />
+                Sorry, your browser does not support inline SVG.
+              </svg>
+            </button>
+          </div>
         </div>
-        <h2 class="text-4xl font-play font-bold text-black xl:text-5xl dark:text-white">Blog Posts</h2>
-        <p class="block max-w-4xl text-gray-500 dark:text-gray-300 mx-auto">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure veritatis sint autem nesciunt, laudantium
-          quia tempore delect
-        </p>
       </div>
-      <div class="">
-
-      </div>
+      <h6 class="mb-0 font-body text-center text-10 md:text-12 text-gray-700 uppercase letter-15">CHECK OUT OUR <a href="#" class="text-gray-700 underline hover:no-underline hover:text-black">INNVOATIVE NAIL POLISH REMOVER</a></h6>
     </div>
   </section>
   <!-- Video Section [E] -->
 
   <!-- Blog [S] -->
   <section class="bg-white dark:bg-gray-900">
-    <div class="container px-6 py-12 xl:py-24 mx-auto">
+    <div class="container px-6 py-7 md:py-12 lg:py-16 xl:py-24 mx-auto">
       <div class="title space-y-6 text-center">
         <div class="flex items-center justify-center space-x-4 text-yellow-600">
           <span class="h-px bg-current w-16"></span>
@@ -708,7 +709,7 @@
 
   <!-- Contact [S] -->
   <section class="bg-white dark:bg-gray-900">
-    <div class="container px-6 py-12 xl:py-24 mx-auto">
+    <div class="container px-6 py-7 md:py-12 lg:py-16 xl:py-24 mx-auto">
       <div class="title space-y-6 text-center">
         <div class="flex items-center justify-center space-x-4 text-yellow-600">
           <span class="h-px bg-current w-16"></span>
@@ -767,13 +768,13 @@
               <a href="#">
                 <img class="w-auto h-28" src="assets/images/logo/main-logo.png" alt="Footer Logo" />
               </a>
-              <p class="max-w-sm text-gray-500 dark:text-gray-400">Join 31,000+ other and never miss out on new tips, tutorials, and more.</p>
+              <p class="max-w-sm text-sm leading-6 text-gray-500 dark:text-gray-400">Join 31,000+ other and never miss out on new tips, tutorials, and more.</p>
             </div>
           </div>
           <div class="mt-6 lg:mt-0 lg:flex-1">
-            <div class="text-xs tracking-wider grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            <div class="text-xs tracking-wider grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
               <div>
-                <h3 class="text-gray-700 uppercase dark:text-white">About</h3>
+                <h3 class="text-xl font-play text-gray-700 uppercase dark:text-white mb-5">About</h3>
                 <a href="#" class="block mt-2 text-gray-600 dark:text-gray-400 hover:underline">Blog</a>
                 <a href="#" class="block mt-2 text-gray-600 dark:text-gray-400 hover:underline">Faq's</a>
                 <a href="#" class="block mt-2 text-gray-600 dark:text-gray-400 hover:underline">Privacy Policy</a>
@@ -782,19 +783,7 @@
                 <a href="#" class="block mt-2 text-gray-600 dark:text-gray-400 hover:underline">HTML Sitemap</a>
               </div>
               <div>
-                <h3 class="text-gray-700 uppercase dark:text-white">Blog</h3>
-                <a href="#" class="block mt-2 text-gray-600 dark:text-gray-400 hover:underline">Tec</a>
-                <a href="#" class="block mt-2 text-gray-600 dark:text-gray-400 hover:underline">Music</a>
-                <a href="#" class="block mt-2 text-gray-600 dark:text-gray-400 hover:underline">Videos</a>
-              </div>
-              <div>
-                <h3 class="text-gray-700 uppercase dark:text-white">Products</h3>
-                <a href="#" class="block mt-2 text-gray-600 dark:text-gray-400 hover:underline">Mega cloud</a>
-                <a href="#" class="block mt-2 text-gray-600 dark:text-gray-400 hover:underline">Aperion UI</a>
-                <a href="#" class="block mt-2 text-gray-600 dark:text-gray-400 hover:underline">Meraki UI</a>
-              </div>
-              <div>
-                <h3 class="text-gray-700 uppercase dark:text-white">Contact</h3>
+                <h3 class="text-xl font-play text-gray-700 uppercase dark:text-white mb-5">Contact</h3>
                 <span class="block mt-2 text-gray-600 dark:text-gray-400 hover:underline">+1 526 654 8965</span>
                 <span class="block mt-2 text-gray-600 dark:text-gray-400 hover:underline">example@email.com</span>
               </div>
@@ -803,7 +792,7 @@
         </div>
         <hr class="h-px my-6 bg-gray-200 border-none dark:bg-gray-700">
         <div>
-          <p class="text-center text-gray-500 dark:text-gray-400">© <span class="font-bold text-slate-300 px-1 inline-block">Gold Touch</span> 2023 - All rights reserved</p>
+          <p class="text-center text-gray-500 dark:text-gray-400">© <span class="font-bold text-slate-300 px-1 inline-block">Gold Touch</span> <span x-text="new Date().getFullYear()"></span> - All rights reserved</p>
         </div>
       </div>
     </div>
@@ -812,10 +801,10 @@
 
   <!-- Register Popup [S] -->
   <div class="fixed inset-0 w-screen h-screen flex items-center justify-center z-50 dark hidden">
-    <span class="fixed inset-0 w-screen h-screen bg-black/40 z-30 backdrop-blur-sm"></span>
-    <div class="flex w-full max-w-sm mx-auto overflow-hidden rounded-lg shadow-md lg:max-w-4xl relative z-40 bg-gradient-to-r from-slate-900 to-slate-700">
-      <div class="hidden bg-cover bg-center lg:block lg:w-1/2 opacity-80" style="background-image: url('assets/images/slider/slide-4.jpg');"></div>
-      <div x-data="{ isHidden: true }" class="w-full px-6 py-8 md:px-8 lg:w-1/2 max-h-[calc(100vh-100px)] overflow-y-auto space-y-4">
+    <span x-cloak @click="isSingInPop = !isSingInPop" class="fixed inset-0 w-screen h-screen bg-black/40 z-30 backdrop-blur-sm"></span>
+    <div class="flex w-full max-w-md mx-auto overflow-hidden rounded-lg shadow-md lg:max-w-4xl relative z-40 bg-gradient-to-br from-slate-950 via-black to-slate-950 backdrop-blur-sm">
+      <div class="hidden bg-cover bg-center lg:block lg:w-1/2 xl:w-5/12 opacity-80" style="background-image: url('assets/images/slider/slide-4.jpg');"></div>
+      <div x-data="{ isHidden: true }" class="w-full px-6 py-8 md:px-8 lg:w-1/2 xl:w-7/12 max-h-[calc(100vh-100px)] overflow-y-auto space-y-4">
         <div class="flex justify-center mx-auto">
           <img class="w-auto h-20" src="assets/images/logo/main-logo.png" alt="Logo">
         </div>
@@ -869,22 +858,22 @@
                 <label class="block mb-1 text-gray-600 dark:text-gray-200">Last name</label>
                 <input type="text" placeholder="Snow" class="block w-full px-5 py-3 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-400 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
               </div>
-            </div>
-            <div>
-              <label class="block mb-1 text-gray-600 dark:text-gray-200">Phone number</label>
-              <input type="text" placeholder="XXX-XX-XXXX-XXX" class="block w-full px-5 py-3 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-400 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
-            </div>
-            <div>
-              <label class="block mb-1 text-gray-600 dark:text-gray-200">Email address</label>
-              <input type="email" placeholder="johnsnow@example.com" class="block w-full px-5 py-3 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-400 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
-            </div>
-            <div>
-              <label class="block mb-1 text-gray-600 dark:text-gray-200">Password</label>
-              <input type="password" placeholder="Enter your password" class="block w-full px-5 py-3 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-400 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
-            </div>
-            <div>
-              <label class="block mb-1 text-gray-600 dark:text-gray-200">Confirm password</label>
-              <input type="password" placeholder="Enter your password" class="block w-full px-5 py-3 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-400 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+              <div>
+                <label class="block mb-1 text-gray-600 dark:text-gray-200">Phone number</label>
+                <input type="text" placeholder="XXX-XX-XXXX-XXX" class="block w-full px-5 py-3 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-400 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+              </div>
+              <div>
+                <label class="block mb-1 text-gray-600 dark:text-gray-200">Email address</label>
+                <input type="email" placeholder="johnsnow@example.com" class="block w-full px-5 py-3 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-400 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+              </div>
+              <div>
+                <label class="block mb-1 text-gray-600 dark:text-gray-200">Password</label>
+                <input type="password" placeholder="Enter your password" class="block w-full px-5 py-3 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-400 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+              </div>
+              <div>
+                <label class="block mb-1 text-gray-600 dark:text-gray-200">Confirm password</label>
+                <input type="password" placeholder="Enter your password" class="block w-full px-5 py-3 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-400 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+              </div>
             </div>
             <div class="pt-4">
               <button class="btn btn-light w-full py-3 text-xs font-bold">Sign Up</button>
@@ -902,6 +891,7 @@
   <!-- Register Popup [E] -->
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine-ie11.min.js" integrity="sha512-Atu8sttM7mNNMon28+GHxLdz4Xo2APm1WVHwiLW9gW4bmHpHc/E2IbXrj98SmefTmbqbUTOztKl5PDPiu0LD/A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="assets/js/script.js"></script>
 
 </body>
 
