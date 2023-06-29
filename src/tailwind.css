@@ -50,34 +50,6 @@ img {@apply max-w-full w-auto;}
 
 @tailwind utilities;
 
-
-
-  /* article .social {@apply space-x-5;}
-  article .social a {@apply block;}
-  article .social a:hover {@apply opacity-75;}
-  article .social img {@apply w-3.5;}
-
-  article .main-head h1 {@apply w-full md:w-9/12;}
-  article .main-head .social {@apply w-full md:w-52;}
-  article .main-head h5 {@apply text-xs lg:text-lg uppercase;}
-  @media (max-width: 1024px) {
-    article .main-head h5.font-LinoType {@apply text-sm;}
-  }
-
-  article .rest h5 {@apply font-LinoType font-normal tracking-tight mb-7 lg:mb-10;}
-  article .rest .img-txt .img { width: calc(100% - 280px);}
-  @media (max-width: 1024px) {
-    article .rest .img-txt .img {width: calc(100% - 180px);}
-  }
-  @media (max-width: 767px) {
-    article .rest .img-txt .img {width: 100%;}
-  }
-
-  article .rest .img-txt .txt {width: 280px;}
-  @media (max-width: 1024px) {
-    article .rest .img-txt .txt {width: 180px;}
-  }
-  @media (max-width: 767px) {
-    article .rest .img-txt .txt {width: 100%;}
-  } */
+.dropDown {position: static;}
+.dropDown:hover .megaDropDown {display: block;}
 
