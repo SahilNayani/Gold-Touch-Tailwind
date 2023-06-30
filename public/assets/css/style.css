@@ -1834,6 +1834,16 @@ img{
      object-fit: cover;
 }
 
+.object-\[0\2c 11\%\]{
+  -o-object-position: 0 11%;
+     object-position: 0 11%;
+}
+
+.object-\[0\2c 70\%\]{
+  -o-object-position: 0 70%;
+     object-position: 0 70%;
+}
+
 .p-0{
   padding: 0px;
 }
