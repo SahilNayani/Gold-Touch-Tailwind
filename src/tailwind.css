@@ -32,7 +32,7 @@ font-family: 'Play', sans-serif;
 }
 *{box-sizing:border-box;font-smoothing:antialiased;text-rendering:optimizeLegibility;}
 h1{@apply text-xl md:text-2xl lg:text-3xl font-play font-bold dark:text-white}
-body {@apply font-openSans;}
+body {@apply font-openSans tracking-wide;}
 img {@apply max-w-full w-auto;}
 
 .btn {@apply px-6 py-2 text-sm font-play uppercase font-medium tracking-wide transition-all duration-300 transform rounded-lg focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50;}
