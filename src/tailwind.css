@@ -47,12 +47,18 @@ img {@apply max-w-full w-auto;}
 .bg-gradient-primary.bgg-hover:hover {
   background-image: linear-gradient(to top, lightgrey 0%, lightgrey 1%, #e0e0e0 26%, #efefef 48%, #d9d9d9 75%, #bcbcbc 100%);
 }
+header {@apply sticky left-0 right-0 z-50 transition-all duration-300;}
+
+
 
 @tailwind utilities;
 
-.dropDown {position: static;}
+/* .dropDown {position: relative;} */
 .dropDown:hover .megaDropDown {display: block;}
 
-header {@apply fixed top-0 left-0 right-0 z-50 transition-all duration-300;}
-/* header.nav-down {@apply top-0;} */
+header.nav-down {@apply top-0;}
 header.nav-up {@apply -top-full;}
+
+.openMenu .ham {@apply hidden;}
+.openMenu .hamClose {@apply block;}
+.openMenu .mainMenu {@apply flex;}

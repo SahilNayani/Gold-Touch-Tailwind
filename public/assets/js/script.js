@@ -42,14 +42,29 @@ function hasScrolled() {
   // This is necessary so you never see what is "behind" the navbar.
   if (st > lastScrollTop && st > navbarHeight){
     // Scroll Down
-    $('header').removeClass('nav-down').addClass('nav-up');
+    $('.header').removeClass('nav-down').addClass('nav-up');
     $('#toTop').removeClass('arrow-down').addClass('arrow-up');
   } else {
     // Scroll Up
     if(st + $(window).height() < $(document).height()) {
-      $('header').removeClass('nav-up').addClass('nav-down');
+      $('.header').removeClass('nav-up').addClass('nav-down');
       $('#toTop').removeClass('arrow-up').addClass('arrow-down');
     }
   }  
   lastScrollTop = st;
+}
+
+
+// Active Class JS
+function toggleClass(Id, db) {
+  var element = document.querySelector(Id);
+  element.classList.toggle(db);
+}
+function addClass(Id, db) {
+  var element = document.querySelector(Id);
+  element.classList.add(db);
+}
+function removeClass(Id, db) {
+  var element = document.querySelector(Id);
+  element.classList.remove(db);
 }
