@@ -47,7 +47,7 @@ img {@apply max-w-full w-auto;}
 .bg-gradient-primary.bgg-hover:hover {
   background-image: linear-gradient(to top, lightgrey 0%, lightgrey 1%, #e0e0e0 26%, #efefef 48%, #d9d9d9 75%, #bcbcbc 100%);
 }
-header {@apply sticky left-0 right-0 z-50 transition-all duration-300;}
+header {@apply sticky left-0 right-0 z-40 transition-all duration-300;}
 
 
 
@@ -62,3 +62,20 @@ header.nav-up {@apply -top-full;}
 .openMenu .ham {@apply hidden;}
 .openMenu .hamClose {@apply block;}
 .openMenu .mainMenu {@apply flex;}
+
+
+
+body.open-drawer {@apply overflow-hidden;}
+body.open-drawer:after {@apply absolute bg-black/70 inset-0 z-40;content: '';}
+body.open-drawer #cartDrawer {@apply flex;}
+.cart-drawer {@apply fixed inset-y-0 right-0 bg-white z-50;width: 400px;}
+.cart-drawer .close {margin-right: -10px;}
+.cart-drawer .d-body {@apply max-h-[66vh] h-full overflow-y-auto overflow-x-hidden;}
+.cart-drawer .d-body::-webkit-scrollbar {display: none;}
+.cart-drawer .cart-item .prod {width: calc(100% - 100px);}
+.cart-drawer .cart-item .prod .qty-sec {width: 66px;}
+.cart-drawer .cart-item .prod .qty-sec input {height: 20px;line-height: 20px;width: calc(100% - 40px);font-size: 10px;}
+.cart-drawer .cart-item .prod .qty-sec button {width: 20px;height: 20px;font-size: 12px;}
+.cart-drawer .cart-item .price-act {width: 100px;}
+.cart-drawer .d-foot {position: absolute;bottom: 0;left: 0;right: 0;}
+.cart-drawer .cart-summary {background: none;}
