@@ -62,6 +62,7 @@ header.nav-up {@apply -top-full;}
 .openMenu .ham {@apply hidden;}
 .openMenu .hamClose {@apply block;}
 .openMenu .mainMenu {@apply flex;}
+.mainMenu a, .dropDown a {@apply hover:text-yellow-600 dark:hover:text-yellow-400;}
 
 
 
