@@ -1568,6 +1568,10 @@ header{
   margin-bottom: calc(2rem * var(--tw-space-y-reverse));
 }
 
+.self-end{
+  align-self: flex-end;
+}
+
 .overflow-hidden{
   overflow: hidden;
 }
@@ -1671,6 +1675,15 @@ header{
 .border-zinc-400{
   --tw-border-opacity: 1;
   border-color: rgb(161 161 170 / var(--tw-border-opacity));
+}
+
+.border-black{
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+}
+
+.border-current{
+  border-color: currentColor;
 }
 
 .bg-black\/10{
@@ -2286,6 +2299,10 @@ header{
   line-height: 1.5rem;
 }
 
+.leading-7{
+  line-height: 1.75rem;
+}
+
 .tracking-normal{
   letter-spacing: 0em;
 }
@@ -2752,6 +2769,11 @@ body.open-drawer #cartDrawer{
 .hover\:text-yellow-600:hover{
   --tw-text-opacity: 1;
   color: rgb(202 138 4 / var(--tw-text-opacity));
+}
+
+.hover\:text-gold:hover{
+  --tw-text-opacity: 1;
+  color: rgb(223 184 88 / var(--tw-text-opacity));
 }
 
 .hover\:underline:hover{
