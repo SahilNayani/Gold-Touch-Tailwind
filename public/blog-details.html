@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
   <title>GoldTouch</title>
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
@@ -11,126 +12,226 @@
 <body>
 
   <!-- Header [S] -->
-  <header class="sticky top-0 left-0 right-0 z-50">
-    <nav x-data="{ isOpen: false }" class="shadow dark bg-gradient-to-r from-slate-950 via-black/50 to-slate-950 backdrop-blur-sm">
-      <div class="container px-6 py-3 mx-auto">
-        <div class="flex flex-col md:flex-row md:justify-between md:items-center">
-          <div class="flex items-center justify-between">
-            <div class="flex items-center">
-              <a href="#">
-                <img class="w-auto h-16 sm:h-20 sharp" src="assets/images/logo/main-logo.png" alt="GoldTouch Logo" />
-                <!-- <img class="w-auto h-16 sm:h-14" src="assets/images/logo/logo-1.png" alt="GoldTouch Logo" /> -->
-                <!-- <img class="w-auto h-16 sm:h-14" src="assets/images/logo/Untitled-2.png" alt="GoldTouch Logo" /> -->
-                <!-- <img class="w-auto h-16 sm:h-14" src="assets/images/logo/logo.png" alt="GoldTouch Logo" /> -->
-              </a>
-            </div>
-  
-            <!-- Mobile menu button -->
-            <div class="flex lg:hidden">
-              <button x-cloak @click="isOpen = !isOpen" type="button" class="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400" aria-label="toggle menu">
-                <svg x-show="!isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
-                </svg>
-        
-                <svg x-show="isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-            </div>
+  <header class="header nav-down">
+    <div class="text-center font-play text-sm py-2 bg-white/30 backdrop-blur-md">
+      <p class="w-full px-3.5"><b>FREE SHIPPING</b> ON USA ORDERS OVER $65</p>
+    </div>
+    <nav class="shadow dark bg-gradient-to-r from-slate-950 via-black lg:via-black/75 to-slate-950 lg:to-slate-950 backdrop-blur-sm">
+      <div class="max-w-screen-2xl px-6 xl:px-10 mx-auto relative">
+        <div id="mobiMenu" class="flex flex-row justify-between items-center">
+          <div class="flex items-center py-2">
+            <a href="#">
+              <!-- <img class="w-auto h-16 lg:h-20 sharp" src="assets/images/logo/main-logo.svg" alt="GoldTouch Logo" /> -->
+              <svg class="w-auto h-16 lg:h-20 py-1 text-slate-300" width="773" height="377" viewBox="0 0 773 377" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M264.214 169.171C257.964 169.171 251.764 169.491 245.634 168.941C244.164 168.811 242.574 165.941 241.694 164.081C233.354 146.181 219.314 135.481 200.304 131.081C166.594 123.271 132.074 150.171 130.394 184.741C129.064 212.211 146.734 235.221 166.394 241.941C168.834 242.781 169.884 244.341 169.784 247.081C169.584 252.661 169.724 258.261 169.724 263.901C142.724 259.561 109.894 230.591 109.964 188.001C110.034 144.501 145.444 109.891 188.964 109.651C225.914 109.441 258.894 137.731 264.214 169.171Z" class="fill-current"/>
+                <path d="M245.274 198.311H207.744V178.311H265.744C271.814 219.141 243.654 255.491 207.484 263.581C207.484 257.331 207.224 251.191 207.684 245.111C207.794 243.711 210.204 242.041 211.904 241.271C228.904 233.541 239.614 220.541 244.784 202.771C245.049 201.298 245.213 199.808 245.274 198.311Z" class="fill-current"/>
+                <path d="M178.744 198.311H148.744V178.311H198.744V266.311H178.744V198.311Z" class="fill-current"/>
+                <path d="M110.984 60.9114C104.984 60.0414 98.5737 60.6214 96.0537 54.3214C93.6237 48.3214 97.7837 43.7314 101.844 40.1214C114.794 28.6114 129.794 21.9814 147.434 23.6414C158.134 24.6414 161.074 32.1114 154.274 40.4614C145.984 50.6314 134.584 55.8214 122.194 58.9814C118.404 59.9814 114.444 60.3414 110.984 60.9114Z" class="fill-current"/>
+                <path d="M265.914 60.8115C250.384 59.5215 236.114 54.3615 224.544 43.0615C220.854 39.4515 217.094 35.2215 219.314 29.5115C221.654 23.5115 227.624 23.0315 232.824 23.1915C249.664 23.7215 264.454 29.6415 276.334 41.8515C279.534 45.1515 282.334 49.1315 280.624 54.0715C278.914 59.0115 274.004 59.7715 269.454 60.4715C268.414 60.6315 267.344 60.6815 265.914 60.8115Z" class="fill-current"/>
+                <path d="M110.984 315.781C126.314 316.721 139.984 321.981 151.244 332.431C155.334 336.211 159.764 340.781 157.114 347.001C154.584 352.921 148.534 353.181 143.014 353.001C127.704 352.689 113.058 346.694 101.924 336.181C97.9236 332.491 93.6936 328.021 96.1036 322.001C98.5136 315.981 104.524 315.881 110.104 315.761L110.984 315.781Z" class="fill-current"/>
+                <path d="M233.984 353.541C230.714 352.891 227.494 352.621 224.554 351.541C219.084 349.601 217.184 345.101 219.794 339.931C221.255 336.939 223.266 334.249 225.724 332.001C237.924 321.401 252.044 315.521 268.424 315.781C269.77 315.795 271.111 315.953 272.424 316.251C281.274 318.391 283.704 324.341 278.334 331.771C270.664 342.361 259.334 347.491 247.274 351.031C242.984 352.341 238.424 352.751 233.984 353.541Z" class="fill-current"/>
+                <path d="M23.0536 233.051C23.5236 230.691 23.7937 227.161 24.9736 223.961C26.8236 218.961 31.2337 217.191 35.9737 219.501C38.8567 220.837 41.4674 222.695 43.6736 224.981C54.2826 236.239 60.3182 251.045 60.6036 266.511C60.7436 271.951 60.2936 277.991 54.1736 280.371C48.2636 282.661 43.9737 278.541 40.3437 274.731C29.6337 263.411 24.3436 249.651 23.0536 233.051Z" class="fill-current"/>
+                <path d="M353.294 235.381C352.064 249.811 346.824 263.581 335.994 274.851C332.344 278.651 327.994 282.721 322.134 280.301C316.134 277.811 315.694 271.781 315.864 266.301C316.364 250.411 322.184 236.551 332.864 224.771C333.898 223.66 335.055 222.67 336.314 221.821C339.584 219.581 342.944 217.231 347.184 219.201C351.424 221.171 352.454 225.201 352.964 229.331C353.174 230.981 353.164 232.691 353.294 235.381Z" class="fill-current"/>
+                <path d="M23.1136 142.881C24.2336 127.041 29.5336 113.821 39.4036 102.461C40.2033 101.574 41.0655 100.745 41.9836 99.9815C45.6636 96.8515 49.7136 93.9815 54.6936 96.0915C59.4836 98.1415 60.5236 103.091 60.5436 107.611C60.6336 125.611 54.3336 141.001 41.3536 153.551C40.1212 154.674 38.7337 155.614 37.2336 156.341C31.3036 159.341 26.3836 157.431 24.4236 151.031C23.7861 148.351 23.3483 145.627 23.1136 142.881Z" class="fill-current"/>
+                <path d="M353.414 142.981C353.159 145.65 352.711 148.297 352.074 150.901C350.074 157.481 344.964 159.491 338.934 156.131C336.809 154.963 334.877 153.476 333.204 151.721C322.289 140.345 316.09 125.255 315.854 109.491C315.704 104.301 316.314 98.5815 321.714 96.1415C327.424 93.5615 331.994 97.2815 335.714 101.141C346.804 112.611 352.214 126.601 353.414 142.981Z" class="fill-current"/>
+                <path d="M82.0637 124.061C83.2337 112.121 84.3237 100.381 85.6237 88.6815C85.7437 87.5815 87.0737 85.8215 87.9937 85.6815C99.9937 84.2715 111.994 83.1215 124.734 81.8215C123.644 88.6115 122.664 94.9415 121.604 101.251C120.814 106.011 120.054 110.791 118.954 115.491C118.654 116.771 117.334 118.591 116.224 118.801C105.224 120.801 94.2237 122.621 83.2237 124.451C82.9837 124.531 82.6737 124.301 82.0637 124.061Z" class="fill-current"/>
+                <path d="M253.284 81.8414L292.174 85.8414C293.474 98.5614 294.774 111.271 296.174 124.671C289.504 123.591 283.324 122.611 277.174 121.571C272.854 120.841 268.564 119.651 264.174 119.341C260.624 119.081 259.234 117.691 258.714 114.281C257.074 103.671 255.184 93.1214 253.284 81.8414Z" class="fill-current"/>
+                <path d="M126.424 294.371C113.864 293.121 101.974 292.011 90.1137 290.671C89.477 290.496 88.8936 290.166 88.4155 289.711C87.9374 289.256 87.5795 288.689 87.3737 288.061C85.9837 276.191 84.8337 264.301 83.5437 251.641C90.9837 252.851 98.0637 253.991 105.134 255.161C107.374 255.531 109.594 256.011 111.824 256.431C120.464 258.041 120.424 258.051 121.754 266.811C122.434 271.291 123.284 275.751 124.044 280.231C124.804 284.711 125.554 289.151 126.424 294.371Z" class="fill-current"/>
+                <path d="M251.684 294.361C253.744 282.211 255.624 270.921 257.684 259.651C257.818 259.189 258.062 258.766 258.394 258.418C258.727 258.07 259.138 257.807 259.594 257.651C271.004 255.561 282.434 253.651 294.474 251.531C293.854 258.401 293.324 264.651 292.734 270.891C292.214 276.301 291.784 281.731 290.934 287.091C290.724 288.431 289.204 290.481 288.094 290.621C276.234 291.981 264.384 293.111 251.684 294.361Z" class="fill-current"/>
+                <path d="M157.984 308.081L188.314 286.661C198.314 293.761 208.214 300.731 218.604 308.071C212.194 313.321 206.104 318.421 199.904 323.371C195.984 326.461 191.984 331.581 187.984 331.651C184.244 331.721 180.354 326.381 176.594 323.351C170.484 318.401 164.424 313.391 157.984 308.081Z" class="fill-current"/>
+                <path d="M188.254 43.4315L218.584 68.1815C208.674 75.1815 199.224 81.9115 189.664 88.5015C189.157 88.7206 188.605 88.8158 188.053 88.7793C187.502 88.7428 186.967 88.5756 186.494 88.2915C177.074 81.7715 167.744 75.1115 157.984 68.1815L188.254 43.4315Z" class="fill-current"/>
+                <path d="M43.5037 188.141L68.2637 157.831C75.2637 167.751 82.0237 177.191 88.6137 186.731C88.8301 187.235 88.9249 187.783 88.8901 188.33C88.8554 188.878 88.6921 189.409 88.4137 189.881C81.8837 199.291 75.2237 208.621 68.2637 218.441C59.8737 208.171 51.7737 198.251 43.5037 188.141Z" class="fill-current"/>
+                <path d="M308.234 218.461L286.804 188.151L308.234 157.811L332.984 188.141L308.234 218.461Z" class="fill-current"/>
+                <path d="M371.984 161.491C378.424 178.661 377.574 194.871 372.414 212.201C367.704 205.551 363.464 199.571 359.244 193.591C354.244 186.591 354.244 186.541 359.244 179.591C363.254 173.771 367.354 167.981 371.984 161.491Z" class="fill-current"/>
+                <path d="M336.534 299.231C332.114 312.371 316.624 328.231 301.624 334.851C302.794 327.571 303.844 320.671 305.034 313.801C306.614 304.571 306.654 304.541 315.914 302.801C322.684 301.571 329.474 300.451 336.534 299.231Z" class="fill-current"/>
+                <path d="M4.13366 212.161C-1.03634 194.801 -1.86634 178.521 4.58366 161.551C10.3937 169.731 15.8437 177.341 21.1637 185.031C21.4041 185.465 21.5394 185.948 21.5585 186.443C21.5776 186.938 21.48 187.431 21.2737 187.881C15.8037 195.791 10.2037 203.601 4.13366 212.161Z" class="fill-current"/>
+                <path d="M164.594 371.981L189.824 354.121L214.244 371.351C204.564 377.641 179.534 378.041 164.594 371.981Z" class="fill-current"/>
+                <path d="M40.9836 299.151C51.2636 300.911 60.4936 302.461 69.7036 304.151C70.1115 304.264 70.4871 304.471 70.7998 304.756C71.1126 305.041 71.3537 305.396 71.5036 305.791C73.2236 315.291 74.8036 324.791 76.5936 335.321C60.8036 326.771 48.8536 315.851 40.9836 299.151Z" class="fill-current"/>
+                <path d="M164.204 4.06146C181.414 -1.01854 197.624 -1.80854 214.984 4.43146C210.614 7.54146 206.984 10.2315 203.184 12.8015C198.724 15.8615 194.184 21.0815 189.664 21.1515C185.354 21.2115 180.944 15.8415 176.664 12.8215C172.724 10.1415 168.984 7.41146 164.204 4.06146Z" class="fill-current"/>
+                <path d="M41.0436 74.9814C49.7136 59.1014 60.6236 47.1014 77.1736 39.4114C75.4736 49.5514 73.9836 58.8714 72.2936 68.1614C72.159 68.5679 71.9289 68.9361 71.6227 69.2354C71.3165 69.5346 70.9431 69.7562 70.5336 69.8814C61.0436 71.5914 51.5436 73.1814 41.0436 74.9814Z" class="fill-current"/>
+                <path d="M301.474 39.6815C317.554 47.2115 328.404 59.1615 336.964 74.8815C329.514 73.6715 322.874 72.7015 316.274 71.4915C306.124 69.6415 306.084 69.5815 304.224 59.4915C303.124 53.4915 302.224 47.5615 301.224 41.5915C301.24 40.9478 301.323 40.3076 301.474 39.6815Z" class="fill-current"/>
+                <path d="M434.948 208.332H411.008V200.016H470.102V208.332H446.288V261H434.948V208.332ZM511.883 262.26C507.431 262.26 503.567 261.966 500.291 261.378C497.099 260.79 494.033 259.782 491.093 258.354C487.985 256.842 485.591 254.532 483.911 251.424C482.231 248.316 481.391 244.536 481.391 240.084V222.192C481.391 218.412 481.979 215.052 483.155 212.112C484.415 209.172 486.053 206.82 488.069 205.056C489.833 203.544 492.101 202.284 494.873 201.276C497.729 200.184 500.543 199.47 503.315 199.134C505.835 198.882 508.691 198.756 511.883 198.756C516.251 198.756 520.031 199.05 523.223 199.638C526.415 200.226 529.565 201.234 532.673 202.662C535.949 204.258 538.427 206.694 540.107 209.97C541.871 213.246 542.753 217.278 542.753 222.066V240.084C542.753 254.868 532.463 262.26 511.883 262.26ZM512.135 254.322C518.771 254.322 523.559 253.314 526.499 251.298C529.439 249.282 530.909 245.586 530.909 240.21V221.562C530.909 215.85 529.397 211.902 526.373 209.718C523.433 207.534 518.645 206.442 512.009 206.442C505.373 206.442 500.543 207.534 497.519 209.718C494.579 211.818 493.109 215.766 493.109 221.562V240.21C493.109 245.502 494.621 249.198 497.645 251.298C500.753 253.314 505.583 254.322 512.135 254.322ZM589.769 262.26C585.401 262.26 581.705 261.966 578.681 261.378C575.741 260.79 572.927 259.782 570.239 258.354C564.527 255.246 561.671 249.156 561.671 240.084V200.016H573.011V240.21C573.011 245.586 574.271 249.282 576.791 251.298C579.395 253.314 583.805 254.322 590.021 254.322C596.153 254.322 600.437 253.356 602.873 251.424C605.393 249.408 606.653 245.67 606.653 240.21V200.016H617.993V240.084C617.993 244.536 617.237 248.316 615.725 251.424C614.213 254.532 612.071 256.8 609.299 258.228C606.527 259.74 603.587 260.79 600.479 261.378C597.455 261.966 593.885 262.26 589.769 262.26ZM667.289 262.26C662.837 262.26 658.973 261.966 655.697 261.378C652.505 260.79 649.439 259.782 646.499 258.354C643.391 256.842 640.955 254.532 639.191 251.424C637.511 248.316 636.671 244.536 636.671 240.084V222.192C636.671 218.412 637.259 215.052 638.435 212.112C639.695 209.172 641.333 206.82 643.349 205.056C645.113 203.544 647.381 202.284 650.153 201.276C653.009 200.184 655.823 199.47 658.595 199.134C661.283 198.882 664.181 198.756 667.289 198.756C674.681 198.756 681.737 199.47 688.457 200.898V209.97C680.393 207.954 673.421 206.946 667.541 206.946C660.653 206.946 655.697 207.996 652.673 210.096C649.649 212.196 648.137 216.102 648.137 221.814V239.706C648.137 244.914 649.775 248.568 653.051 250.668C656.327 252.768 661.325 253.818 668.045 253.818C673.925 253.818 680.897 252.81 688.961 250.794V260.118C682.241 261.546 675.017 262.26 667.289 262.26ZM705.267 200.016H716.607V225.342H750.501V200.016H761.841V261H750.501V233.658H716.607V261H705.267V200.016Z" class="fill-current"/>
+                <path d="M425.772 290.952H418.932V288.576H435.816V290.952H429.012V306H425.772V290.952ZM439.689 288.576H442.929V295.812H452.613V288.576H455.853V306H452.613V298.188H442.929V306H439.689V288.576ZM461.908 288.576H476.164V290.952H465.148V295.704H474.976V298.08H465.148V303.624H476.524V306H461.908V288.576ZM491.626 306.18C491.218 306.18 489.79 306.108 487.342 305.964V303.624L491.194 304.02C492.178 304.02 492.922 303.948 493.426 303.804C493.93 303.66 494.29 303.372 494.506 302.94C494.746 302.508 494.866 301.86 494.866 300.996V288.576H498.106V300.852C498.106 302.316 497.89 303.432 497.458 304.2C497.05 304.968 496.39 305.496 495.478 305.784C494.566 306.048 493.282 306.18 491.626 306.18ZM504.166 288.576H518.422V290.952H507.406V295.704H517.234V298.08H507.406V303.624H518.782V306H504.166V288.576ZM521.015 288.576H524.579L528.827 302.904H529.043L533.147 288.576H536.783L541.031 302.904H541.247L545.351 288.576H548.663L542.939 306H539.087L534.875 291.924L530.735 306H526.883L521.015 288.576ZM552.119 288.576H566.375V290.952H555.359V295.704H565.187V298.08H555.359V303.624H566.735V306H552.119V288.576ZM571.56 288.576H574.8V303.624H585.096V306H571.56V288.576ZM589.033 288.576H592.273V303.624H602.569V306H589.033V288.576ZM611.618 306.36C609.77 306.36 607.778 306.216 605.642 305.928V303.48C608.378 303.912 610.394 304.128 611.69 304.128C613.226 304.128 614.33 303.984 615.002 303.696C615.674 303.384 616.01 302.82 616.01 302.004V300.24C616.01 299.496 615.758 298.968 615.254 298.656C614.75 298.344 613.934 298.188 612.806 298.188H610.826C609.026 298.188 607.646 297.816 606.686 297.072C605.75 296.328 605.282 295.284 605.282 293.94V292.32C605.282 289.584 607.874 288.216 613.058 288.216C613.442 288.216 615.206 288.312 618.35 288.504V290.808C616.166 290.496 614.354 290.34 612.914 290.34C611.21 290.34 610.046 290.508 609.422 290.844C608.798 291.18 608.486 291.744 608.486 292.536V294.012C608.486 295.188 609.554 295.776 611.69 295.776H613.706C617.378 295.776 619.214 297.144 619.214 299.88V301.392C619.214 303.192 618.59 304.476 617.342 305.244C616.094 305.988 614.186 306.36 611.618 306.36ZM640.809 306.36C634.593 306.36 631.485 304.248 631.485 300.024V294.912C631.485 290.448 634.593 288.216 640.809 288.216C642.897 288.216 645.105 288.396 647.433 288.756V291.42C645.081 290.844 642.897 290.556 640.881 290.556C640.113 290.556 639.465 290.592 638.937 290.664C638.409 290.712 637.881 290.82 637.353 290.988C636.777 291.156 636.309 291.396 635.949 291.708C635.613 292.02 635.337 292.428 635.121 292.932C634.881 293.436 634.761 294.06 634.761 294.804V300.06C634.761 302.748 636.849 304.092 641.025 304.092C641.961 304.092 643.257 303.972 644.913 303.732V298.836H639.981V296.496H647.973V305.568C645.765 306.096 643.377 306.36 640.809 306.36ZM658.663 288.576H662.695L670.327 306H666.799L665.071 301.788H655.891L654.163 306H650.815L658.663 288.576ZM664.099 299.484L660.643 291.132H660.319L656.863 299.484H664.099ZM674.252 288.576H677.492V303.624H687.788V306H674.252V288.576ZM691.724 288.576H694.964V303.624H705.26V306H691.724V288.576ZM709.197 288.576H723.453V290.952H712.437V295.704H722.265V298.08H712.437V303.624H723.813V306H709.197V288.576ZM728.639 288.576H737.567C739.103 288.576 740.303 288.708 741.167 288.972C742.031 289.212 742.655 289.644 743.039 290.268C743.423 290.892 743.615 291.78 743.615 292.932V294.408C743.615 295.752 743.123 296.784 742.139 297.504C741.155 298.224 739.871 298.584 738.287 298.584L745.055 306H740.771L734.795 299.016H731.879V306H728.639V288.576ZM737.243 296.784C738.371 296.784 739.163 296.568 739.619 296.136C740.099 295.68 740.339 294.924 740.339 293.868V293.364C740.339 292.452 740.087 291.804 739.583 291.42C739.103 291.012 738.323 290.808 737.243 290.808H731.879V296.784H737.243ZM753.175 299.448L746.047 288.576H749.683L754.831 296.856L759.979 288.576H763.615L756.451 299.34V306H753.175V299.448Z" class="fill-current"/>
+                <path d="M458.77 158.34C453.767 158.34 449.345 158.117 445.504 157.67C441.662 157.223 437.866 156.464 434.114 155.392C430.094 154.32 426.788 152.891 424.198 151.104C421.607 149.228 419.508 146.816 417.9 143.868C416.292 140.741 415.488 137.168 415.488 133.148V96.968C415.488 92.5907 416.381 88.66 418.168 85.176C419.954 81.6027 422.366 78.7887 425.404 76.734C428.262 74.858 431.657 73.25 435.588 71.91C439.608 70.57 443.538 69.6767 447.38 69.23C450.596 68.8727 454.482 68.694 459.038 68.694C471.366 68.694 483.158 69.632 494.414 71.508V87.32C484.051 84.8187 472.259 83.568 459.038 83.568C443.94 83.568 436.392 87.9453 436.392 96.7V131.674C436.392 135.962 438.402 138.999 442.422 140.786C446.531 142.573 452.695 143.466 460.914 143.466C465.291 143.466 469.981 142.796 474.984 141.456V121.222H460.78V107.554H494.95V152.712C490.483 154.32 484.766 155.66 477.798 156.732C470.919 157.804 464.576 158.34 458.77 158.34ZM551.106 158.34C546.282 158.34 541.815 158.027 537.706 157.402C533.686 156.777 529.487 155.705 525.11 154.186C520.375 152.578 516.668 149.987 513.988 146.414C511.308 142.751 509.968 138.329 509.968 133.148V95.092C509.968 90.804 510.906 86.9627 512.782 83.568C514.747 80.1733 517.249 77.4933 520.286 75.528C522.966 73.8307 526.271 72.4013 530.202 71.24C534.133 70.0787 537.795 69.364 541.19 69.096C544.317 68.828 547.622 68.694 551.106 68.694C555.215 68.694 558.789 68.8727 561.826 69.23C564.863 69.498 568.258 70.1233 572.01 71.106C576.298 72.3567 579.827 73.8753 582.596 75.662C585.365 77.4487 587.688 79.95 589.564 83.166C591.529 86.4713 592.512 90.4467 592.512 95.092V133.148C592.512 137.972 591.217 142.126 588.626 145.61C586.125 149.094 582.641 151.729 578.174 153.516C570.134 156.732 561.111 158.34 551.106 158.34ZM551.374 143.466C554.322 143.466 556.779 143.377 558.744 143.198C560.799 142.93 562.898 142.483 565.042 141.858C567.186 141.233 568.794 140.205 569.866 138.776C571.027 137.257 571.608 135.381 571.608 133.148V94.958C571.608 90.8487 569.955 87.9453 566.65 86.248C563.345 84.4613 558.208 83.568 551.24 83.568C544.272 83.568 539.135 84.4167 535.83 86.114C532.525 87.8113 530.872 90.7593 530.872 94.958V133.148C530.872 135.381 531.453 137.257 532.614 138.776C533.775 140.205 535.473 141.233 537.706 141.858C539.85 142.483 541.905 142.93 543.87 143.198C545.925 143.377 548.426 143.466 551.374 143.466ZM609.334 70.034H630.238V142.126H672.984V157H609.334V70.034ZM687.065 70.034H724.049C734.233 70.034 742.273 70.838 748.169 72.446C754.065 73.9647 758.397 76.6447 761.167 80.486C763.936 84.3273 765.321 89.6427 765.321 96.432V131.808C765.321 138.419 764.025 143.555 761.435 147.218C758.844 150.791 754.601 153.337 748.705 154.856C742.809 156.285 734.635 157 724.183 157H687.065V70.034ZM723.245 142.126C728.962 142.126 733.25 141.903 736.109 141.456C739.057 140.92 741.156 139.937 742.407 138.508C743.747 137.079 744.417 134.845 744.417 131.808V96.03C744.417 91.9207 742.764 89.062 739.459 87.454C736.243 85.7567 731.061 84.908 723.915 84.908H707.969V142.126H723.245Z" class="fill-current"/>
+              </svg>
+            </a>
           </div>
-  
           <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
-          <div x-cloak :class="[isOpen ? 'translate-x-0 opacity-100 ' : 'opacity-0 -translate-x-full']" class="absolute inset-x-0 z-20 w-full px-6 py-2 transition-all duration-300 ease-in-out top-24 md:mt-0 md:p-0 md:top-0 md:relative md:bg-transparent md:w-auto md:opacity-100 md:translate-x-0 md:flex md:flex-col md:items-end space-y-6 bg-gradient-to-r from-slate-900 to-slate-700 lg:bg-transparent lg:bg-none">
-            <div class="flex items-center mt-3 lg:mt-0 ml-7 space-x-4">
-              <!-- <button class="hidden text-gray-600 transition-colors duration-300 transform lg:block dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-400 focus:text-gray-700 dark:focus:text-gray-400 focus:outline-none" aria-label="show notifications">
+          <div class="">
+            <div class="flex items-center justify-end ml-auto lg:ml-7 space-x-4 lg:pt-3">
+              <button class="hidden text-gray-600 transition-colors duration-300 transform lg:block dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-400 focus:text-gray-700 dark:focus:text-gray-400 focus:outline-none" aria-label="show notifications">
                 <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M15 17H20L18.5951 15.5951C18.2141 15.2141 18 14.6973 18 14.1585V11C18 8.38757 16.3304 6.16509 14 5.34142V5C14 3.89543 13.1046 3 12 3C10.8954 3 10 3.89543 10 5V5.34142C7.66962 6.16509 6 8.38757 6 11V14.1585C6 14.6973 5.78595 15.2141 5.40493 15.5951L4 17H9M15 17V18C15 19.6569 13.6569 21 12 21C10.3431 21 9 19.6569 9 18V17M15 17H9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-              </button> -->
+              </button>
               <a class="relative text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-300" href="#">
-                <svg class="w-5 h-5" width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.62 20.81C12.28 20.93 11.72 20.93 11.38 20.81C8.48 19.82 2 15.69 2 8.68998C2 5.59998 4.49 3.09998 7.56 3.09998C9.38 3.09998 10.99 3.97998 12 5.33998C13.01 3.97998 14.63 3.09998 16.44 3.09998C19.51 3.09998 22 5.59998 22 8.68998C22 15.69 15.52 19.82 12.62 20.81Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                <svg class="w-5 h-5 text-red-600 hidden" width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.44 3.10156C14.63 3.10156 13.01 3.98156 12 5.33156C10.99 3.98156 9.37 3.10156 7.56 3.10156C4.49 3.10156 2 5.60156 2 8.69156C2 9.88156 2.19 10.9816 2.52 12.0016C4.1 17.0016 8.97 19.9916 11.38 20.8116C11.72 20.9316 12.28 20.9316 12.62 20.8116C15.03 19.9916 19.9 17.0016 21.48 12.0016C21.81 10.9816 22 9.88156 22 8.69156C22 5.60156 19.51 3.10156 16.44 3.10156Z" fill="currentColor"/></svg>
+                <svg class="w-5 h-5" width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.62 20.81C12.28 20.93 11.72 20.93 11.38 20.81C8.48 19.82 2 15.69 2 8.68998C2 5.59998 4.49 3.09998 7.56 3.09998C9.38 3.09998 10.99 3.97998 12 5.33998C13.01 3.97998 14.63 3.09998 16.44 3.09998C19.51 3.09998 22 5.59998 22 8.68998C22 15.69 15.52 19.82 12.62 20.81Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <svg class="w-5 h-5 text-red-600 hidden" width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16.44 3.10156C14.63 3.10156 13.01 3.98156 12 5.33156C10.99 3.98156 9.37 3.10156 7.56 3.10156C4.49 3.10156 2 5.60156 2 8.69156C2 9.88156 2.19 10.9816 2.52 12.0016C4.1 17.0016 8.97 19.9916 11.38 20.8116C11.72 20.9316 12.28 20.9316 12.62 20.8116C15.03 19.9916 19.9 17.0016 21.48 12.0016C21.81 10.9816 22 9.88156 22 8.69156C22 5.60156 19.51 3.10156 16.44 3.10156Z" fill="currentColor"/>
+                </svg>
               </a>
-              <a class="relative text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-300" href="#">
+              <a onclick="addClass('body', 'open-drawer');" class="relative text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-300" href="#">
                 <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 3H5L5.4 5M7 13H17L21 5H5.4M7 13L5.4 5M7 13L4.70711 15.2929C4.07714 15.9229 4.52331 17 5.41421 17H17M17 17C15.8954 17 15 17.8954 15 19C15 20.1046 15.8954 21 17 21C18.1046 21 19 20.1046 19 19C19 17.8954 18.1046 17 17 17ZM9 19C9 20.1046 8.10457 21 7 21C5.89543 21 5 20.1046 5 19C5 17.8954 5.89543 17 7 17C8.10457 17 9 17.8954 9 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-                <span class="absolute top-0 left-0 p-1 text-xs text-white bg-blue-900 rounded-full"></span>
+                <span class="absolute top-0 left-0 p-1 text-xs text-white bg-yellow-400 rounded-full"></span>
               </a>
-              <div x-data="{ isOpen: false }" class="relative inline-block">
-                <!-- Dropdown toggle button -->
-                <button @click="isOpen = !isOpen" type="button" class="flex items-center focus:outline-none" aria-label="toggle profile dropdown">
+              <div class="inline-block dropDown relative">
+                <!-- <a href="#" class="px-3 py-3 block text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-yellow-600 dark:hover:text-yellow-400">Pendents</a> -->
+                <button type="button" class="flex items-center focus:outline-none" aria-label="toggle profile dropdown">
+                  <span class="mx-2 text-sm capitalize font-play tracking-wider text-gray-700 dark:text-gray-200 hidden lg:block">Khatab wedaa</span>
                   <div class="w-8 h-8 overflow-hidden border-2 border-gray-400 rounded-full">
                     <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80" class="object-cover w-full h-full" alt="avatar">
                   </div>
-                  <h3 class="mx-2 text-gray-700 dark:text-gray-200 lg:hidden">Khatab wedaa</h3>
                 </button>
-            
-                <!-- Dropdown menu -->
-                <div x-show="isOpen" 
-                  @click.away="isOpen = false"
-                  x-transition:enter="transition ease-out duration-100"
-                  x-transition:enter-start="opacity-0 scale-90"
-                  x-transition:enter-end="opacity-100 scale-100"
-                  x-transition:leave="transition ease-in duration-100"
-                  x-transition:leave-start="opacity-100 scale-100"
-                  x-transition:leave-end="opacity-0 scale-90" 
-                  class="absolute right-0 z-20 w-48 py-2 mt-2 origin-top-right rounded-md shadow-xl bg-gradient-to-r from-slate-950/85 via-black/95 to-slate-950/95 backdrop-blur-sm"
-                >
-                  <a href="#" class="block px-4 py-3 text-sm capitalize transition-colors duration-300 transform text-gray-300 hover:bg-gray-700 hover:text-white"> your profile </a>
-                  <a href="#" class="block px-4 py-3 text-sm capitalize transition-colors duration-300 transform text-gray-300 hover:bg-gray-700 hover:text-white"> Your projects </a>
-                  <a href="#" class="block px-4 py-3 text-sm capitalize transition-colors duration-300 transform text-gray-300 hover:bg-gray-700 hover:text-white"> Help </a>
-                  <a href="#" class="block px-4 py-3 text-sm capitalize transition-colors duration-300 transform text-gray-300 hover:bg-gray-700 hover:text-white"> Settings </a>
-                  <a href="#" class="block px-4 py-3 text-sm capitalize transition-colors duration-300 transform text-gray-300 hover:bg-gray-700 hover:text-white"> Sign Out </a>
+                <div class="megaDropDown lg:absolute top-full right-0 w-44 py-2 bg-white shadow-xl dark:bg-slate-950/75 backdrop-blur-lg hidden z-30">
+                  <div class="flex flex-wrap items-start">
+                    <div class="w-full p-2 grid grid-cols-1 gap-2 text-sm text-gray-600 capitalize transition-colors duration-300 transform dark:text-gray-300">
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">your profile</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Your projects</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Help</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Settings</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Sign Out</a>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <button class="btn btn-light">Sign In</button>
+              <button onclick="removeClass('#LRPopup', 'hidden')" class="btn btn-light">Sign In</button>
+              <!-- Mobile menu button -->
+              <div class="flex lg:hidden">
+                <button type="button" class="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400" aria-label="toggle menu">
+                  <svg onclick="addClass('#mobiMenu', 'openMenu');removeClass('header', 'header');" class="ham w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
+                  </svg>
+                  <svg onclick="removeClass('#mobiMenu', 'openMenu');addClass('header', 'header');" class="hamClose w-6 h-6 hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
             </div>
-            <div class="flex flex-col md:flex-row lg:space-x-8">
-              <div x-data="{ isOpen: false }" class="relative inline-block">
-                <!-- Dropdown toggle button -->
-                <div class="flex items-center justify-between space-x-3 my-1 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0">
-                  <a href="#">Home</a>
-                  <svg @click="isOpen = !isOpen" class="w-5 h-5 text-gray-800 dark:text-white cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
-                </div>
-            
-                <!-- Dropdown menu -->
-                <div x-show="isOpen" 
-                  @click.away="isOpen = false"
-                  x-transition:enter="transition ease-out duration-100"
-                  x-transition:enter-start="opacity-0 scale-90"
-                  x-transition:enter-end="opacity-100 scale-100"
-                  x-transition:leave="transition ease-in duration-100"
-                  x-transition:leave-start="opacity-100 scale-100"
-                  x-transition:leave-end="opacity-0 scale-90" 
-                  class="absolute right-0 z-20 w-48 py-2 mt-2 origin-top-right bg-white rounded-md shadow-xl dark:bg-gray-800"
-                >
-                  <a href="#" class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"> your profile </a>
-                  <a href="#" class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"> Your projects </a>
-                  <a href="#" class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"> Help </a>
-                  <a href="#" class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"> Settings </a>
-                  <a href="#" class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"> Sign Out </a>
+            <div class="mainMenu absolute inset-x-0 z-20 w-full px-6 py-2 transition-all duration-300 ease-in-out top-20 lg:mt-1 lg:p-0 lg:top-0 lg:static lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:flex-row lg:items-end bg-gradient-to-r from-slate-950 to-slate-800 lg:bg-transparent lg:bg-none hidden flex-col">
+              <div class="inline-block dropDown">
+                <a href="#" class="px-3 py-3 block text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200">Ring</a>
+                <div class="megaDropDown lg:absolute top-full right-0 w-full py-2 bg-white shadow-xl dark:bg-slate-950/75 backdrop-blur-lg hidden z-20">
+                  <div class="flex flex-wrap items-start">
+                    <div class="w-full lg:w-1/2 p-2 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-2 text-sm text-gray-600 capitalize transition-colors duration-300 transform dark:text-gray-300">
+                      <a href="#" class="block px-4 py-1 text-base font-play font-semibold uppercase text-white dark:hover:text-white col-span-full">Shop By Style</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Solitaire</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Accents</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">3 stone</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Halo</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Double Halo</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Hidden Accents</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Nature Inspired</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Vintage Inspired</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">2 Prong</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">4 Prong</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">5 Prong</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">6 Prong</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">8 Prong</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Wedding</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Anniversary Band</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Engagement Rings</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Delicate Rings</a>
+                    </div>
+                    <div class="w-full lg:w-1/2 p-2 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-1 gap-2 text-sm text-gray-600 capitalize transition-colors duration-300 transform dark:text-gray-300">
+                      <a href="#" class="block px-4 py-1 text-base font-play font-semibold uppercase text-white dark:hover:text-white col-span-full">Shop By Shape</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Emerald</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Princess</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Cushion</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Pears</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Round</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Oval</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Trillion</a>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <a class="flex items-center justify-between space-x-3 my-2 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0" href="#">Home</a>
-              <a class="flex items-center justify-between space-x-3 my-2 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0" href="#">Ring</a>
-              <a class="flex items-center justify-between space-x-3 my-2 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0" href="#">Pendents</a>
-              <a class="flex items-center justify-between space-x-3 my-2 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0" href="#">Bracelets</a>
-              <a class="flex items-center justify-between space-x-3 my-2 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0" href="#">Earring</a>
-              <a class="flex items-center justify-between space-x-3 my-2 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0" href="#">Necklace</a>
-              <a class="flex items-center justify-between space-x-3 my-2 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0" href="#">Diamond Shapes</a>
-              <a class="flex items-center justify-between space-x-3 my-2 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0" href="#">Gift</a>
-              <a class="flex items-center justify-between space-x-3 my-2 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0" href="#">About Us</a>
-              <a class="flex items-center justify-between space-x-3 my-2 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0" href="#">Contact Us</a>
-              
+              <div class="inline-block dropDown">
+                <a href="#" class="px-3 py-3 block text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200">Pendents</a>
+                <div class="megaDropDown lg:absolute top-full w-full lg:w-52 py-2 bg-white shadow-xl dark:bg-slate-950/75 backdrop-blur-lg hidden z-20">
+                  <div class="flex flex-wrap items-start">
+                    <div class="w-full p-2 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-1 gap-2 text-sm text-gray-600 capitalize transition-colors duration-300 transform dark:text-gray-300">
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Charm Pendants</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Solitaire Pendants</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="inline-block dropDown">
+                <a href="#" class="px-3 py-3 block text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200">Bracelets</a>
+                <div class="megaDropDown lg:absolute top-full w-full lg:w-52 py-2 bg-white shadow-xl dark:bg-slate-950/75 backdrop-blur-lg hidden z-20">
+                  <div class="flex flex-wrap items-start">
+                    <div class="w-full p-2 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-1 gap-2 text-sm text-gray-600 capitalize transition-colors duration-300 transform dark:text-gray-300">
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Tennis Bracelets</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a class="px-3 py-3 block text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200" href="#">Earring</a>
+              <div class="inline-block dropDown">
+                <a href="#" class="px-3 py-3 block text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200">Necklace</a>
+                <div class="megaDropDown lg:absolute top-full w-full lg:w-52 py-2 bg-white shadow-xl dark:bg-slate-950/75 backdrop-blur-lg hidden z-20">
+                  <div class="flex flex-wrap items-start">
+                    <div class="w-full p-2 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-1 gap-2 text-sm text-gray-600 capitalize transition-colors duration-300 transform dark:text-gray-300">
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Charm Necklace</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Solitaire Necklace</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="inline-block dropDown">
+                <a href="#" class="px-3 py-3 block text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200">Diamond Shapes</a>
+                <div class="megaDropDown lg:absolute top-full w-full lg:w-52 py-2 bg-white shadow-xl dark:bg-slate-950/75 backdrop-blur-lg hidden z-20">
+                  <div class="flex flex-wrap items-start">
+                    <div class="w-full p-2 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-1 gap-2 text-sm text-gray-600 capitalize transition-colors duration-300 transform dark:text-gray-300">
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Round</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Princess</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Cushion</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Oval</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Emerald</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Pear</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Asscher</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Heart</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Radiant</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Marquise</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="inline-block dropDown">
+                <a href="#" class="px-3 py-3 block text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200">Gift</a>
+                <div class="megaDropDown lg:absolute top-full right-0 w-full py-2 bg-white shadow-xl dark:bg-slate-950/75 backdrop-blur-lg hidden z-20">
+                  <div class="flex flex-wrap items-start">
+                    <div class="w-full lg:w-1/2 p-2 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-2 text-sm text-gray-600 capitalize transition-colors duration-300 transform dark:text-gray-300">
+                      <a href="#" class="block px-4 py-1 text-base font-play font-semibold uppercase text-white dark:hover:text-white col-span-full">TOP GIFT IDEAS</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Earrings</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Necklaces</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Bracelets</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Diamond Jewelry</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Gemstone Jewelry</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Pearl Jewelry</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Gifts For Her</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Gifts For Him</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Gifts Under $500</a>
+                    </div>
+                    <div class="w-full lg:w-1/2 p-2 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-1 gap-2 text-sm text-gray-600 capitalize transition-colors duration-300 transform dark:text-gray-300">
+                      <a href="#" class="block px-4 py-1 text-base font-play font-semibold uppercase text-white dark:hover:text-white col-span-full">GIFTS BY OCCASION</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Anniversary</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Graduation</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Engravable</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Wedding Party Gifts</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Bridal Jewelry</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a class="px-3 py-3 block text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200" href="#">About Us</a>
+              <a class="px-3 py-3 block text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200" href="#">Contact Us</a>                
             </div>
           </div>
-        </div>
-  
-        <div class="py-3 mt-2 -mx-3 overflow-y-auto whitespace-nowrap scroll-hidden hidden">
-          <a class="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0" href="#">News</a>
-          <a class="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0" href="#">Articles</a>
-          <a class="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0" href="#">Videos</a>
         </div>
       </div>
     </nav>
@@ -138,83 +239,89 @@
   <!-- Header [E] -->
 
   <!-- Blog Section [S] -->
-  <div class="bg-white dark:bg-gray-900">
-    <div class="container px-6 py-12 xl:py-24 mx-auto">
-      <div class="flex items-center">
-        <div class="w-7/12">
-          <div class="blog_img flex flex-wrap items-center">
-            <div class="w-full max-h-[300px] overflow-hidden px-3`">
-              <img src="assets/images/category/category-2.jpg" alt="" class="w-full md:-translate-y-1/4">
+  <article class="py-7 md:py-10">
+    <div class="container">
+      <div class="main-img mb-7 md:mb-10 lg:mb-12">
+        <img src="assets/images/blog/slide-1.jpg" class="block w-full" alt="">
+      </div>
+      <div class="flex flex-wrap">
+        <div class="w-full lg:w-11/12 xl:w-10/12 mx-auto">
+          <div class="main-head border-b border-gray-200 pb-5 mb-5">
+            <p class="date uppercase mb-2.5 lg:mb-3.5">12 June 2019</p>
+            <div class="flex flex-wrap items-center mb-2.5 md:mb-6">
+              <h1 class="font-play text-xl md:text-2xl xl:text-3xl uppercase mb-2.5 md:mb-0">Meet the new style trends of 2020 Yup ! its already here</h1>
+              <ul class="flex justify-end items-center space-x-3 px-3">
+                <li><a class="block" href="#"><img src="assets/svg/f-fb.svg" class="block" alt="" /></a></li>
+                <li><a class="block" href="#"><img src="assets/svg/f-insta.svg" class="block" alt="" /></a></li>
+                <li><a class="block" href="#"><img src="assets/svg/f-twit.svg" class="block" alt="" /></a></li>
+                <li><a class="block" href="#"><img src="assets/svg/f-pint.svg" class="block" alt="" /></a></li>
+              </ul>
+            </div>
+            <h5 class="">Quisque suscipit ipsum est, eu venenatis leo ornare eget. Ut porta facilisis elementum. Sed condimentum sed massa quis ullamcorper.</h5>
+          </div>
+          <div class="rest">
+            <h5 class="mb-7 lg:mb-10">Donec at scelerisque neque. Pellentesque sagittis, massa sodales sodales finibus, felis ligula tempus lorem, eu porttitor ex lacus vel felis. Vivamus egestas scelerisque consectetur. Vestibulum faucibus enim urna, fermentum aliquet quam euismod non. Proin cursus, libero quis semper elementum, diam metus eleifend magna, in placerat sem velit vitae lacus. Vivamus tempor fringilla nisl, id condimentum felis dignissim nec.Quisque suscipit ipsum est, eu venenatis leo ornare eget. Ut porta facilisis elementum. Sed condimentum sed massa quis ullamcorper. Donec at scelerisque neque. Pellentesque sagittis, massa sodales sodales finibus, felis ligula tempus lorem, eu porttitor ex lacus vel felis. Vivamus egestas scelerisque consectetur. Vestibulum faucibus enim urna, fermentum aliquet quam euismod non. Proin cursus, libero quis semper elementum, diam metus eleifend magna, in placerat sem velit vitae lacus. Vivamus tempor fringilla nisl, id condimentum felis dignissim nec.</h5>
+            <div class="img mb-3 lg:mb-4">
+              <img src="assets/images/blog/slide-1.jpg" alt="" class="w-full" />
+            </div>
+            <h5 class="">Donec at scelerisque neque. Pellentesque sagittis, massa sodales sodales finibus, felis ligula tempus lorem, eu porttitor ex lacus vel felis. Vivamus egestas scelerisque consectetur. Vestibulum faucibus enim urna, fermentum aliquet quam euismod non. Proin cursus, libero quis semper elementum, diam metus eleifend magna, in placerat sem velit vitae lacus. Vivamus tempor fringilla nisl, id condimentum felis dignissim nec.Quisque suscipit ipsum est, eu venenatis leo ornare eget. Ut porta facilisis elementum. Sed condimentum sed massa quis ullamcorper. Donec at scelerisque neque. Pellentesque sagittis, massa sodales sodales finibus, felis ligula tempus lorem, eu porttitor ex lacus vel felis. Vivamus egestas scelerisque consectetur. Vestibulum faucibus enim urna, fermentum aliquet quam euismod non. Proin cursus, libero quis semper elementum, diam metus eleifend magna, in placerat sem velit vitae lacus. Vivamus tempor fringilla nisl, id condimentum felis dignissim nec.</h5>
+            <ul class="flex justify-end items-center social space-x-3 px-3">
+              <li><p class="mb-0">SHARE THIS POST</p></li>
+              <li><a href="#"><img src="assets/svg/f-fb.svg" class="block" alt="" /></a></li>
+              <li><a href="#"><img src="assets/svg/f-insta.svg" class="block" alt="" /></a></li>
+              <li><a href="#"><img src="assets/svg/f-twit.svg" class="block" alt="" /></a></li>
+              <li><a href="#"><img src="assets/svg/f-pint.svg" class="block" alt="" /></a></li>
+            </ul>
+          </div>
+          <hr class="my-5 lg:my-7">
+          <div class="next-art flex">
+            <div class="max-w-[240px] lg:max-w-xs md:ml-auto">
+              <a href="#" class="hover:no-underline py-1 pl-1 pr-7 block relative">
+                <p class="uppercase sub mb-1 text-muted text-sm font-play font-bold tracking-wider">NEXT ARTICLE</p>
+                <p class="uppercase main mb-0 text-xs tracking-wider">MEET THE NEW STYLE TRENDS OF 2020 YUP ! ITS ALREADY HERE</p>
+              </a>
             </div>
           </div>
-          <div class="blog_deatils flex flex-col space-y-5 py-5">
-            <h1 class="blog_heading">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
-            <p class="text-xs md:text-sm text-justify dark:text-gray-400 \">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur obcaecati, sed nemo quas, ex possimus illum dicta a, minima deleniti ut assumenda sunt consequuntur asperiores. Optio voluptatem ex aut possimus?Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur obcaecati, sed nemo quas, ex possimus illum dicta a, minima deleniti ut assumenda sunt consequuntur asperiores. Optio voluptatem ex aut possimus?Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur obcaecati, sed nemo quas, ex possimus illum dicta a, minima deleniti ut assumenda sunt consequuntur asperiores. Optio voluptatem ex aut possimus?Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur obcaecati, sed nemo quas, ex possimus illum dicta a, minima deleniti ut assumenda sunt consequuntur asperiores. Optio voluptatem ex aut possimus?Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur obcaecati, sed nemo quas, ex possimus illum dicta a, minima deleniti ut assumenda sunt consequuntur asperiores. Optio voluptatem ex aut possimus?Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur obcaecati, sed nemo quas, ex possimus illum dicta a, minima deleniti ut assumenda sunt consequuntur asperiores. Optio voluptatem ex aut possimus?</p>
-            <p class="text-xs md:text-sm text-justify dark:text-gray-400 \">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur obcaecati, sed nemo quas, ex possimus illum dicta a, minima deleniti ut assumenda sunt consequuntur asperiores. Optio voluptatem ex aut possimus?Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur obcaecati, sed nemo quas, ex possimus illum dicta a, minima deleniti ut assumenda sunt consequuntur asperiores. Optio voluptatem ex aut possimus?Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur obcaecati, sed nemo quas, ex possimus illum dicta a, minima deleniti ut assumenda sunt consequuntur asperiores. Optio voluptatem ex aut possimus?Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur obcaecati, sed nemo quas, ex possimus illum dicta a, minima deleniti ut assumenda sunt consequuntur asperiores. Optio voluptatem ex aut possimus?Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur obcaecati, sed nemo quas, ex possimus illum dicta a, minima deleniti ut assumenda sunt consequuntur asperiores. Optio voluptatem ex aut possimus?Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur obcaecati, sed nemo quas, ex possimus illum dicta a, minima deleniti ut assumenda sunt consequuntur asperiores. Optio voluptatem ex aut possimus? </p>
-          </div>
-        </div>
-        <div class="w-5/12">
-          <div class="flex items-center">
-                
-          </div>
-        </div>
-      </div>
-      <div class="w-full">
-        <div class="flex flex-wrap items-center -mx-3">
-          <div class="w-1/2 md:w-1/3 p-3">
-              <div class="flex flex-col items-stretch justify-between">
-                  <div class="blog_img">
-                      <img src="assets/images/category/category-2.jpg" class="w-full h-full" alt="Blog Img">
-                  </div>
-                  <div class="blog_content flex flex-col space-y-1 pt-3">
-                      <span class="block text-xs font-bold text-gold">Sahil 02/Jun/2023</span>
-                      <h1 class="font-play font-bold text-gray-800 line-clamp-2">Blog Heading</h1>
-                      <p class="text-xs font-semibold max-h-12 h-full overflow-hidden line-clamp-3 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique odio, illum explicabo deleniti minima, maxime necessitatibus iusto iure aliquid porro quidem harum ratione distinctio id esse obcaecati saepe labore dolore?</p>
-                      <a href="#" class="pt-2">
-                          <button type="button" class="btn btn-dark text-xs">Know More</button>
-                      </a>
-                  </div>
-              </div>
-          </div>
-          <div class="w-1/2 md:w-1/3 p-3">
-              <div class="flex flex-col items-stretch justify-between">
-                  <div class="blog_img">
-                      <img src="assets/images/category/category-2.jpg" class="w-full h-full" alt="Blog Img">
-                  </div>
-                  <div class="blog_content flex flex-col space-y-1 pt-3">
-                      <span class="block text-xs font-bold text-gold">Sahil 02/Jun/2023</span>
-                      <h1 class="font-play font-bold text-gray-800 line-clamp-2">Blog Heading</h1>
-                      <p class="text-xs font-semibold max-h-12 h-full overflow-hidden line-clamp-3 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique odio, illum explicabo deleniti minima, maxime necessitatibus iusto iure aliquid porro quidem harum ratione distinctio id esse obcaecati saepe labore dolore?</p>
-                      <a href="#" class="pt-2">
-                          <button type="button" class="btn btn-dark text-xs">Know More</button>
-                      </a>
-                  </div>
-              </div>
-          </div>
-          <div class="w-1/2 md:w-1/3 p-3">
-              <div class="flex flex-col items-stretch justify-between">
-                  <div class="blog_img">
-                      <img src="assets/images/category/category-2.jpg" class="w-full h-full" alt="Blog Img">
-                  </div>
-                  <div class="blog_content flex flex-col space-y-1 pt-3">
-                      <span class="block text-xs font-bold text-gold">Sahil 02/Jun/2023</span>
-                      <h1 class="font-play font-bold text-gray-800 line-clamp-2">Blog Heading</h1>
-                      <p class="text-xs font-semibold max-h-12 h-full overflow-hidden line-clamp-3 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique odio, illum explicabo deleniti minima, maxime necessitatibus iusto iure aliquid porro quidem harum ratione distinctio id esse obcaecati saepe labore dolore?</p>
-                      <a href="#" class="pt-2">
-                          <button type="button" class="btn btn-dark text-xs">Know More</button>
-                      </a>
-                  </div>
-              </div>
-          </div>          
         </div>
       </div>
     </div>
-  </div>
+  </article>
+  <section class="pop-news pt-7 md:pt-10 lg:pt-12 pb-1 md:pb-2.5 lg:pb-5 bg-white dark:bg-black bg-gradient-to-r from-slate-100 to-slate-200">
+    <div class="container">
+      <h4 class="news-t text-center mb-5 md:mb-6 lg:mb-12 text-xl md:text-2xl lg:text-3xl font-dancingScript font-bold tracking-wider">Other Popular Posts</h4>
+      <div class="news-slider grid md:grid-cols-2 lg:grid-cols-3 gap-7 text-center md:text-left"> 
+        <div class="mb-6">
+          <div class="news-blk">
+            <div class="news-img mb-3.5 lg:mb-5"><img src="assets/images/blog/slide-1.jpg" alt="" class="w-full" /></div>
+            <h6 class="mb-1 text-xs lg:text-xs tracking-wider">20 MARCH 2020</h6>
+            <h5 class="font-play font-bold text-sm md:text-base lg:text-xl line-clamp-1 uppercase mb-2.5 lg:mb-2.5 tracking-wider">doing what we do best</h5>
+            <a href="#" class="btn btn-dark black">READ ARTICLE</a>
+          </div>
+        </div>
+        <div class="mb-6 hidden md:block">
+          <div class="news-blk">
+            <div class="news-img mb-3.5 lg:mb-5"><img src="assets/images/blog/slide-1.jpg" alt="" class="w-full" /></div>
+            <h6 class="mb-1 text-xs lg:text-xs tracking-wider">20 MARCH 2020</h6>
+            <h5 class="font-play font-bold text-sm md:text-base lg:text-xl line-clamp-1 uppercase mb-2.5 lg:mb-2.5 tracking-wider">CELEBRITIES & STYLE</h5>
+            <a href="#" class="btn btn-dark black">READ ARTICLE</a>
+          </div>
+        </div>
+        <div class="mb-6 hidden lg:block">
+          <div class="news-blk">
+            <div class="news-img mb-3.5 lg:mb-5"><img src="assets/images/blog/slide-1.jpg" alt="" class="w-full" /></div>
+            <h6 class="mb-1 text-xs lg:text-xs tracking-wider">20 MARCH 2020</h6>
+            <h5 class="font-play font-bold text-sm md:text-base lg:text-xl line-clamp-1 uppercase mb-2.5 lg:mb-2.5 tracking-wider">SNEAK PEAK INTO THE NEW YORK FASHION WEEK 2020</h5>
+            <a href="#" class="btn btn-dark black">READ ARTICLE</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <!-- Blog Section [E] -->
 
   <!-- Contact [S] -->
   <section class="bg-white dark:bg-gray-900">
-    <div class="container px-6 py-12 xl:py-24 mx-auto">
+    <div class="container px-6 py-7 md:py-12 lg:py-16 xl:py-24 mx-auto">
       <div class="title space-y-6 text-center">
         <div class="flex items-center justify-center space-x-4 text-yellow-600">
           <span class="h-px bg-current w-16"></span>
@@ -235,7 +342,7 @@
           </span>
           <h2 class="mt-4 text-lg lg:text-2xl font-bold text-gray-800 dark:text-white font-play">Email</h2>
           <p class="mt-2 text-gray-500 dark:text-gray-400">Our friendly team is here to help.</p>
-          <p class="mt-2 text-yellow-600 dark:text-blue-400">hello@merakiui.com</p>
+          <p class="mt-2 text-yellow-600 dark:text-yellow-400">hello@merakiui.com</p>
         </div>
         <div class="flex flex-col items-center justify-center text-center lg:p-5">
           <span class="p-3 text-white rounded-full bg-gradient-to-r from-slate-900 to-slate-700">
@@ -246,7 +353,7 @@
           </span>
           <h2 class="mt-4 text-lg lg:text-2xl font-bold text-gray-800 dark:text-white font-play">Office</h2>
           <p class="mt-2 text-gray-500 dark:text-gray-400">Come say hello at our office HQ.</p>
-          <p class="mt-2 text-yellow-600 dark:text-blue-400">100 Smith Street Collingwood VIC 3066 AU</p>
+          <p class="mt-2 text-yellow-600 dark:text-yellow-400">100 Smith Street Collingwood VIC 3066 AU</p>
         </div>
         <div class="flex flex-col items-center justify-center text-center lg:p-5">
           <span class="p-3 text-white rounded-full bg-gradient-to-r from-slate-900 to-slate-700">
@@ -256,7 +363,7 @@
           </span>
           <h2 class="mt-4 text-lg lg:text-2xl font-bold text-gray-800 dark:text-white font-play">Phone</h2>
           <p class="mt-2 text-gray-500 dark:text-gray-400">Mon-Fri from 8am to 5pm.</p>
-          <p class="mt-2 text-yellow-600 dark:text-blue-400">+1 (555) 000-0000</p>
+          <p class="mt-2 text-yellow-600 dark:text-yellow-400">+1 (555) 000-0000</p>
         </div>
       </div>
     </div>
@@ -271,38 +378,26 @@
           <div class="w-full -mx-6 lg:w-2/5">
             <div class="px-6 space-y-6">
               <a href="#">
-                <img class="w-auto h-28" src="assets/images/logo/main-logo.png" alt="Footer Logo" />
+                <img class="w-auto h-28" src="assets/images/logo/footer-logo.svg" alt="Footer Logo" />
               </a>
-              <p class="max-w-sm text-gray-500 dark:text-gray-400">Join 31,000+ other and never miss out on new tips, tutorials, and more.</p>
+              <p class="max-w-sm text-sm leading-6 text-gray-500 dark:text-gray-400">Join 31,000+ other and never miss out on new tips, tutorials, and more.</p>
             </div>
           </div>
           <div class="mt-6 lg:mt-0 lg:flex-1">
-            <div class="text-xs tracking-wider grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-              <div>
-                <h3 class="text-gray-700 uppercase dark:text-white">About</h3>
-                <a href="#" class="block mt-2 text-gray-600 dark:text-gray-400 hover:underline">Blog</a>
-                <a href="#" class="block mt-2 text-gray-600 dark:text-gray-400 hover:underline">Faq's</a>
-                <a href="#" class="block mt-2 text-gray-600 dark:text-gray-400 hover:underline">Privacy Policy</a>
-                <a href="#" class="block mt-2 text-gray-600 dark:text-gray-400 hover:underline">Terms & Condition</a>
-                <a href="#" class="block mt-2 text-gray-600 dark:text-gray-400 hover:underline">Costumer Reviews</a>
-                <a href="#" class="block mt-2 text-gray-600 dark:text-gray-400 hover:underline">HTML Sitemap</a>
+            <div class="text-sm tracking-wider grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
+              <div class="flex flex-col">
+                <h3 class="text-xl font-play text-gray-700 uppercase dark:text-white mb-5">About</h3>
+                <a href="#" class="block mt-2 hover:tracking-widest text-gray-600 dark:text-gray-400 hover:text-yellow-600 dark:hover:text-yellow-400">Blog</a>
+                <a href="#" class="block mt-2 hover:tracking-widest text-gray-600 dark:text-gray-400 hover:text-yellow-600 dark:hover:text-yellow-400">Faq's</a>
+                <a href="#" class="block mt-2 hover:tracking-widest text-gray-600 dark:text-gray-400 hover:text-yellow-600 dark:hover:text-yellow-400">Privacy Policy</a>
+                <a href="#" class="block mt-2 hover:tracking-widest text-gray-600 dark:text-gray-400 hover:text-yellow-600 dark:hover:text-yellow-400">Terms & Condition</a>
+                <a href="#" class="block mt-2 hover:tracking-widest text-gray-600 dark:text-gray-400 hover:text-yellow-600 dark:hover:text-yellow-400">Costumer Reviews</a>
+                <a href="#" class="block mt-2 hover:tracking-widest text-gray-600 dark:text-gray-400 hover:text-yellow-600 dark:hover:text-yellow-400">HTML Sitemap</a>
               </div>
-              <div>
-                <h3 class="text-gray-700 uppercase dark:text-white">Blog</h3>
-                <a href="#" class="block mt-2 text-gray-600 dark:text-gray-400 hover:underline">Tec</a>
-                <a href="#" class="block mt-2 text-gray-600 dark:text-gray-400 hover:underline">Music</a>
-                <a href="#" class="block mt-2 text-gray-600 dark:text-gray-400 hover:underline">Videos</a>
-              </div>
-              <div>
-                <h3 class="text-gray-700 uppercase dark:text-white">Products</h3>
-                <a href="#" class="block mt-2 text-gray-600 dark:text-gray-400 hover:underline">Mega cloud</a>
-                <a href="#" class="block mt-2 text-gray-600 dark:text-gray-400 hover:underline">Aperion UI</a>
-                <a href="#" class="block mt-2 text-gray-600 dark:text-gray-400 hover:underline">Meraki UI</a>
-              </div>
-              <div>
-                <h3 class="text-gray-700 uppercase dark:text-white">Contact</h3>
-                <span class="block mt-2 text-gray-600 dark:text-gray-400 hover:underline">+1 526 654 8965</span>
-                <span class="block mt-2 text-gray-600 dark:text-gray-400 hover:underline">example@email.com</span>
+              <div class="flex flex-col">
+                <h3 class="text-xl font-play text-gray-700 uppercase dark:text-white mb-5">Contact</h3>
+                <a href="#" class="block mt-2 hover:tracking-widest text-gray-600 dark:text-gray-400 hover:text-yellow-600 dark:hover:text-yellow-400">+1 526 654 8965</a>
+                <a href="#" class="block mt-2 hover:tracking-widest text-gray-600 dark:text-gray-400 hover:text-yellow-600 dark:hover:text-yellow-400">example@email.com</a>
               </div>
             </div>
           </div>
@@ -317,15 +412,15 @@
   <!-- Footer [E] -->
 
   <!-- Register Popup [S] -->
-  <div class="fixed inset-0 w-screen h-screen flex items-center justify-center z-50 dark hidden">
-    <span class="fixed inset-0 w-screen h-screen bg-black/40 z-30 backdrop-blur-sm"></span>
-    <div class="flex w-full max-w-sm mx-auto overflow-hidden rounded-lg shadow-md lg:max-w-4xl relative z-40 bg-gradient-to-r from-slate-900 to-slate-700">
-      <div class="hidden bg-cover bg-center lg:block lg:w-1/2 opacity-80" style="background-image: url('assets/images/slider/slide-4.jpg');"></div>
-      <div x-data="{ isHidden: true }" class="w-full px-6 py-8 md:px-8 lg:w-1/2 max-h-[calc(100vh-100px)] overflow-y-auto space-y-4">
+  <div id="LRPopup" class="fixed inset-0 w-screen h-screen flex items-center justify-center z-50 dark hidden">
+    <span onclick="addClass('#LRPopup', 'hidden')" class="fixed inset-0 w-screen h-screen bg-black/40 z-30 backdrop-blur-sm"></span>
+    <div class="flex w-full max-w-md mx-auto overflow-hidden rounded-lg shadow-md lg:max-w-4xl relative z-40 bg-gradient-to-br from-slate-950 via-black to-slate-950 backdrop-blur-sm">
+      <div class="hidden bg-cover bg-center lg:block lg:w-1/2 xl:w-5/12 opacity-80" style="background-image: url('assets/images/slider/slide-4.jpg');"></div>
+      <div class="w-full px-6 py-8 md:px-8 lg:w-1/2 xl:w-7/12 max-h-[calc(100vh-100px)] overflow-y-auto space-y-4">
         <div class="flex justify-center mx-auto">
-          <img class="w-auto h-20" src="assets/images/logo/main-logo.png" alt="Logo">
+          <img class="w-auto h-20" src="assets/images/logo/main-logo.svg" alt="Logo">
         </div>
-        <div class="text-xs tracking-wider space-y-5" x-show="isHidden">
+        <div id="SignIn" class="text-xs tracking-wider space-y-5">
           <p class="text-xl font-play text-center text-gray-600 dark:text-gray-200">Welcome back!</p>
           <!-- <a href="#" class="flex items-center justify-center text-gray-600 transition-colors duration-300 transform border rounded-lg dark:border-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600">
             <div class="px-4 py-2">
@@ -340,28 +435,28 @@
           </a>
           <div class="flex items-center justify-between">
             <span class="w-1/5 border-b dark:border-gray-600 lg:w-1/4"></span>
-            <a href="#" class="text-xs text-center text-gray-500 uppercase dark:text-gray-400 hover:underline">or login
+            <a href="#" class="text-xs text-center text-gray-500 uppercase dark:text-gray-400">or login
             with email</a>
             <span class="w-1/5 border-b dark:border-gray-400 lg:w-1/4"></span>
           </div> -->
           <div>
             <label class="block mb-1 text-gray-600 dark:text-gray-200">Email Address</label>
-            <input type="email" placeholder="Email Address" class="block w-full px-5 py-3 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-400 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+            <input type="email" placeholder="Email Address" class="block w-full px-5 py-3 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-400 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-700 focus:border-yellow-400 dark:focus:border-yellow-400 focus:ring-yellow-400 focus:outline-none focus:ring focus:ring-opacity-40" />
           </div>
           <div>
             <label class="block mb-1 text-gray-600 dark:text-gray-200">Password</label>
-            <input type="password" placeholder="Password" class="block w-full px-5 py-3 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-400 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+            <input type="password" placeholder="Password" class="block w-full px-5 py-3 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-400 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-700 focus:border-yellow-400 dark:focus:border-yellow-400 focus:ring-yellow-400 focus:outline-none focus:ring focus:ring-opacity-40" />
           </div>
           <div class="pt-4">
             <button class="btn btn-light w-full py-3 text-xs font-bold">Sign In</button>
           </div>
           <div class="flex items-center justify-between">
             <span class="w-1/5 border-b dark:border-gray-600 md:w-1/4"></span>
-            <span x-cloak @click="isHidden = !isHidden" class="cursor-pointer text-xs text-gray-500 uppercase dark:text-gray-400 hover:underline">or sign up</span>
+            <span onclick="addClass('#SignIn', 'hidden');removeClass('#SignUp', 'hidden')" class="cursor-pointer text-xs text-gray-500 uppercase dark:text-gray-400">or sign up</span>
             <span class="w-1/5 border-b dark:border-gray-600 md:w-1/4"></span>
           </div>
         </div>
-        <div class="space-y-5" x-show="!isHidden">
+        <div id="SignUp" class="space-y-5 hidden">
           <p class="text-xl font-play text-center text-gray-600 dark:text-gray-200">
             Get Your Free Account Now.
           </p>
@@ -369,28 +464,28 @@
             <div class="grid grid-cols-2 gap-4">
               <div>
                 <label class="block mb-1 text-gray-600 dark:text-gray-200">First Name</label>
-                <input type="text" placeholder="John" class="block w-full px-5 py-3 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-400 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                <input type="text" placeholder="John" class="block w-full px-5 py-3 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-400 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-700 focus:border-yellow-400 dark:focus:border-yellow-400 focus:ring-yellow-400 focus:outline-none focus:ring focus:ring-opacity-40" />
               </div>
               <div>
                 <label class="block mb-1 text-gray-600 dark:text-gray-200">Last name</label>
-                <input type="text" placeholder="Snow" class="block w-full px-5 py-3 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-400 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                <input type="text" placeholder="Snow" class="block w-full px-5 py-3 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-400 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-700 focus:border-yellow-400 dark:focus:border-yellow-400 focus:ring-yellow-400 focus:outline-none focus:ring focus:ring-opacity-40" />
               </div>
-            </div>
-            <div>
-              <label class="block mb-1 text-gray-600 dark:text-gray-200">Phone number</label>
-              <input type="text" placeholder="XXX-XX-XXXX-XXX" class="block w-full px-5 py-3 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-400 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
-            </div>
-            <div>
-              <label class="block mb-1 text-gray-600 dark:text-gray-200">Email address</label>
-              <input type="email" placeholder="johnsnow@example.com" class="block w-full px-5 py-3 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-400 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
-            </div>
-            <div>
-              <label class="block mb-1 text-gray-600 dark:text-gray-200">Password</label>
-              <input type="password" placeholder="Enter your password" class="block w-full px-5 py-3 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-400 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
-            </div>
-            <div>
-              <label class="block mb-1 text-gray-600 dark:text-gray-200">Confirm password</label>
-              <input type="password" placeholder="Enter your password" class="block w-full px-5 py-3 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-400 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+              <div>
+                <label class="block mb-1 text-gray-600 dark:text-gray-200">Phone number</label>
+                <input type="text" placeholder="XXX-XX-XXXX-XXX" class="block w-full px-5 py-3 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-400 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-700 focus:border-yellow-400 dark:focus:border-yellow-400 focus:ring-yellow-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+              </div>
+              <div>
+                <label class="block mb-1 text-gray-600 dark:text-gray-200">Email address</label>
+                <input type="email" placeholder="johnsnow@example.com" class="block w-full px-5 py-3 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-400 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-700 focus:border-yellow-400 dark:focus:border-yellow-400 focus:ring-yellow-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+              </div>
+              <div>
+                <label class="block mb-1 text-gray-600 dark:text-gray-200">Password</label>
+                <input type="password" placeholder="Enter your password" class="block w-full px-5 py-3 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-400 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-700 focus:border-yellow-400 dark:focus:border-yellow-400 focus:ring-yellow-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+              </div>
+              <div>
+                <label class="block mb-1 text-gray-600 dark:text-gray-200">Confirm password</label>
+                <input type="password" placeholder="Enter your password" class="block w-full px-5 py-3 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-400 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-700 focus:border-yellow-400 dark:focus:border-yellow-400 focus:ring-yellow-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+              </div>
             </div>
             <div class="pt-4">
               <button class="btn btn-light w-full py-3 text-xs font-bold">Sign Up</button>
@@ -398,7 +493,7 @@
           </form>
           <div class="flex items-center justify-between">
             <span class="w-1/5 border-b dark:border-gray-600 md:w-1/4"></span>
-            <span x-cloak @click="isHidden = !isHidden" class="cursor-pointer text-xs text-gray-500 uppercase dark:text-gray-400 hover:underline">or sign in</span>
+            <span onclick="addClass('#SignUp', 'hidden');removeClass('#SignIn', 'hidden')" class="cursor-pointer text-xs text-gray-500 uppercase dark:text-gray-400">or sign in</span>
             <span class="w-1/5 border-b dark:border-gray-600 md:w-1/4"></span>
           </div>
         </div>
@@ -407,7 +502,112 @@
   </div>
   <!-- Register Popup [E] -->
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine-ie11.min.js" integrity="sha512-Atu8sttM7mNNMon28+GHxLdz4Xo2APm1WVHwiLW9gW4bmHpHc/E2IbXrj98SmefTmbqbUTOztKl5PDPiu0LD/A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <div id="cartDrawer" class="cart-drawer hidden flex-col justify-between tracking-widest w-full">
+    <div class="d-head">
+      <div class="flex items-center justify-between py-2.5 px-5">
+        <p class="mb-0 text-base font-play font-semibold tracking-wider">YOUR CART</p>
+        <svg onclick="removeClass('body', 'open-drawer');" class="w-6 h-6 cursor-pointer hover:opacity-75" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </div>
+      <div class="bg-gray-100 offer-bar p-2.5 text-xs tracking-wider text-center">ADD $15.50 TO GET FREE SHIPPING IN THE US</div>
+    </div>
+    <div class="d-body">
+      <div class="cart-list">
+        <div class="cart-item py-3.5 px-5 border-b border-gray-200">
+          <div class="media flex items-center">
+            <img src="assets/images/products/0601-W1.jpg" alt="" class="w-16 h-16 object-cover shadow mr-3.5" />
+            <div class="media-body">
+              <div class="flex justify-between">
+                <div class="prod">
+                  <h6 class="mb-1"><a href="#" class="text-xs font-play hover:underline">LIQUID GLASS LACQUER</a></h6>
+                  <div class="qty-sec flex mr-2.5 lg:mr-3.5">
+                    <button type="button" class="dec-btn minus"><span>–</span></button>
+                    <input type="text" value="1" readonly="readonly" class="product-quantity text-center">        
+                    <button type="button" class="inc-btn plus"><span>+</span></button>
+                  </div>
+                </div>
+                <div class="price-act text-right">
+                  <h6 class="mb-0 text-base font-play font-bold">$15.50</h6>
+                  <a href="#" class="remove text-xs text-gray-900 hover:text-black">(REMOVE)</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cart-item py-3.5 px-5 border-b border-gray-200">
+          <div class="media flex items-center">
+            <img src="assets/images/products/0601-W1.jpg" alt="" class="w-16 h-16 object-cover shadow mr-3.5" />
+            <div class="media-body">
+              <div class="flex justify-between">
+                <div class="prod">
+                  <h6 class="mb-1"><a href="#" class="text-xs font-play hover:underline">LIQUID GLASS LACQUER</a></h6>
+                  <div class="qty-sec flex mr-2.5 lg:mr-3.5">
+                    <button type="button" class="dec-btn minus"><span>–</span></button>
+                    <input type="text" value="1" readonly="readonly" class="product-quantity text-center">        
+                    <button type="button" class="inc-btn plus"><span>+</span></button>
+                  </div>
+                </div>
+                <div class="price-act text-right">
+                  <h6 class="mb-0 text-base font-play font-bold">$15.50</h6>
+                  <a href="#" class="remove text-xs text-gray-900 hover:text-black">(REMOVE)</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="foot">
+      <div class="cart-summary pb-3.5">
+        <div class="summ-blk px-5">
+          <div class="border rounded-md mb-5 p-2.5">
+            <div class="flex items-center justify-between">
+              <div class="media flex items-center">
+                <svg class="mr-5" xmlns="http://www.w3.org/2000/svg" width="28" height="26" viewBox="0 0 28 26">
+                  <g id="Group_932" data-name="Group 932" transform="translate(-963.965 -537)">
+                    <path id="Union_56" data-name="Union 56" d="M18467.207-3691.882s-4.441-3.563-3.809-8.586l1.178-2.377s-1.687,4.239,3.535,9.636c5.137,4.188,9.1,2.856,9.1,2.856l-2.23,1.3a5.08,5.08,0,0,1-.588.027A11.107,11.107,0,0,1,18467.207-3691.882Zm1.186-2.573c-3.371-3.518-4.377-7.925-2.262-9.85s6.578-.634,9.943,2.879,4.383,7.921,2.264,9.846a3.755,3.755,0,0,1-2.588.894C18473.523-3690.687,18470.705-3692.051,18468.393-3694.456Zm14.16-8.358-1.678-.981s2.984,1.008,6.859-2.163c3.941-4.083,2.67-7.291,2.67-7.291l.885,1.8c.479,3.8-2.873,6.5-2.873,6.5a8.362,8.362,0,0,1-5.416,2.153C18482.715-3702.8,18482.553-3702.814,18482.553-3702.814Zm-2.527-1.907c-1.6-1.46-.838-4.8,1.705-7.455s5.895-3.636,7.494-2.177.842,4.791-1.7,7.45a8.364,8.364,0,0,1-5.549,2.856A2.838,2.838,0,0,1,18480.025-3704.721Z" transform="translate(-17499.371 4252.03)"/>
+                    <rect id="Rectangle_350" data-name="Rectangle 350" width="28" height="26" transform="translate(963.965 537)" fill="none"/>
+                  </g>
+                </svg>
+                <div class="media-body">
+                  <p class="mb-0 text-base font-bold font-play tracking-wider">YOU HAVE</p>
+                  <h6 class="mb-0 text-xs tracking-wider">1000 REWARD POINTS</h6>
+                </div>
+              </div>
+              <a href="#" class="btn btn-dark ml-5">USE</a>
+            </div>
+          </div>
+          <div class="flex justify-between mb-5">
+            <div class="lbl text-uppercase text-xs tracking-wider font-play font-bold">Sub Total</div>
+            <div class="amount cart_total text-xs tracking-wider font-play font-bold">$450.00</div>
+          </div>
+          <div class="flex justify-between mb-5">
+            <div class="lbl text-uppercase text-xs tracking-wider font-play font-bold">Total</div>
+            <div class="amount cart_total text-xs tracking-wider font-play font-bold">$450.00</div>
+          </div>
+        </div>
+        <div class="summ-blk pt-2.5 px-5">
+          <div class="text-center">
+            <button class="btn btn-dark w-full text-base" type="buttom" name="checkout">CHECKOUT</button>
+          </div>
+          <div class="text-center mt-3.5">
+            <a href="#" class="continue text-sm font-play font-bold tracking-wider">CONTINUE SHOPPING</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <a href="#" 
+  class="fixed bottom-5 right-5 z-30 drop-shadow-sm w-12 h-12 bg-green-500 text-white flex items-center justify-center rounded-full hover:scale-110 transition-all duration-300 active:scale-75">
+    <svg class="w-7 h-7 fill-current" fill="fill-current" height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 308 308" xml:space="preserve"> <g id="XMLID_468_"> <path id="XMLID_469_" d="M227.904,176.981c-0.6-0.288-23.054-11.345-27.044-12.781c-1.629-0.585-3.374-1.156-5.23-1.156 c-3.032,0-5.579,1.511-7.563,4.479c-2.243,3.334-9.033,11.271-11.131,13.642c-0.274,0.313-0.648,0.687-0.872,0.687 c-0.201,0-3.676-1.431-4.728-1.888c-24.087-10.463-42.37-35.624-44.877-39.867c-0.358-0.61-0.373-0.887-0.376-0.887 c0.088-0.323,0.898-1.135,1.316-1.554c1.223-1.21,2.548-2.805,3.83-4.348c0.607-0.731,1.215-1.463,1.812-2.153 c1.86-2.164,2.688-3.844,3.648-5.79l0.503-1.011c2.344-4.657,0.342-8.587-0.305-9.856c-0.531-1.062-10.012-23.944-11.02-26.348 c-2.424-5.801-5.627-8.502-10.078-8.502c-0.413,0,0,0-1.732,0.073c-2.109,0.089-13.594,1.601-18.672,4.802 c-5.385,3.395-14.495,14.217-14.495,33.249c0,17.129,10.87,33.302,15.537,39.453c0.116,0.155,0.329,0.47,0.638,0.922 c17.873,26.102,40.154,45.446,62.741,54.469c21.745,8.686,32.042,9.69,37.896,9.69c0.001,0,0.001,0,0.001,0 c2.46,0,4.429-0.193,6.166-0.364l1.102-0.105c7.512-0.666,24.02-9.22,27.775-19.655c2.958-8.219,3.738-17.199,1.77-20.458 C233.168,179.508,230.845,178.393,227.904,176.981z"/> <path id="XMLID_470_" d="M156.734,0C73.318,0,5.454,67.354,5.454,150.143c0,26.777,7.166,52.988,20.741,75.928L0.212,302.716 c-0.484,1.429-0.124,3.009,0.933,4.085C1.908,307.58,2.943,308,4,308c0.405,0,0.813-0.061,1.211-0.188l79.92-25.396 c21.87,11.685,46.588,17.853,71.604,17.853C240.143,300.27,308,232.923,308,150.143C308,67.354,240.143,0,156.734,0z M156.734,268.994c-23.539,0-46.338-6.797-65.936-19.657c-0.659-0.433-1.424-0.655-2.194-0.655c-0.407,0-0.815,0.062-1.212,0.188 l-40.035,12.726l12.924-38.129c0.418-1.234,0.209-2.595-0.561-3.647c-14.924-20.392-22.813-44.485-22.813-69.677 c0-65.543,53.754-118.867,119.826-118.867c66.064,0,119.812,53.324,119.812,118.867 C276.546,215.678,222.799,268.994,156.734,268.994z"/> </g> </svg>
+  </a>
+
+  <!-- Jquery Plugin -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/script.js"></script>
 
 </body>
 
