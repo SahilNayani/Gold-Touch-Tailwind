@@ -4,6 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="shortcut icon" href="assets/images/logo/icon-light.svg" type="image/x-icon">
   <title>GoldTouch</title>
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
@@ -11,126 +13,190 @@
 <body>
 
   <!-- Header [S] -->
-  <header class="sticky top-0 left-0 right-0 z-50">
-    <nav x-data="{ isOpen: false }" class="shadow dark bg-gradient-to-r from-slate-950 via-black/50 to-slate-950 backdrop-blur-sm">
-      <div class="container px-6 py-3 mx-auto">
-        <div class="flex flex-col md:flex-row md:justify-between md:items-center">
-          <div class="flex items-center justify-between">
-            <div class="flex items-center">
-              <a href="#">
-                <img class="w-auto h-16 sm:h-20 sharp" src="assets/images/logo/main-logo.svg" alt="GoldTouch Logo" />
-                <!-- <img class="w-auto h-16 sm:h-14" src="assets/images/logo/logo-1.png" alt="GoldTouch Logo" /> -->
-                <!-- <img class="w-auto h-16 sm:h-14" src="assets/images/logo/Untitled-2.png" alt="GoldTouch Logo" /> -->
-                <!-- <img class="w-auto h-16 sm:h-14" src="assets/images/logo/logo.png" alt="GoldTouch Logo" /> -->
-              </a>
-            </div>
-  
-            <!-- Mobile menu button -->
-            <div class="flex lg:hidden">
-              <button x-cloak @click="isOpen = !isOpen" type="button" class="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400" aria-label="toggle menu">
-                <svg x-show="!isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
-                </svg>
-        
-                <svg x-show="isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-            </div>
+  <header class="header nav-down">
+    <div class="text-center font-play text-sm py-2 bg-white/30 backdrop-blur-md">
+      <p class="w-full px-3.5"><b>FREE SHIPPING</b> ON USA ORDERS OVER $65</p>
+    </div>
+    <nav class="shadow dark bg-gradient-to-r from-slate-950 via-black lg:via-black/75 to-slate-950 lg:to-slate-950 backdrop-blur-sm">
+      <div class="max-w-screen-2xl px-6 xl:px-10 mx-auto relative">
+        <div id="mobiMenu" class="flex flex-row justify-between items-center">
+          <div class="flex items-center py-2">
+            <a href="#">
+              <img class="w-auto h-16 lg:h-20 sharp" src="assets/images/logo/main-logo.svg" alt="GoldTouch Logo" />
+            </a>
           </div>
-  
           <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
-          <div x-cloak :class="[isOpen ? 'translate-x-0 opacity-100 ' : 'opacity-0 -translate-x-full']" class="absolute inset-x-0 z-20 w-full px-6 py-2 transition-all duration-300 ease-in-out top-24 md:mt-0 md:p-0 md:top-0 md:relative md:bg-transparent md:w-auto md:opacity-100 md:translate-x-0 md:flex md:flex-col md:items-end space-y-6 bg-gradient-to-r from-slate-900 to-slate-700 lg:bg-transparent lg:bg-none">
-            <div class="flex items-center mt-3 lg:mt-0 ml-7 space-x-4">
-              <!-- <button class="hidden text-gray-600 transition-colors duration-300 transform lg:block dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-400 focus:text-gray-700 dark:focus:text-gray-400 focus:outline-none" aria-label="show notifications">
+          <div class="">
+            <div class="flex items-center justify-end ml-auto lg:ml-7 space-x-4 lg:pt-3">
+              <button class="hidden text-gray-600 transition-colors duration-300 transform lg:block dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-400 focus:text-gray-700 dark:focus:text-gray-400 focus:outline-none" aria-label="show notifications">
                 <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M15 17H20L18.5951 15.5951C18.2141 15.2141 18 14.6973 18 14.1585V11C18 8.38757 16.3304 6.16509 14 5.34142V5C14 3.89543 13.1046 3 12 3C10.8954 3 10 3.89543 10 5V5.34142C7.66962 6.16509 6 8.38757 6 11V14.1585C6 14.6973 5.78595 15.2141 5.40493 15.5951L4 17H9M15 17V18C15 19.6569 13.6569 21 12 21C10.3431 21 9 19.6569 9 18V17M15 17H9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-              </button> -->
+              </button>
               <a class="relative text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-300" href="#">
                 <svg class="w-5 h-5" width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.62 20.81C12.28 20.93 11.72 20.93 11.38 20.81C8.48 19.82 2 15.69 2 8.68998C2 5.59998 4.49 3.09998 7.56 3.09998C9.38 3.09998 10.99 3.97998 12 5.33998C13.01 3.97998 14.63 3.09998 16.44 3.09998C19.51 3.09998 22 5.59998 22 8.68998C22 15.69 15.52 19.82 12.62 20.81Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 <svg class="w-5 h-5 text-red-600 hidden" width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.44 3.10156C14.63 3.10156 13.01 3.98156 12 5.33156C10.99 3.98156 9.37 3.10156 7.56 3.10156C4.49 3.10156 2 5.60156 2 8.69156C2 9.88156 2.19 10.9816 2.52 12.0016C4.1 17.0016 8.97 19.9916 11.38 20.8116C11.72 20.9316 12.28 20.9316 12.62 20.8116C15.03 19.9916 19.9 17.0016 21.48 12.0016C21.81 10.9816 22 9.88156 22 8.69156C22 5.60156 19.51 3.10156 16.44 3.10156Z" fill="currentColor"/></svg>
               </a>
-              <a class="relative text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-300" href="#">
+              <a onclick="addClass('body', 'open-drawer');" class="relative text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-300" href="#">
                 <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 3H5L5.4 5M7 13H17L21 5H5.4M7 13L5.4 5M7 13L4.70711 15.2929C4.07714 15.9229 4.52331 17 5.41421 17H17M17 17C15.8954 17 15 17.8954 15 19C15 20.1046 15.8954 21 17 21C18.1046 21 19 20.1046 19 19C19 17.8954 18.1046 17 17 17ZM9 19C9 20.1046 8.10457 21 7 21C5.89543 21 5 20.1046 5 19C5 17.8954 5.89543 17 7 17C8.10457 17 9 17.8954 9 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-                <span class="absolute top-0 left-0 p-1 text-xs text-white bg-blue-900 rounded-full"></span>
+                <span class="absolute top-0 left-0 p-1 text-xs text-white bg-yellow-400 rounded-full"></span>
               </a>
-              <div x-data="{ isOpen: false }" class="relative inline-block">
-                <!-- Dropdown toggle button -->
-                <button @click="isOpen = !isOpen" type="button" class="flex items-center focus:outline-none" aria-label="toggle profile dropdown">
+              <div class="inline-block dropDown relative">
+                <!-- <a href="#" class="px-3 py-3 block text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-yellow-600 dark:hover:text-yellow-400">Pendents</a> -->
+                <button type="button" class="flex items-center focus:outline-none" aria-label="toggle profile dropdown">
+                  <span class="mx-2 text-sm capitalize font-play tracking-wider text-gray-700 dark:text-gray-200 hidden lg:block">Khatab wedaa</span>
                   <div class="w-8 h-8 overflow-hidden border-2 border-gray-400 rounded-full">
                     <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80" class="object-cover w-full h-full" alt="avatar">
                   </div>
-                  <h3 class="mx-2 text-gray-700 dark:text-gray-200 lg:hidden">Khatab wedaa</h3>
                 </button>
-            
-                <!-- Dropdown menu -->
-                <div x-show="isOpen" 
-                  @click.away="isOpen = false"
-                  x-transition:enter="transition ease-out duration-100"
-                  x-transition:enter-start="opacity-0 scale-90"
-                  x-transition:enter-end="opacity-100 scale-100"
-                  x-transition:leave="transition ease-in duration-100"
-                  x-transition:leave-start="opacity-100 scale-100"
-                  x-transition:leave-end="opacity-0 scale-90" 
-                  class="absolute right-0 z-20 w-48 py-2 mt-2 origin-top-right rounded-md shadow-xl bg-gradient-to-r from-slate-950/85 via-black/95 to-slate-950/95 backdrop-blur-sm"
-                >
-                  <a href="#" class="block px-4 py-3 text-sm capitalize transition-colors duration-300 transform text-gray-300 hover:bg-gray-700 hover:text-white"> your profile </a>
-                  <a href="#" class="block px-4 py-3 text-sm capitalize transition-colors duration-300 transform text-gray-300 hover:bg-gray-700 hover:text-white"> Your projects </a>
-                  <a href="#" class="block px-4 py-3 text-sm capitalize transition-colors duration-300 transform text-gray-300 hover:bg-gray-700 hover:text-white"> Help </a>
-                  <a href="#" class="block px-4 py-3 text-sm capitalize transition-colors duration-300 transform text-gray-300 hover:bg-gray-700 hover:text-white"> Settings </a>
-                  <a href="#" class="block px-4 py-3 text-sm capitalize transition-colors duration-300 transform text-gray-300 hover:bg-gray-700 hover:text-white"> Sign Out </a>
+                <div class="megaDropDown absolute top-full right-0 w-44 py-2 bg-white shadow-xl dark:bg-slate-950/75 backdrop-blur-lg hidden z-40">
+                  <div class="flex flex-wrap items-start">
+                    <div class="w-full p-2 grid grid-cols-1 gap-2 text-sm text-gray-600 capitalize transition-colors duration-300 transform dark:text-gray-300">
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">your profile</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Your projects</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Help</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Settings</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Sign Out</a>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <button class="btn btn-light">Sign In</button>
+              <button onclick="removeClass('#LRPopup', 'hidden')" class="btn btn-light">Sign In</button>
+              <!-- Mobile menu button -->
+              <div class="flex lg:hidden">
+                <button type="button" class="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400" aria-label="toggle menu">
+                  <svg onclick="addClass('#mobiMenu', 'openMenu');removeClass('header', 'header');" class="ham w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
+                  </svg>
+                  <svg onclick="removeClass('#mobiMenu', 'openMenu');addClass('header', 'header');" class="hamClose w-6 h-6 hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
             </div>
-            <div class="flex flex-col md:flex-row lg:space-x-8">
-              <div x-data="{ isOpen: false }" class="relative inline-block">
-                <!-- Dropdown toggle button -->
-                <div class="flex items-center justify-between space-x-3 my-1 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0">
-                  <a href="#">Home</a>
-                  <svg @click="isOpen = !isOpen" class="w-5 h-5 text-gray-800 dark:text-white cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
-                </div>
-            
-                <!-- Dropdown menu -->
-                <div x-show="isOpen" 
-                  @click.away="isOpen = false"
-                  x-transition:enter="transition ease-out duration-100"
-                  x-transition:enter-start="opacity-0 scale-90"
-                  x-transition:enter-end="opacity-100 scale-100"
-                  x-transition:leave="transition ease-in duration-100"
-                  x-transition:leave-start="opacity-100 scale-100"
-                  x-transition:leave-end="opacity-0 scale-90" 
-                  class="absolute right-0 z-20 w-48 py-2 mt-2 origin-top-right bg-white rounded-md shadow-xl dark:bg-gray-800"
-                >
-                  <a href="#" class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"> your profile </a>
-                  <a href="#" class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"> Your projects </a>
-                  <a href="#" class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"> Help </a>
-                  <a href="#" class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"> Settings </a>
-                  <a href="#" class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"> Sign Out </a>
+            <div class="mainMenu absolute inset-x-0 z-20 w-full px-6 py-2 transition-all duration-300 ease-in-out top-20 lg:mt-1 lg:p-0 lg:top-0 lg:static lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:flex-row lg:items-end bg-gradient-to-r from-slate-950 to-slate-800 lg:bg-transparent lg:bg-none hidden flex-col">
+              <div class="inline-block dropDown">
+                <a href="#" class="px-3 py-3 block text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200">Ring</a>
+                <div class="megaDropDown lg:absolute top-full right-0 w-full py-2 bg-white shadow-xl dark:bg-slate-950/75 backdrop-blur-lg hidden z-20">
+                  <div class="flex flex-wrap items-start">
+                    <div class="w-full lg:w-1/2 p-2 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-2 text-sm text-gray-600 capitalize transition-colors duration-300 transform dark:text-gray-300">
+                      <a href="#" class="block px-4 py-1 text-base font-play font-semibold uppercase text-white dark:hover:text-white col-span-full">Shop By Style</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Solitaire</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Accents</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">3 stone</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Halo</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Double Halo</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Hidden Accents</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Nature Inspired</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Vintage Inspired</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">2 Prong</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">4 Prong</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">5 Prong</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">6 Prong</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">8 Prong</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Wedding</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Anniversary Band</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Engagement Rings</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Delicate Rings</a>
+                    </div>
+                    <div class="w-full lg:w-1/2 p-2 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-1 gap-2 text-sm text-gray-600 capitalize transition-colors duration-300 transform dark:text-gray-300">
+                      <a href="#" class="block px-4 py-1 text-base font-play font-semibold uppercase text-white dark:hover:text-white col-span-full">Shop By Shape</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Emerald</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Princess</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Cushion</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Pears</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Round</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Oval</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Trillion</a>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <a class="flex items-center justify-between space-x-3 my-2 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0" href="#">Home</a>
-              <a class="flex items-center justify-between space-x-3 my-2 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0" href="#">Ring</a>
-              <a class="flex items-center justify-between space-x-3 my-2 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0" href="#">Pendents</a>
-              <a class="flex items-center justify-between space-x-3 my-2 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0" href="#">Bracelets</a>
-              <a class="flex items-center justify-between space-x-3 my-2 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0" href="#">Earring</a>
-              <a class="flex items-center justify-between space-x-3 my-2 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0" href="#">Necklace</a>
-              <a class="flex items-center justify-between space-x-3 my-2 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0" href="#">Diamond Shapes</a>
-              <a class="flex items-center justify-between space-x-3 my-2 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0" href="#">Gift</a>
-              <a class="flex items-center justify-between space-x-3 my-2 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0" href="#">About Us</a>
-              <a class="flex items-center justify-between space-x-3 my-2 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0" href="#">Contact Us</a>
-              
+              <div class="inline-block dropDown">
+                <a href="#" class="px-3 py-3 block text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200">Pendents</a>
+                <div class="megaDropDown lg:absolute top-full w-full lg:w-52 py-2 bg-white shadow-xl dark:bg-slate-950/75 backdrop-blur-lg hidden z-20">
+                  <div class="flex flex-wrap items-start">
+                    <div class="w-full p-2 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-1 gap-2 text-sm text-gray-600 capitalize transition-colors duration-300 transform dark:text-gray-300">
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Charm Pendants</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Solitaire Pendants</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="inline-block dropDown">
+                <a href="#" class="px-3 py-3 block text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200">Bracelets</a>
+                <div class="megaDropDown lg:absolute top-full w-full lg:w-52 py-2 bg-white shadow-xl dark:bg-slate-950/75 backdrop-blur-lg hidden z-20">
+                  <div class="flex flex-wrap items-start">
+                    <div class="w-full p-2 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-1 gap-2 text-sm text-gray-600 capitalize transition-colors duration-300 transform dark:text-gray-300">
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Tennis Bracelets</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a class="px-3 py-3 block text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200" href="#">Earring</a>
+              <div class="inline-block dropDown">
+                <a href="#" class="px-3 py-3 block text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200">Necklace</a>
+                <div class="megaDropDown lg:absolute top-full w-full lg:w-52 py-2 bg-white shadow-xl dark:bg-slate-950/75 backdrop-blur-lg hidden z-20">
+                  <div class="flex flex-wrap items-start">
+                    <div class="w-full p-2 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-1 gap-2 text-sm text-gray-600 capitalize transition-colors duration-300 transform dark:text-gray-300">
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Charm Necklace</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Solitaire Necklace</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="inline-block dropDown">
+                <a href="#" class="px-3 py-3 block text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200">Diamond Shapes</a>
+                <div class="megaDropDown lg:absolute top-full w-full lg:w-52 py-2 bg-white shadow-xl dark:bg-slate-950/75 backdrop-blur-lg hidden z-20">
+                  <div class="flex flex-wrap items-start">
+                    <div class="w-full p-2 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-1 gap-2 text-sm text-gray-600 capitalize transition-colors duration-300 transform dark:text-gray-300">
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Round</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Princess</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Cushion</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Oval</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Emerald</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Pear</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Asscher</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Heart</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Radiant</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Marquise</a>
+                    </div>
+                  </div>
+                </div>
+              </div>              
+              <div class="inline-block dropDown">
+                <a href="#" class="px-3 py-3 block text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200">Gift</a>
+                <div class="megaDropDown lg:absolute top-full right-0 w-full py-2 bg-white shadow-xl dark:bg-slate-950/75 backdrop-blur-lg hidden z-20">
+                  <div class="flex flex-wrap items-start">
+                    <div class="w-full lg:w-1/2 p-2 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-2 text-sm text-gray-600 capitalize transition-colors duration-300 transform dark:text-gray-300">
+                      <a href="#" class="block px-4 py-1 text-base font-play font-semibold uppercase text-white dark:hover:text-white col-span-full">TOP GIFT IDEAS</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Earrings</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Necklaces</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Bracelets</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Diamond Jewelry</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Gemstone Jewelry</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Pearl Jewelry</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Gifts For Her</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Gifts For Him</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Gifts Under $500</a>
+                    </div>
+                    <div class="w-full lg:w-1/2 p-2 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-1 gap-2 text-sm text-gray-600 capitalize transition-colors duration-300 transform dark:text-gray-300">
+                      <a href="#" class="block px-4 py-1 text-base font-play font-semibold uppercase text-white dark:hover:text-white col-span-full">GIFTS BY OCCASION</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Anniversary</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Graduation</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Engravable</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Wedding Party Gifts</a>
+                      <a href="#" class="block px-4 hover:tracking-wider dark:hover:text-white">Bridal Jewelry</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a class="px-3 py-3 block text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200" href="#">About Us</a>
+              <a class="px-3 py-3 block text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200" href="#">Contact Us</a>                
             </div>
           </div>
-        </div>
-  
-        <div class="py-3 mt-2 -mx-3 overflow-y-auto whitespace-nowrap scroll-hidden hidden">
-          <a class="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0" href="#">News</a>
-          <a class="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0" href="#">Articles</a>
-          <a class="mx-4 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:my-0" href="#">Videos</a>
         </div>
       </div>
     </nav>
@@ -138,143 +204,270 @@
   <!-- Header [E] -->
 
   <!-- Product Section [S] -->
-  <section class="bg-white dark:bg-gray-900">
-    <div class="container px-6 py-12 xl:py-24 mx-auto">
-      <div class="flex flex-wrap items-start">
-        <div class="w-full md:w-1/2 flex flex-wrap px-3">
-          <div class="sm:w-1/5 flex sm:flex-col justify-between sm:px-3 -mx-3 mt-3 sm:mx-0 sm:mt-0">
-            <div class="w-1/2 sm:w-full flex items-center justify-center max-h-24 px-3 sm:px-0 rounded-xl"><img src="assets/images/products/DOC-PD-15003-R4.jpg" alt="" class="w-full h-full"></div>
-            <div class="w-1/2 sm:w-full flex items-center justify-center max-h-24 px-3 sm:px-0 rounded-xl"><img src="assets/images/products/DOC-PD-15003-R4.jpg" alt="" class="w-full h-full"></div>
-            <div class="w-1/2 sm:w-full flex items-center justify-center max-h-24 px-3 sm:px-0 rounded-xl"><img src="assets/images/products/DOC-PD-15003-R4.jpg" alt="" class="w-full h-full"></div>
-            <div class="w-1/2 sm:w-full flex items-center justify-center max-h-24 px-3 sm:px-0 rounded-xl"><img src="assets/images/products/DOC-PD-15003-R4.jpg" alt="" class="w-full h-full"></div>
+  <section class="prod-wrp pt-5 md:pt-6 pb-10 md:pb-16">
+    <div class="container">
+      <nav aria-label="breadcrumb" class="uppercase mb-6 hidden md:block font-play">
+        <ol class="breadcrumb flex flex-wrap space-x-3 text-xs">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li>&gt;</li>
+          <li class="breadcrumb-item"><a href="#">GLASS LACQUER</a></li>
+          <li>&gt;</li>
+          <li class="breadcrumb-item active" aria-current="page">SUMMER STAPLES PALLETE</li>
+        </ol>
+      </nav>
+      <div class="flex flex-wrap">
+        <div class="w-full md:w-7/12 lg:pr-7 xl:pr-12">
+          <div class="md:hidden mb-5 text-center">
+            <h5 class="prod-name mb-1 text-base lg:text-lg xl:text-xl font-play tracking-wider">FETISH COFFIN</h5>
+            <h6 class="prod-type mb-1 md:mb-2.5 font-body text-xs md:text-sm lg:text-15 tracking-wider">POP ON NAILS</h6>
+            <div class="price flex flex-wrap justify-center md:justify-start items-center mb-2.5">
+              <h6 class="mb-0 inline-block text-sm lg:text-base xl:text-lg font-play font-bold tracking-wider">$18.99</h6>
+              <div class="review-star star-5 inline-flex items-center space-x-2.5 ml-5 lg:ml-10">
+                <span class="star flex space-x-1.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="19.477" height="19.477" viewBox="0 0 19.477 19.477">
+                    <path id="Path_5" data-name="Path 5" d="M12.338,7.58,9.725,0,7.038,7.519,0,7.58l5.786,4.8-2.08,7.093L9.725,15.17l6.018,4.306-2.08-7.047,5.814-4.85Z"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="19.477" height="19.477" viewBox="0 0 19.477 19.477">
+                    <path id="Path_5" data-name="Path 5" d="M12.338,7.58,9.725,0,7.038,7.519,0,7.58l5.786,4.8-2.08,7.093L9.725,15.17l6.018,4.306-2.08-7.047,5.814-4.85Z"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="19.477" height="19.477" viewBox="0 0 19.477 19.477">
+                    <path id="Path_5" data-name="Path 5" d="M12.338,7.58,9.725,0,7.038,7.519,0,7.58l5.786,4.8-2.08,7.093L9.725,15.17l6.018,4.306-2.08-7.047,5.814-4.85Z"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="19.477" height="19.477" viewBox="0 0 19.477 19.477">
+                    <path id="Path_5" data-name="Path 5" d="M12.338,7.58,9.725,0,7.038,7.519,0,7.58l5.786,4.8-2.08,7.093L9.725,15.17l6.018,4.306-2.08-7.047,5.814-4.85Z"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="19.477" height="19.477" viewBox="0 0 19.477 19.477">
+                    <path id="Path_5" data-name="Path 5" d="M12.338,7.58,9.725,0,7.038,7.519,0,7.58l5.786,4.8-2.08,7.093L9.725,15.17l6.018,4.306-2.08-7.047,5.814-4.85Z"/>
+                  </svg>
+                </span>
+                <span class="txt text-xs md:text-sm">724 Reviews</span>
+              </div>
+              <span class="afterpay block text-8 md:text-sm lg:text-sm tracking-wider w-full mt-2.5">OR 4 PAYMENTS OF <img src="/afterpay@2x.png" alt="" class="ml-1 inline-block" /></span>
+            </div>
           </div>
-          <div class="w-full sm:w-4/5 order-first sm:order-none rounded-xl">
-            <img src="assets/images/products/DOC-PD-15003-R4.jpg" alt="" class="img-fluid">
+          <div class="img-slider flex flex-wrap mb-7 md:mb-0">
+            <div class="img-gallery lg:order-2 relative">
+              <div class="prod-slider">
+                <div class="slider"><img src="assets/images/products/DOC-PD-15003-W1.jpg" class="w-full block"  alt="" /></div>
+              </div>
+              <a href="#" class="zoom absolute"><img src="/zoom.svg" alt="" class="block" /></a>
+            </div>
+            <div class="thumbs lg:order-1 hidden md:block lg:pr-5">
+              <div class="nav-slider md:flex lg:block">
+                <div class="px-2.5 lg:px-0 lg:py-2.5"><div class="img"><img src="assets/images/products/DOC-PD-15003-R4.jpg" class="w-full block" alt="" /></div></div>
+                <div class="px-2.5 lg:px-0 lg:py-2.5"><div class="img"><img src="assets/images/products/DOC-PD-15003-R4.jpg" class="w-full block" alt="" /></div></div>
+                <div class="px-2.5 lg:px-0 lg:py-2.5"><div class="img"><img src="assets/images/products/DOC-PD-15003-R4.jpg" class="w-full block" alt="" /></div></div>
+                <div class="px-2.5 lg:px-0 lg:py-2.5"><div class="img"><img src="assets/images/products/DOC-PD-15003-R4.jpg" class="w-full block" alt="" /></div></div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="w-full md:w-1/2 px-3 mt-5 md:mt-0"> 
-          <h2 class="font-play font-bold text-black text-xl sm:text-2xl md:text-3xl lg:text-4xl dark:text-white">Rose-gold Pandle</h2>
-          <span class="text-xl font-medium text-gray-400 py-2 block">$ 1,200</span>
-          <div class="flex items-center py-2">
-            <div class="ratting flex pr-4">
-              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M9 0L12 6L18 6.75L13.88 11.37L15 18L9 15L3 18L4.13 11.37L0 6.75L6 6L9 0Z" fill="#334155"></path> </svg>
-              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M9 0L12 6L18 6.75L13.88 11.37L15 18L9 15L3 18L4.13 11.37L0 6.75L6 6L9 0Z" fill="#334155"></path> </svg>
-              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M9 0L12 6L18 6.75L13.88 11.37L15 18L9 15L3 18L4.13 11.37L0 6.75L6 6L9 0Z" fill="#334155"></path> </svg>
-              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M9 0L12 6L18 6.75L13.88 11.37L15 18L9 15L3 18L4.13 11.37L0 6.75L6 6L9 0Z" fill="#334155"></path> </svg>
-              <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M7.1563 6.0125L0.800049 6.9375L5.40005 11.4188L4.31255 17.75L10 14.7625V0.25L7.1563 6.0125Z" fill="#334155"></path> </svg>
-            </div>
-            <div class="text-gray-400 border-l-2 border-zinc-400 pl-4">5 Customer review</div>
-          </div>
-          <p class="font-medium dark:text-gray-300 pt-3 pb-5">Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound.</p>
-          <div class="flex pt-4 pb-8">
-            <div class="quantity_btn border-2 border-gray-400 px-3 py-3 rounded-xl">
-              <button type="button" class="border-0 text-xl dark:text-gray-300">+</button>
-              <input type="text" name="quantity" class="outline-none w-12 placeholder:text-center placeholder:text-black placeholder:text-xl" placeholder="1" min="0">
-              <button type="button" class="border-0 text-xl dark:text-gray-300">-</button>
-            </div>
-            <div class="cart_btn flex items-center border-2 border-gray-500 rounded-xl h-auto px-8 md:px-10 py-3 ml-5"><span class="text-sm sm:text-base md:text-xl font-medium capitalize dark:text-gray-300">add to cart</span></div>
-          </div>
-          <hr class="bg-gray-300 h-0.5">
-          <div class="details flex">
-            <table class="font-medium my-4">
-              <tbody><tr>
-                <td class="text-gray-900 dark:text-gray-300 px-2 py-1">SKU</td>
-                <td class="text-gray-900 dark:text-gray-300 px-2 py-1">:</td>
-                <td class="text-gray-900 dark:text-gray-300 px-2 py-1">SS001</td>
-              </tr>
-              <tr>
-                <td class="text-gray-900 dark:text-gray-300 px-2 py-1">Category</td>
-                <td class="text-gray-900 dark:text-gray-300 px-2 py-1">:</td>
-                <td class="text-gray-900 dark:text-gray-300 px-2 py-1">Pandle</td>
-              </tr>
-              <tr>
-                <td class="text-gray-900 dark:text-gray-300 px-2 py-1">Tags</td>
-                <td class="text-gray-900 dark:text-gray-300 px-2 py-1">:</td>
-                <td class="text-gray-900 dark:text-gray-300 px-2 py-1">Pandle</td>
-              </tr>
-              <tr>
-                <td class="text-gray-900 dark:text-gray-300 px-2 py-1">Share</td>
-                <td class="text-gray-900 dark:text-gray-300 px-2 py-1">:</td>
-                <td class="text-gray-900 dark:text-gray-300 px-2 py-1">
-                  <span class="flex items-center">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="mx-1"> <g clip-path="url(#clip0_39_178)"> <path fill-rule="evenodd" clip-rule="evenodd" d="M0 10.0558C0 15.0275 3.61083 19.1617 8.33333 20V12.7775H5.83333V10H8.33333V7.7775C8.33333 5.2775 9.94417 3.88917 12.2225 3.88917C12.9442 3.88917 13.7225 4 14.4442 4.11083V6.66667H13.1667C11.9442 6.66667 11.6667 7.2775 11.6667 8.05583V10H14.3333L13.8892 12.7775H11.6667V20C16.3892 19.1617 20 15.0283 20 10.0558C20 4.525 15.5 0 10 0C4.5 0 0 4.525 0 10.0558Z" fill="black"></path> </g> <defs> <clipPath id="clip0_39_178"> <rect width="20" height="20" fill="white"></rect> </clipPath> </defs> </svg>
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="mx-1"> <g clip-path="url(#clip0_39_182)"> <path fill-rule="evenodd" clip-rule="evenodd" d="M0.833252 2.36501C0.833252 1.95879 0.994624 1.5692 1.28187 1.28196C1.56911 0.994717 1.9587 0.833346 2.36492 0.833346H17.6333C17.8346 0.833017 18.034 0.872398 18.22 0.949234C18.4061 1.02607 18.5752 1.13885 18.7176 1.28113C18.8601 1.4234 18.973 1.59237 19.0501 1.77835C19.1271 1.96434 19.1667 2.1637 19.1666 2.36501V17.6333C19.1668 17.8347 19.1273 18.0341 19.0504 18.2202C18.9735 18.4063 18.8606 18.5754 18.7183 18.7178C18.5759 18.8602 18.4069 18.9731 18.2209 19.0502C18.0348 19.1272 17.8354 19.1668 17.6341 19.1667H2.36492C2.16371 19.1667 1.96447 19.127 1.77858 19.05C1.5927 18.973 1.42381 18.8601 1.28157 18.7178C1.13933 18.5755 1.02653 18.4065 0.949604 18.2206C0.87268 18.0347 0.833143 17.8354 0.833252 17.6342V2.36501ZM8.08992 7.82335H10.5724V9.07001C10.9308 8.35335 11.8474 7.70835 13.2249 7.70835C15.8658 7.70835 16.4916 9.13585 16.4916 11.755V16.6067H13.8191V12.3517C13.8191 10.86 13.4608 10.0183 12.5508 10.0183C11.2883 10.0183 10.7633 10.9258 10.7633 12.3517V16.6067H8.08992V7.82335ZM3.50659 16.4925H6.17992V7.70835H3.50659V16.4917V16.4925ZM6.56242 4.84335C6.56746 5.07224 6.52673 5.29983 6.44262 5.51277C6.35851 5.72571 6.23271 5.91971 6.07261 6.08337C5.91251 6.24704 5.72133 6.37707 5.5103 6.46585C5.29926 6.55463 5.07262 6.60036 4.84367 6.60036C4.61472 6.60036 4.38808 6.55463 4.17704 6.46585C3.966 6.37707 3.77483 6.24704 3.61473 6.08337C3.45463 5.91971 3.32883 5.72571 3.24472 5.51277C3.16061 5.29983 3.11988 5.07224 3.12492 4.84335C3.13481 4.39406 3.32024 3.9665 3.64149 3.65225C3.96274 3.338 4.39427 3.16203 4.84367 3.16203C5.29307 3.16203 5.7246 3.338 6.04585 3.65225C6.3671 3.9665 6.55253 4.39406 6.56242 4.84335Z" fill="black"></path> </g> <defs> <clipPath id="clip0_39_182"> <rect width="20" height="20" fill="white"></rect> </clipPath> </defs> </svg>
-                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="mx-1"> <path d="M12.5 1.5625C6.45996 1.5625 1.5625 6.45996 1.5625 12.5C1.5625 18.54 6.45996 23.4375 12.5 23.4375C18.54 23.4375 23.4375 18.54 23.4375 12.5C23.4375 6.45996 18.54 1.5625 12.5 1.5625ZM17.7563 9.80713C17.7637 9.92188 17.7637 10.0415 17.7637 10.1587C17.7637 13.7427 15.0342 17.8711 10.0464 17.8711C8.5083 17.8711 7.08252 17.4243 5.88135 16.6553C6.10107 16.6797 6.31104 16.6895 6.53565 16.6895C7.80518 16.6895 8.97217 16.2598 9.90234 15.5322C8.71094 15.5078 7.70996 14.7266 7.36816 13.6523C7.78564 13.7134 8.16162 13.7134 8.59131 13.6035C7.97785 13.4789 7.42645 13.1457 7.0308 12.6606C6.63515 12.1755 6.41964 11.5684 6.4209 10.9424V10.9082C6.77979 11.1108 7.20215 11.2354 7.64404 11.2524C7.27256 11.0049 6.96792 10.6695 6.75711 10.276C6.5463 9.88244 6.43585 9.443 6.43555 8.99658C6.43555 8.49121 6.56738 8.02979 6.8042 7.62939C7.48511 8.46762 8.33479 9.15318 9.29801 9.64152C10.2612 10.1299 11.3164 10.41 12.395 10.4639C12.0117 8.62061 13.3887 7.12891 15.0439 7.12891C15.8252 7.12891 16.5283 7.45605 17.0239 7.9834C17.6367 7.86865 18.2227 7.63916 18.7451 7.33154C18.5425 7.95898 18.1177 8.48877 17.5537 8.82324C18.1006 8.76465 18.6279 8.61328 19.1162 8.40088C18.7476 8.94287 18.2861 9.42383 17.7563 9.80713Z" fill="black"></path> </svg>
+        <div class="w-full md:w-5/12 px-3.5 text-center md:text-left">
+          <div class="flex flex-col">
+            <div class="hidden md:block md:order-1">
+              <h5 class="prod-name mb-1 text-lg lg:text-xl xl:text-2xl font-play font-bold tracking-wider">FETISH COFFIN</h5>
+              <h6 class="prod-type mb-1 md:mb-2.5 font-body text-xs md:text-sm lg:text-15 tracking-wider">POP ON NAILS</h6>
+              <div class="price flex flex-wrap items-center mb-2.5">
+                <h6 class="mb-0 inline-block text-sm lg:text-base xl:text-lg font-play font-bold tracking-wider">$18.99</h6>
+                <div class="review-star star-5 inline-flex space-x-2.5 items-center ml-5 lg:ml-10">
+                  <span class="star flex space-x-1.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="19.477" height="19.477" viewBox="0 0 19.477 19.477">
+                      <path id="Path_5" data-name="Path 5" d="M12.338,7.58,9.725,0,7.038,7.519,0,7.58l5.786,4.8-2.08,7.093L9.725,15.17l6.018,4.306-2.08-7.047,5.814-4.85Z"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="19.477" height="19.477" viewBox="0 0 19.477 19.477">
+                      <path id="Path_5" data-name="Path 5" d="M12.338,7.58,9.725,0,7.038,7.519,0,7.58l5.786,4.8-2.08,7.093L9.725,15.17l6.018,4.306-2.08-7.047,5.814-4.85Z"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="19.477" height="19.477" viewBox="0 0 19.477 19.477">
+                      <path id="Path_5" data-name="Path 5" d="M12.338,7.58,9.725,0,7.038,7.519,0,7.58l5.786,4.8-2.08,7.093L9.725,15.17l6.018,4.306-2.08-7.047,5.814-4.85Z"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="19.477" height="19.477" viewBox="0 0 19.477 19.477">
+                      <path id="Path_5" data-name="Path 5" d="M12.338,7.58,9.725,0,7.038,7.519,0,7.58l5.786,4.8-2.08,7.093L9.725,15.17l6.018,4.306-2.08-7.047,5.814-4.85Z"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="19.477" height="19.477" viewBox="0 0 19.477 19.477">
+                      <path id="Path_5" data-name="Path 5" d="M12.338,7.58,9.725,0,7.038,7.519,0,7.58l5.786,4.8-2.08,7.093L9.725,15.17l6.018,4.306-2.08-7.047,5.814-4.85Z"/>
+                    </svg>
                   </span>
-                </td>
-              </tr>
-            </tbody></table>
+                  <span class="txt text-xs md:text-sm">724 Reviews</span>
+                </div>
+                <span class="afterpay w-full block text-8 md:text-sm lg:text-sm tracking-wider mt-3.5">OR 4 PAYMENTS OF <img src="/afterpay@2x.png" alt="" class="ml-1 inline-block" /></span>
+              </div>
+              <hr class="my-5 border-gray-400">
+            </div>
+            <div class="mb-5 md:order-3">
+              <h6 class="mb-2.5 text-xs lg:text-sm font-play font-bold tracking-wider">COLOR</h6>
+              <div class="flex flex-wrap gap-2">
+                <label class="flex flex-wrap items-center justify-center px-3.5 py-2.5 relative group">
+                  <input class="hidden peer" type="radio" value="" name="color" checked />
+                  <span class="absolute inset-0 border border-transparent rounded group-hover:border-gray-400 peer-checked:bg-gray-100 peer-checked:border-gray-400"></span>
+                  <span class="flex items-center cursor-pointer relative text-xs lg:text-sm font-play font-bold uppercase tracking-wider"><span class="w-4 h-4 rounded-full mr-3.5 block border" style="background:#C0C0C0;"></span><span class="block">Silver</span></span>
+                </label>
+                <label class="flex flex-wrap items-center justify-center px-3.5 py-2.5 relative group">
+                  <input class="hidden peer" type="radio" value="" name="color" checked />
+                  <span class="absolute inset-0 border border-transparent rounded group-hover:border-gray-400 peer-checked:bg-yellow-50 peer-checked:border-gray-400"></span>
+                  <span class="flex items-center cursor-pointer relative text-xs lg:text-sm font-play font-bold uppercase tracking-wider"><span class="w-4 h-4 rounded-full mr-3.5 block border" style="background:#FFD700;"></span><span class="block">Gold</span></span>
+                </label>
+                <label class="flex flex-wrap items-center justify-center px-3.5 py-2.5 relative group">
+                  <input class="hidden peer" type="radio" value="" name="color" checked />
+                  <span class="absolute inset-0 border border-transparent rounded group-hover:border-gray-400 peer-checked:bg-rose-50 peer-checked:border-gray-400"></span>
+                  <span class="flex items-center cursor-pointer relative text-xs lg:text-sm font-play font-bold uppercase tracking-wider"><span class="w-4 h-4 rounded-full mr-3.5 block border" style="background:#B76E79;"></span><span class="block">Rose Gold</span></span>
+                </label>
+                <label class="flex flex-wrap items-center justify-center px-3.5 py-2.5 relative group">
+                  <input class="hidden peer" type="radio" value="" name="color" checked />
+                  <span class="absolute inset-0 border border-transparent rounded group-hover:border-gray-400 peer-checked:bg-white peer-checked:border-gray-400"></span>
+                  <span class="flex items-center cursor-pointer relative text-xs lg:text-sm font-play font-bold uppercase tracking-wider"><span class="w-4 h-4 rounded-full mr-3.5 block border" style="background:#FFFFF4;"></span><span class="block">White Gold</span></span>
+                </label>
+                <label class="flex flex-wrap items-center justify-center px-3.5 py-2.5 relative group">
+                  <input class="hidden peer" type="radio" value="" name="color" checked />
+                  <span class="absolute inset-0 border border-transparent rounded group-hover:border-gray-400 peer-checked:bg-gray-50 peer-checked:border-gray-400"></span>
+                  <span class="flex items-center cursor-pointer relative text-xs lg:text-sm font-play font-bold uppercase tracking-wider"><span class="w-4 h-4 rounded-full mr-3.5 block border" style="background:#E5E4E2;"></span><span class="block">Platinum</span></span>
+                </label>
+              </div>
+            </div>
+            <div class="mb-5 lg:mb-7 flex md:order-3">
+              <div class="qty-sec rounded-sm flex mr-2.5 lg:mr-3.5">
+                <button type="button" class="dec-btn minus"><span>–</span></button>
+                <input type="text" value="1" readonly="readonly" class="product-quantity text-center">        
+                <button type="button" class="inc-btn plus"><span>+</span></button>
+              </div>
+              <button type="button" class="btn min text-center inline-block letter-10 p-2.5 lg:p-3.5 border-0 text-9 md:text-xs lg:text-15 rounded-0 text-white bg-black hover:bg-black-hover w-full add-cart">Add to Cart</button>
+            </div>
+            <div class="desc mb-5 md:order-2 tracking-wider">
+              <p><b>3X LONGER WEAR</b> In a comprehensive study, 100% of participants saw 3x longer wear compared to other leading brands.</p>
+            </div>
+            <div class="accordion border-t border-gray-400 text-left md:order-5">
+              <div class="box-accordian border-b border-gray-400">
+                <div class="acco-header cursor-pointer flex items-center justify-between text-xs lg:text-sm font-play font-bold tracking-wider py-3.5">
+                  <span>IN THE KIT</span>
+                  <div class="flex place-content-center text-xl font-play">
+                    <span class="block">+</span>
+                    <span class="hidden">-</span>
+                  </div>
+                </div>
+                <div class="text-xs hidden">
+                  <div class="inner pb-3.5">
+                    Fusce at nisi eget dolor rhoncus facilisis. Mauris ante nisl, consectetur et luctus et, porta ut dolor. Curabitur ultricies ultrices nulla. Morbi blandit nec est vitae dictum. Etiam vel consectetur diam. Maecenas vitae egestas dolor. Fusce tempor magna at tortor aliquet finibus. Sed eu nunc sit amet elit euismod faucibus.
+                  </div>
+                </div>
+              </div>
+              <div class="box-accordian border-b border-gray-400">
+                <div class="acco-header cursor-pointer flex items-center justify-between text-xs lg:text-sm font-play font-bold tracking-wider py-3.5">
+                  <span>APPLICATION AND REMOVAL</span>
+                  <div class="flex place-content-center text-xl font-play">
+                    <span class="block">+</span>
+                    <span class="hidden">-</span>
+                  </div>
+                </div>
+                <div class="text-xs hidden">
+                  <div class="inner pb-3.5">
+                    Fusce at nisi eget dolor rhoncus facilisis. Mauris ante nisl, consectetur et luctus et, porta ut dolor. Curabitur ultricies ultrices nulla. Morbi blandit nec est vitae dictum. Etiam vel consectetur diam. Maecenas vitae egestas dolor. Fusce tempor magna at tortor aliquet finibus. Sed eu nunc sit amet elit euismod faucibus.
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <div class="bg-white dark:bg-gray-900">
-    <div class="containe px-6 py-12 xl:py-24 mx-auto">
-      <div class="section_title text-center pb-8">
-        <h2 class="text-4xl font-play font-bold text-black xl:text-5xl dark:text-white">Releted Product</h2>
-      </div>
-      <div class="w-full">
-        <div class="flex items-center flex-wrap -mx-3">
-          <div class="w-1/4 p-3">
-            <div class="w-full">
-              <div class="product_img rounded-md overflow-hidden">
-                <a href="product-details.html" target="_blank" class="block">
-                  <img src="assets/images/products/DOC-PD-15003-R4.jpg" alt="Single Product Img" class="  max-w-xs w-full">
-                </a>
-              </div>
-              <div class="product_details text-center">
-                <span class="block dark:text-gray-300 font-semibold pt-3 pb-1">Rose-gold Pandle</span>
-                <span class="block dark:text-gray-300 font-play font-bold text-lg">$ 1,200</span>
-              </div>
-            </div>
-          </div>
-          <div class="w-1/4 p-3">
-            <div class="w-full">
-              <div class="product_img rounded-md overflow-hidden">
-                <a href="product-details.html" target="_blank" class="block">
-                  <img src="assets/images/products/DOC-PD-15003-R4.jpg" alt="Single Product Img" class="  max-w-xs w-full">
-                </a>
-              </div>
-              <div class="product_details text-center">
-                <span class="block dark:text-gray-300 font-semibold pt-3 pb-1">Rose-gold Pandle</span>
-                <span class="block dark:text-gray-300 font-play font-bold text-lg">$ 1,200</span>
-              </div>
-            </div>
-          </div>
-          <div class="w-1/4 p-3">
-            <div class="w-full">
-              <div class="product_img rounded-md overflow-hidden">
-                <a href="product-details.html" target="_blank" class="block">
-                  <img src="assets/images/products/DOC-PD-15003-R4.jpg" alt="Single Product Img" class="  max-w-xs w-full">
-                </a>
-              </div>
-              <div class="product_details text-center">
-                <span class="block dark:text-gray-300 font-semibold pt-3 pb-1">Rose-gold Pandle</span>
-                <span class="block dark:text-gray-300 font-play font-bold text-lg">$ 1,200</span>
-              </div>
-            </div>
-          </div>
-          <div class="w-1/4 p-3">
-            <div class="w-full">
-              <div class="product_img rounded-md overflow-hidden">
-                <a href="product-details.html" target="_blank" class="block">
-                  <img src="assets/images/products/DOC-PD-15003-R4.jpg" alt="Single Product Img" class="  max-w-xs w-full">
-                </a>
-              </div>
-              <div class="product_details text-center">
-                <span class="block dark:text-gray-300 font-semibold pt-3 pb-1">Rose-gold Pandle</span>
-                <span class="block dark:text-gray-300 font-play font-bold text-lg">$ 1,200</span>
-              </div>
-            </div>
-          </div>
+  <section class="feat-product py-7 md:py-10 lg:py-12 bg-gradient-to-r from-slate-50 to-slate-100">
+    <div class="container">
+      <div class="title text-center space-y-6">
+        <div class="flex items-center justify-center space-x-4 text-yellow-600">
+          <span class="h-px bg-current w-16"></span>
+          <p class="text-current font-play">Our Products</p>
+          <span class="h-px bg-current w-16"></span>
         </div>
-        <div class="w-full">
-          <a href="products.html" target="_blank" class="block w-fit font-play text-xl font-bold border-b-2 border-gray-900 dark:border-gray-300 dark:text-gray-300 mx-auto">View more</a>
+        <h2 class="text-4xl font-dancingScript font-bold text-black xl:text-5xl dark:text-white">Try something really different right now.</h2>
+        <p class="block max-w-4xl text-gray-500 dark:text-gray-300 mx-auto">
+          The Elegan pays tribute to the tradition of fine jewelry in its most timeless form. Appealing to both men and women, each model is produced in rose or white gold beautifully combining purity and elegance.
+        </p>
+      </div>
+
+      <div class="product-slider flex flex-wrap mt-10">
+        <div class="w-full md:w-1/2 lg:w-1/3 2xl:w-1/4 px-4 mb-24">
+          <a href="#" class="block relative rounded-md shadow-2xl group">
+            <div class="overflow-hidden rounded-md">
+              <img class="group-hover:hidden origin-bottom transition-all duration-300 imgSharp" src="assets/images/products/16001-R1.jpg" alt="Product 1" />
+              <img class="hidden group-hover:block origin-bottom transition-all duration-300 imgSharp" src="assets/images/products/16005-R2.jpg" alt="Product 1" />
+            </div>
+            <div class="absolute bottom-0 inset-x-5 group-hover:inset-x-0 translate-y-2/3 group-hover:translate-y-full transition-all duration-300 rounded-md group-hover:shadow-xl flex flex-col text-left space-y-2 p-4 btn btn-dark bg-gradient-to-r bg-[length:200%_100%]">
+              <p class="font-play truncate">Ace Round Diamond Engagement Ring</p>
+              <div class="flex flex-wrap items-center justify-between">
+                <span class="font-play font-bold pr-4">$ 450.00</span>
+                <ul class="flex space-x-2">
+                  <li><span class="cursor-pointer block w-5 h-5 border border-white rounded-full bg-gradient-to-bl from-slate-300 via-white to-slate-300 transition-all duration-300 hover:rotate-90"></span></li>
+                  <li><span class="cursor-pointer block w-5 h-5 border border-white rounded-full bg-gradient-to-bl from-yellow-500 via-white to-yellow-500 transition-all duration-300 hover:rotate-90"></span></li>
+                  <li><span class="cursor-pointer block w-5 h-5 border border-white rounded-full bg-gradient-to-bl from-gray-300 via-white to-gray-300 transition-all duration-300 hover:rotate-90"></span></li>
+                  <li><span class="cursor-pointer block w-5 h-5 border border-white rounded-full bg-gradient-to-bl from-rose-300 via-white to-rose-300 transition-all duration-300 hover:rotate-90"></span></li>
+                  <li><span class="cursor-pointer block w-5 h-5 border border-white rounded-full bg-gradient-to-bl from-zinc-400 via-white to-zinc-400 transition-all duration-300 hover:rotate-90"></span></li>
+                </ul>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="w-full md:w-1/2 lg:w-1/3 2xl:w-1/4 px-4 mb-24">
+          <a href="#" class="block relative rounded-md shadow-2xl group">
+            <div class="overflow-hidden rounded-md">
+              <img class="group-hover:scale-125 origin-bottom transition-all duration-300 imgSharp" src="assets/images/products/16005-R2.jpg" alt="Product 1" />
+            </div>
+            <div class="absolute bottom-0 inset-x-5 group-hover:inset-x-0 translate-y-2/3 group-hover:translate-y-full transition-all duration-300 rounded-md group-hover:shadow-xl flex flex-col text-left space-y-2 p-4 btn btn-dark bg-gradient-to-r bg-[length:200%_100%]">
+              <p class="font-play truncate">Ace Round Diamond Engagement Ring</p>
+              <div class="flex flex-wrap items-center justify-between">
+                <span class="font-play font-bold pr-4">$ 450.00</span>
+                <ul class="flex space-x-2">
+                  <li><span class="cursor-pointer block w-5 h-5 border border-white rounded-full bg-gradient-to-bl from-slate-300 via-white to-slate-300 transition-all duration-300 hover:rotate-90"></span></li>
+                  <li><span class="cursor-pointer block w-5 h-5 border border-white rounded-full bg-gradient-to-bl from-yellow-500 via-white to-yellow-500 transition-all duration-300 hover:rotate-90"></span></li>
+                  <li><span class="cursor-pointer block w-5 h-5 border border-white rounded-full bg-gradient-to-bl from-gray-300 via-white to-gray-300 transition-all duration-300 hover:rotate-90"></span></li>
+                  <li><span class="cursor-pointer block w-5 h-5 border border-white rounded-full bg-gradient-to-bl from-rose-300 via-white to-rose-300 transition-all duration-300 hover:rotate-90"></span></li>
+                  <li><span class="cursor-pointer block w-5 h-5 border border-white rounded-full bg-gradient-to-bl from-zinc-400 via-white to-zinc-400 transition-all duration-300 hover:rotate-90"></span></li>
+                </ul>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="w-full md:w-1/2 lg:w-1/3 2xl:w-1/4 px-4 mb-24">
+          <a href="#" class="block relative rounded-md shadow-2xl group">
+            <div class="overflow-hidden rounded-md">
+              <img class="group-hover:scale-125 origin-bottom transition-all duration-300 imgSharp" src="assets/images/products/DOC-PD-15003-R4.jpg" alt="Product 1" />
+            </div>
+            <div class="absolute bottom-0 inset-x-5 group-hover:inset-x-0 translate-y-2/3 group-hover:translate-y-full transition-all duration-300 rounded-md group-hover:shadow-xl flex flex-col text-left space-y-2 p-4 btn btn-dark bg-gradient-to-r bg-[length:200%_100%]">
+              <p class="font-play truncate">Ace Round Diamond Engagement Ring</p>
+              <div class="flex flex-wrap items-center justify-between">
+                <span class="font-play font-bold pr-4">$ 450.00</span>
+                <ul class="flex space-x-2">
+                  <li><span class="cursor-pointer block w-5 h-5 border border-white rounded-full bg-gradient-to-bl from-slate-300 via-white to-slate-300 transition-all duration-300 hover:rotate-90"></span></li>
+                  <li><span class="cursor-pointer block w-5 h-5 border border-white rounded-full bg-gradient-to-bl from-yellow-500 via-white to-yellow-500 transition-all duration-300 hover:rotate-90"></span></li>
+                  <li><span class="cursor-pointer block w-5 h-5 border border-white rounded-full bg-gradient-to-bl from-gray-300 via-white to-gray-300 transition-all duration-300 hover:rotate-90"></span></li>
+                  <li><span class="cursor-pointer block w-5 h-5 border border-white rounded-full bg-gradient-to-bl from-rose-300 via-white to-rose-300 transition-all duration-300 hover:rotate-90"></span></li>
+                  <li><span class="cursor-pointer block w-5 h-5 border border-white rounded-full bg-gradient-to-bl from-zinc-400 via-white to-zinc-400 transition-all duration-300 hover:rotate-90"></span></li>
+                </ul>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="w-full md:w-1/2 lg:w-1/3 2xl:w-1/4 px-4 mb-24">
+          <a href="#" class="block relative rounded-md shadow-2xl group">
+            <div class="overflow-hidden rounded-md">
+              <img class="group-hover:scale-125 origin-bottom transition-all duration-300 imgSharp" src="assets/images/products/DOC-PD-15003-R4.jpg" alt="Product 1" />
+            </div>
+            <div class="absolute bottom-0 inset-x-5 group-hover:inset-x-0 translate-y-2/3 group-hover:translate-y-full transition-all duration-300 rounded-md group-hover:shadow-xl flex flex-col text-left space-y-2 p-4 btn btn-dark bg-gradient-to-r bg-[length:200%_100%]">
+              <p class="font-play truncate">Ace Round Diamond Engagement Ring</p>
+              <div class="flex flex-wrap items-center justify-between">
+                <span class="font-play font-bold pr-4">$ 450.00</span>
+                <ul class="flex space-x-2">
+                  <li><span class="cursor-pointer block w-5 h-5 border border-white rounded-full bg-gradient-to-bl from-slate-300 via-white to-slate-300 transition-all duration-300 hover:rotate-90"></span></li>
+                  <li><span class="cursor-pointer block w-5 h-5 border border-white rounded-full bg-gradient-to-bl from-yellow-500 via-white to-yellow-500 transition-all duration-300 hover:rotate-90"></span></li>
+                  <li><span class="cursor-pointer block w-5 h-5 border border-white rounded-full bg-gradient-to-bl from-gray-300 via-white to-gray-300 transition-all duration-300 hover:rotate-90"></span></li>
+                  <li><span class="cursor-pointer block w-5 h-5 border border-white rounded-full bg-gradient-to-bl from-rose-300 via-white to-rose-300 transition-all duration-300 hover:rotate-90"></span></li>
+                  <li><span class="cursor-pointer block w-5 h-5 border border-white rounded-full bg-gradient-to-bl from-zinc-400 via-white to-zinc-400 transition-all duration-300 hover:rotate-90"></span></li>
+                </ul>
+              </div>
+            </div>
+          </a>
         </div>
       </div>
     </div>
-  </div>
+  </section>
   <!-- Product Section [E] -->
 
   <!-- Contact [S] -->
@@ -411,11 +604,11 @@
           </div> -->
           <div>
             <label class="block mb-1 text-gray-600 dark:text-gray-200">Email Address</label>
-            <input type="email" placeholder="Email Address" class="block w-full px-5 py-3 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-400 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+            <input type="email" placeholder="Email Address" class="block w-full px-5 py-3 text-gray-700 placeholder-gray-400 bg-white border border-gray-400 rounded-lg dark:placeholder-gray-400 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
           </div>
           <div>
             <label class="block mb-1 text-gray-600 dark:text-gray-200">Password</label>
-            <input type="password" placeholder="Password" class="block w-full px-5 py-3 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-400 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+            <input type="password" placeholder="Password" class="block w-full px-5 py-3 text-gray-700 placeholder-gray-400 bg-white border border-gray-400 rounded-lg dark:placeholder-gray-400 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
           </div>
           <div class="pt-4">
             <button class="btn btn-light w-full py-3 text-xs font-bold">Sign In</button>
@@ -434,28 +627,28 @@
             <div class="grid grid-cols-2 gap-4">
               <div>
                 <label class="block mb-1 text-gray-600 dark:text-gray-200">First Name</label>
-                <input type="text" placeholder="John" class="block w-full px-5 py-3 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-400 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                <input type="text" placeholder="John" class="block w-full px-5 py-3 text-gray-700 placeholder-gray-400 bg-white border border-gray-400 rounded-lg dark:placeholder-gray-400 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
               </div>
               <div>
                 <label class="block mb-1 text-gray-600 dark:text-gray-200">Last name</label>
-                <input type="text" placeholder="Snow" class="block w-full px-5 py-3 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-400 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                <input type="text" placeholder="Snow" class="block w-full px-5 py-3 text-gray-700 placeholder-gray-400 bg-white border border-gray-400 rounded-lg dark:placeholder-gray-400 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
               </div>
             </div>
             <div>
               <label class="block mb-1 text-gray-600 dark:text-gray-200">Phone number</label>
-              <input type="text" placeholder="XXX-XX-XXXX-XXX" class="block w-full px-5 py-3 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-400 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+              <input type="text" placeholder="XXX-XX-XXXX-XXX" class="block w-full px-5 py-3 text-gray-700 placeholder-gray-400 bg-white border border-gray-400 rounded-lg dark:placeholder-gray-400 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
             </div>
             <div>
               <label class="block mb-1 text-gray-600 dark:text-gray-200">Email address</label>
-              <input type="email" placeholder="johnsnow@example.com" class="block w-full px-5 py-3 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-400 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+              <input type="email" placeholder="johnsnow@example.com" class="block w-full px-5 py-3 text-gray-700 placeholder-gray-400 bg-white border border-gray-400 rounded-lg dark:placeholder-gray-400 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
             </div>
             <div>
               <label class="block mb-1 text-gray-600 dark:text-gray-200">Password</label>
-              <input type="password" placeholder="Enter your password" class="block w-full px-5 py-3 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-400 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+              <input type="password" placeholder="Enter your password" class="block w-full px-5 py-3 text-gray-700 placeholder-gray-400 bg-white border border-gray-400 rounded-lg dark:placeholder-gray-400 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
             </div>
             <div>
               <label class="block mb-1 text-gray-600 dark:text-gray-200">Confirm password</label>
-              <input type="password" placeholder="Enter your password" class="block w-full px-5 py-3 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-400 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+              <input type="password" placeholder="Enter your password" class="block w-full px-5 py-3 text-gray-700 placeholder-gray-400 bg-white border border-gray-400 rounded-lg dark:placeholder-gray-400 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
             </div>
             <div class="pt-4">
               <button class="btn btn-light w-full py-3 text-xs font-bold">Sign Up</button>
@@ -472,7 +665,112 @@
   </div>
   <!-- Register Popup [E] -->
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine-ie11.min.js" integrity="sha512-Atu8sttM7mNNMon28+GHxLdz4Xo2APm1WVHwiLW9gW4bmHpHc/E2IbXrj98SmefTmbqbUTOztKl5PDPiu0LD/A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <div id="cartDrawer" class="cart-drawer hidden flex-col justify-between tracking-widest w-full">
+    <div class="d-head">
+      <div class="flex items-center justify-between py-2.5 px-5">
+        <p class="mb-0 text-base font-play font-semibold tracking-wider">YOUR CART</p>
+        <svg onclick="removeClass('body', 'open-drawer');" class="w-6 h-6 cursor-pointer hover:opacity-75" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </div>
+      <div class="bg-gray-100 offer-bar p-2.5 text-xs tracking-wider text-center">ADD $15.50 TO GET FREE SHIPPING IN THE US</div>
+    </div>
+    <div class="d-body">
+      <div class="cart-list">
+        <div class="cart-item py-3.5 px-5 border-b border-gray-400">
+          <div class="media flex items-center">
+            <img src="assets/images/products/0601-W1.jpg" alt="" class="w-16 h-16 object-cover shadow mr-3.5" />
+            <div class="media-body">
+              <div class="flex justify-between">
+                <div class="prod">
+                  <h6 class="mb-1"><a href="#" class="text-xs font-play hover:underline">LIQUID GLASS LACQUER</a></h6>
+                  <div class="qty-sec flex mr-2.5 lg:mr-3.5">
+                    <button type="button" class="dec-btn minus"><span>–</span></button>
+                    <input type="text" value="1" readonly="readonly" class="product-quantity text-center">        
+                    <button type="button" class="inc-btn plus"><span>+</span></button>
+                  </div>
+                </div>
+                <div class="price-act text-right">
+                  <h6 class="mb-0 text-base font-play font-bold">$15.50</h6>
+                  <a href="#" class="remove text-xs text-gray-900 hover:text-black">(REMOVE)</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cart-item py-3.5 px-5 border-b border-gray-400">
+          <div class="media flex items-center">
+            <img src="assets/images/products/0601-W1.jpg" alt="" class="w-16 h-16 object-cover shadow mr-3.5" />
+            <div class="media-body">
+              <div class="flex justify-between">
+                <div class="prod">
+                  <h6 class="mb-1"><a href="#" class="text-xs font-play hover:underline">LIQUID GLASS LACQUER</a></h6>
+                  <div class="qty-sec flex mr-2.5 lg:mr-3.5">
+                    <button type="button" class="dec-btn minus"><span>–</span></button>
+                    <input type="text" value="1" readonly="readonly" class="product-quantity text-center">        
+                    <button type="button" class="inc-btn plus"><span>+</span></button>
+                  </div>
+                </div>
+                <div class="price-act text-right">
+                  <h6 class="mb-0 text-base font-play font-bold">$15.50</h6>
+                  <a href="#" class="remove text-xs text-gray-900 hover:text-black">(REMOVE)</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="foot">
+      <div class="cart-summary pb-3.5">
+        <div class="summ-blk px-5">
+          <div class="border rounded-md mb-5 p-2.5">
+            <div class="flex items-center justify-between">
+              <div class="media flex items-center">
+                <svg class="mr-5" xmlns="http://www.w3.org/2000/svg" width="28" height="26" viewBox="0 0 28 26">
+                  <g id="Group_932" data-name="Group 932" transform="translate(-963.965 -537)">
+                    <path id="Union_56" data-name="Union 56" d="M18467.207-3691.882s-4.441-3.563-3.809-8.586l1.178-2.377s-1.687,4.239,3.535,9.636c5.137,4.188,9.1,2.856,9.1,2.856l-2.23,1.3a5.08,5.08,0,0,1-.588.027A11.107,11.107,0,0,1,18467.207-3691.882Zm1.186-2.573c-3.371-3.518-4.377-7.925-2.262-9.85s6.578-.634,9.943,2.879,4.383,7.921,2.264,9.846a3.755,3.755,0,0,1-2.588.894C18473.523-3690.687,18470.705-3692.051,18468.393-3694.456Zm14.16-8.358-1.678-.981s2.984,1.008,6.859-2.163c3.941-4.083,2.67-7.291,2.67-7.291l.885,1.8c.479,3.8-2.873,6.5-2.873,6.5a8.362,8.362,0,0,1-5.416,2.153C18482.715-3702.8,18482.553-3702.814,18482.553-3702.814Zm-2.527-1.907c-1.6-1.46-.838-4.8,1.705-7.455s5.895-3.636,7.494-2.177.842,4.791-1.7,7.45a8.364,8.364,0,0,1-5.549,2.856A2.838,2.838,0,0,1,18480.025-3704.721Z" transform="translate(-17499.371 4252.03)"/>
+                    <rect id="Rectangle_350" data-name="Rectangle 350" width="28" height="26" transform="translate(963.965 537)" fill="none"/>
+                  </g>
+                </svg>
+                <div class="media-body">
+                  <p class="mb-0 text-base font-bold font-play tracking-wider">YOU HAVE</p>
+                  <h6 class="mb-0 text-xs tracking-wider">1000 REWARD POINTS</h6>
+                </div>
+              </div>
+              <a href="#" class="btn btn-dark ml-5">USE</a>
+            </div>
+          </div>
+          <div class="flex justify-between mb-5">
+            <div class="lbl text-uppercase text-xs tracking-wider font-ProximaBold">Sub Total</div>
+            <div class="amount cart_total text-xs tracking-wider font-ProximaBold">$450.00</div>
+          </div>
+          <div class="flex justify-between mb-5">
+            <div class="lbl text-uppercase text-xs tracking-wider font-ProximaBold">Total</div>
+            <div class="amount cart_total text-xs tracking-wider font-ProximaBold">$450.00</div>
+          </div>
+        </div>
+        <div class="summ-blk pt-2.5 px-5">
+          <div class="text-center">
+            <button class="btn btn-dark w-full text-base" type="buttom" name="checkout">CHECKOUT</button>
+          </div>
+          <div class="text-center mt-3.5">
+            <a href="#" class="continue text-sm font-ProximaBold tracking-wider">CONTINUE SHOPPING</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <a href="https://api.whatsapp.com/send?phone=919998336332" 
+  class="fixed bottom-5 right-5 z-30 drop-shadow-sm w-12 h-12 bg-green-500 text-white flex items-center justify-center rounded-full hover:scale-110 transition-all duration-300 active:scale-75">
+    <svg class="w-7 h-7 fill-current" fill="fill-current" height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 308 308" xml:space="preserve"> <g id="XMLID_468_"> <path id="XMLID_469_" d="M227.904,176.981c-0.6-0.288-23.054-11.345-27.044-12.781c-1.629-0.585-3.374-1.156-5.23-1.156 c-3.032,0-5.579,1.511-7.563,4.479c-2.243,3.334-9.033,11.271-11.131,13.642c-0.274,0.313-0.648,0.687-0.872,0.687 c-0.201,0-3.676-1.431-4.728-1.888c-24.087-10.463-42.37-35.624-44.877-39.867c-0.358-0.61-0.373-0.887-0.376-0.887 c0.088-0.323,0.898-1.135,1.316-1.554c1.223-1.21,2.548-2.805,3.83-4.348c0.607-0.731,1.215-1.463,1.812-2.153 c1.86-2.164,2.688-3.844,3.648-5.79l0.503-1.011c2.344-4.657,0.342-8.587-0.305-9.856c-0.531-1.062-10.012-23.944-11.02-26.348 c-2.424-5.801-5.627-8.502-10.078-8.502c-0.413,0,0,0-1.732,0.073c-2.109,0.089-13.594,1.601-18.672,4.802 c-5.385,3.395-14.495,14.217-14.495,33.249c0,17.129,10.87,33.302,15.537,39.453c0.116,0.155,0.329,0.47,0.638,0.922 c17.873,26.102,40.154,45.446,62.741,54.469c21.745,8.686,32.042,9.69,37.896,9.69c0.001,0,0.001,0,0.001,0 c2.46,0,4.429-0.193,6.166-0.364l1.102-0.105c7.512-0.666,24.02-9.22,27.775-19.655c2.958-8.219,3.738-17.199,1.77-20.458 C233.168,179.508,230.845,178.393,227.904,176.981z"/> <path id="XMLID_470_" d="M156.734,0C73.318,0,5.454,67.354,5.454,150.143c0,26.777,7.166,52.988,20.741,75.928L0.212,302.716 c-0.484,1.429-0.124,3.009,0.933,4.085C1.908,307.58,2.943,308,4,308c0.405,0,0.813-0.061,1.211-0.188l79.92-25.396 c21.87,11.685,46.588,17.853,71.604,17.853C240.143,300.27,308,232.923,308,150.143C308,67.354,240.143,0,156.734,0z M156.734,268.994c-23.539,0-46.338-6.797-65.936-19.657c-0.659-0.433-1.424-0.655-2.194-0.655c-0.407,0-0.815,0.062-1.212,0.188 l-40.035,12.726l12.924-38.129c0.418-1.234,0.209-2.595-0.561-3.647c-14.924-20.392-22.813-44.485-22.813-69.677 c0-65.543,53.754-118.867,119.826-118.867c66.064,0,119.812,53.324,119.812,118.867 C276.546,215.678,222.799,268.994,156.734,268.994z"/> </g> </svg>
+  </a>
+
+  <!-- Jquery Plugin -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/script.js"></script>
 
 </body>
 
