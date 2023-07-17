@@ -88,6 +88,19 @@ body.open-drawer #cartDrawer {@apply flex;}
 
 
 
+/* Left Nav Bar */
+.leftPanel {@apply h-screen overflow-y-auto overflow-x-hidden;}
+.nav a {@apply flex items-center text-base font-bold space-x-4 border-l-[3px] border-transparent px-4 py-2.5 text-slate-300 hover:border-current hover:text-slate-300 hover:bg-slate-300 hover:bg-opacity-10 transition-all duration-300;}
+.nav a.active {@apply text-slate-300 border-slate-300 bg-slate-300 bg-opacity-10;}
+/* rightInContent */
+.rightInContent {@apply py-12 overflow-y-auto h-screen;}
+
+/* Wrapper */
+.wrapper {@apply max-w-screen-xl mx-auto px-3.5 md:px-5 xl:px-8 2xl:px-10;}
+
+
+
+
 
 .prod-wrp {
   position: relative;
