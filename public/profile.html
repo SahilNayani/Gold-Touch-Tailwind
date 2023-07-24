@@ -205,14 +205,14 @@
 
   <section class="border border-b border-black">
     <div class="p-5 md:py-12 flex flex-wrap items-center justify-center gap-5">
-      <button class="btn bg-black text-white hover:opacity-75 btn-dark">Profile</button>
-      <button class="btn bg-black text-white hover:opacity-75">Address</button>
+      <button class="btn bg-black text-white hover:opacity-75 btn-dark" onclick="addClass('#Addresses', 'hidden');removeClass('#Profile', 'hidden')">Profile</button>
+      <button class="btn bg-black text-white hover:opacity-75" onclick="addClass('#Profile', 'hidden');removeClass('#Addresses', 'hidden')">Address</button>
       <button class="btn bg-black text-white hover:opacity-75">Logout</button>
     </div>
   </section>
 
   <!-- Profile [S] -->
-  <section class="bg-white dark:bg-gray-900">
+  <section id="Profile" class="bg-white dark:bg-gray-900">
     <div class="container px-6 py-7 md:py-12 lg:py-16 xl:py-24 mx-auto">
       <div class="title space-y-4 text-center">
         <div class="flex items-center justify-center space-x-4 text-yellow-600">
@@ -267,7 +267,7 @@
   <!-- Profile [E] -->
 
   <!-- My Addresses [S] -->
-  <section class="bg-white dark:bg-gray-900">
+  <section id="Addresses" class="bg-white dark:bg-gray-900 hidden">
     <div class="container px-6 py-7 md:py-12 lg:py-16 xl:py-24 mx-auto">
       <div class="title space-y-4 text-center">
         <div class="flex items-center justify-center space-x-4 text-yellow-600">
