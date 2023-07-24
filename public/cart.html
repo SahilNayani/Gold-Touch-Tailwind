@@ -203,242 +203,125 @@
   </header>
   <!-- Header [E] -->
 
-  <section class="border border-b border-black">
-    <div class="p-5 md:py-12 flex flex-wrap items-center justify-center gap-5">
-      <button class="btn bg-black text-white hover:opacity-75 btn-dark" onclick="addClass('#Addresses', 'hidden');removeClass('#Profile', 'hidden')">Profile</button>
-      <button class="btn bg-black text-white hover:opacity-75" onclick="addClass('#Profile', 'hidden');removeClass('#Addresses', 'hidden')">Address</button>
-      <button class="btn bg-black text-white hover:opacity-75">Logout</button>
+  <!-- Cart [S] -->
+  <section class="cart-wrp overflow-hidden">
+    <div class="container">
+      <form method="post">
+        <div class="flex flex-wrap">
+          <div class="w-full px-5 lg:w-7/12 xl:w-8/12">
+            <div class="lg:py-12 md:py-10 py-7">
+              <div class="lg:mb-10 mb-7">
+                <h3 class="tracking-widest font-play text-xl md:text-3xl uppercase">Review your Cart</h3>
+              </div>
+              <div class="tracking-widest cart-view">
+                <div class="cart-head mb-3.5">
+                  <div class="flex items-center flex-wrap cart-row">
+                    <div class="cart-col cart-product block">
+                      <h6 class="text-xs tracking-wider font-bold font-play">PRODUCT</h6>
+                    </div>
+                    <div class="cart-col md:text-left text-right cart-remove block"></div>
+                    <div class="cart-col cart-qty text-left">
+                      <h6 class="text-xs tracking-wider font-bold font-play">QUANTITY</h6>
+                    </div>
+                    <div class="cart-col md:text-left cart-clr text-center">
+                      <h6 class="text-xs tracking-wider font-bold font-play">COLOR</h6>
+                    </div>
+                    <div class="cart-col md:text-left text-right cart-total">
+                      <h6 class="text-xs tracking-wider font-bold font-play">AMT</h6>
+                    </div>
+                  </div>
+                </div>
+                <div class="cart-body" id="cart-items">
+                  <div class="flex items-center flex-wrap cart-row py-3.5">
+                    <div class="cart-col cart-product">
+                      <div class="flex items-center media">
+                        <a class="mr-5 prod-img" href="#"><img alt="" class="img-fluid item-img border" src="assets/images/products/0601-R4.jpg"></a>
+                        <div class=media-body>
+                          <h6 class="text-xs mb-0 font-play sm:text-sm uppercase"><a class="hover:opacity-75" href="#">LIQUID GLASS LACQUER</a></h6>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cart-col cart-remove trash"><a class="tracking-wider hover:text-black remove text-xs text-gray-900" href="#">(REMOVE)</a></div>
+                    <div class="cart-col cart-qty text-left">
+                      <div class="flex lg:mr-3.5 mr-2.5 qty-sec"><button class="hover:bg-black hover:text-white dec-btn minus" type="button"><span>–</span></button> <input class="text-center product-quantity" readonly value="1"> <button class="hover:bg-black hover:text-white inc-btn plus" type="button"><span>+</span></button></div>
+                    </div>
+                    <div class="cart-col md:text-left cart-clr text-center">
+                      <div class="text-xs clr-swch">
+                        <p class="mb-0"><span class="clr" style=background:#ff6969></span> <span class="ml-1">Pink</span>
+                      </div>
+                    </div>
+                    <div class="cart-col md:text-left text-right cart-total"><span class="text-xs amount tracking-wider">$15.50</span></div>
+                  </div>
+                  <div class="flex items-center flex-wrap cart-row py-3.5">
+                    <div class="cart-col cart-product">
+                      <div class="flex items-center media">
+                        <a class="mr-5 prod-img" href="#"><img alt="" class="img-fluid item-img border" src="assets/images/products/0601-R4.jpg"></a>
+                        <div class=media-body>
+                          <h6 class="text-xs mb-0 font-play sm:text-sm uppercase"><a class="hover:opacity-75" href="#">LIQUID GLASS LACQUER</a></h6>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cart-col cart-remove trash"><a class="tracking-wider hover:text-black remove text-xs text-gray-900" href="#">(REMOVE)</a></div>
+                    <div class="cart-col cart-qty text-left">
+                      <div class="flex lg:mr-3.5 mr-2.5 qty-sec"><button class="hover:bg-black hover:text-white dec-btn minus" type="button"><span>–</span></button> <input class="text-center product-quantity" readonly value="1"> <button class="hover:bg-black hover:text-white inc-btn plus" type="button"><span>+</span></button></div>
+                    </div>
+                    <div class="cart-col md:text-left cart-clr text-center">
+                      <div class="text-xs clr-swch">
+                        <p class="mb-0"><span class="clr" style=background:#ff6969></span> <span class="ml-1">Pink</span>
+                      </div>
+                    </div>
+                    <div class="cart-col md:text-left text-right cart-total"><span class="text-xs amount tracking-wider">$15.50</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center flex-wrap justify-end md:space-x-0 mt-7 space-x-5">
+                <div class="text-center md:text-left mb-5 md:mb-10 md:w-6/12 ml-right"><a class="text-xs tracking-wider continue font-play hover:opacity-75" href="#">CONTINUE SHOPPING</a></div>
+                <div class="text-center mb-5 md:mb-10 md:w-6/12 ml-right md:text-right"><button class="btn btn-dark py-3" type="button" name="checkout">CHECKOUT</button></div>
+              </div>
+            </div>
+          </div>
+          <div class="w-full px-5 lg:w-5/12 xl:w-4/12">
+            <div class="text-xs cart-summary lg:px-5 lg:py-24 md:px-16 md:py-10 py-5 sm:px-5 tracking-widest">
+              <div class="py-3.5 summ-blk">
+                <div class="mb-5 cart-reward p-2.5">
+                  <div class="flex items-center media justify-between">
+                    <div class=media-body>
+                      <div class="flex items-center media">
+                        <img alt=""class=mr-5 src=/step2.svg>
+                        <div class=media-body>
+                          <p class="text-xs mb-0 tracking-wider">YOU HAVE
+                          <h6 class="tracking-wider mb-0 font-play text-xs">1000 REWARD POINTS</h6>
+                        </div>
+                      </div>
+                    </div>
+                    <a class="text-center bg-black border-0 btn hover:bg-black-hover letter-10 min px-5 py-2.5 rounded-0 text-white md:text-xs text-9 ml-5" href="#">USE</a>
+                  </div>
+                </div>
+                <h6 class="tracking-wider font-play text-xs mb-5 uppercase">Order Summary</h6>
+                <div class="flex justify-between">
+                  <div class="text-xs tracking-wider lbl">Sub Total</div>
+                  <div class="text-xs tracking-wider amount cart_total">$450.00</div>
+                </div>
+              </div>
+              <div class="py-3.5 summ-blk total">
+                <div class="flex justify-between font-play">
+                  <div class="text-xs tracking-wider lbl">Total</div>
+                  <div class="text-xs tracking-wider amount cart_total">$450.00</div>
+                </div>
+              </div>
+              <div class="summ-blk pt-6">
+                <h6 class="mb-5 font-play">HAVE A PROMO CODE?</h6>
+                <div class="mb-5 promo-code relative"><input class="w-full border border-gray-500 form-control pl-3.5 placeholder-black pr-16"placeholder="Enter promo code here"> <button class="text-center bg-black border-0 btn hover:bg-black-hover letter-10 min px-5 py-2.5 rounded-0 text-white inline-block absolute md:text-xs p-2.5 text-9"type=submit>APPLY</button></div>
+                <div class=text-center><button class="btn btn-dark py-3 w-full"type="button" name="checkout">CHECKOUT</button></div>
+                <div class="text-center mt-3.5"><a class="text-xs tracking-wider continue font-play" href="#">CONTINUE SHOPPING</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
     </div>
   </section>
-
-  <!-- Profile [S] -->
-  <section id="Profile" class="bg-white dark:bg-gray-900">
-    <div class="container px-6 py-7 md:py-12 lg:py-16 xl:py-24 mx-auto">
-      <div class="title space-y-4 text-center">
-        <div class="flex items-center justify-center space-x-4 text-yellow-600">
-          <span class="h-px bg-current w-16"></span>
-          <p class="text-current font-play">Profile</p>
-          <span class="h-px bg-current w-16"></span>
-        </div>
-        <h2 class="text-4xl font-play font-bold text-black xl:text-5xl dark:text-white">My Account</h2>
-      </div>
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-10">
-        <div class="flex flex-col text-left lg:p-5 space-y-6">
-          <div class="">
-            <h2 class="text-3xl font-play font-bold text-black xl:text-4xl dark:text-white">Change Password</h2>
-            <span class="block w-60 h-1 btn-dark mt-3 mb-7"></span>
-          </div>
-          <div class="flex flex-col space-y-2">
-            <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200" for="Password">Password</label>
-            <input type="password" name="password" id="Password" placeholder="Password" class="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" />
-          </div>
-          <div class="flex flex-col space-y-2">
-            <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200" for="PasswordConfirm">Password Confirm</label>
-            <input type="password" name="passwordConfirm" id="PasswordConfirm" placeholder="PasswordConfirm" class="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" />
-          </div>
-          <button class="btn btn-dark w-full py-4">UPDATE PASSWORD</button>
-        </div>
-        <div class="flex flex-col text-left lg:p-5 space-y-6">
-          <div class="">
-            <h2 class="text-3xl font-play font-bold text-black xl:text-4xl dark:text-white">My Account Information</h2>
-            <span class="block w-60 h-1 btn-dark mt-3 mb-7"></span>
-          </div>
-          <div class="flex flex-col space-y-2">
-            <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200" for="FirstName">First Name</label>
-            <input type="text" name="first-name" id="FirstName" placeholder="First Name" class="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" />
-          </div>
-          <div class="flex flex-col space-y-2">
-            <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200" for="LastName">Last Name</label>
-            <input type="text" name="last-name" id="LastName" placeholder="Last Name" class="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" />
-          </div>
-          <div class="flex flex-col space-y-2">
-            <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200" for="EMail">E-mail</label>
-            <input type="email" name="e-mail" id="EMail" placeholder="email" class="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" />
-          </div>
-          <div class="flex flex-col space-y-2">
-            <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200" for="MobileNumber">Mobile Number</label>
-            <input type="tel" name="mobile-number" id="MobileNumber" placeholder="Mobile Number" class="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" />
-          </div>
-          <button class="btn btn-dark w-full py-4">SAVE PROFILE</button>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Profile [E] -->
-
-  <!-- My Addresses [S] -->
-  <section id="Addresses" class="bg-white dark:bg-gray-900 hidden">
-    <div class="container px-6 py-7 md:py-12 lg:py-16 xl:py-24 mx-auto">
-      <div class="title space-y-4 text-center">
-        <div class="flex items-center justify-center space-x-4 text-yellow-600">
-          <span class="h-px bg-current w-16"></span>
-          <p class="text-current font-play">Address</p>
-          <span class="h-px bg-current w-16"></span>
-        </div>
-        <h2 class="text-4xl font-play font-bold text-black xl:text-5xl dark:text-white">Address Book</h2>
-      </div>
-      <div class="flex flex-wrap items-start mt-10">
-        <div class="w-full lg:w-1/2 flex flex-col text-left lg:p-5 space-y-6">
-          <div class="">
-            <h2 class="text-3xl font-play font-bold text-black xl:text-4xl dark:text-white">Address Book</h2>
-            <span class="block w-60 h-1 btn-dark mt-3 mb-7"></span>
-          </div>
-          <div class="flex flex-col sm:flex-row items-end justify-between border border-black rounded-md p-5 space-y-2">
-            <div class="flex flex-col space-y-0.5">
-              <p>SAHIL NAYANI</p>
-              <p>Sahil InfoTech</p>
-              <p>17,marutidham Soc,sec-2,lajamani chowk,motavarachha,surat</p>
-              <p>SURAT 394101</p>
-              <p>Gujarat</p>
-              <p>India</p>
-            </div>
-            <div class="flex sm:flex-col space-x-2 sm:space-x-0 sm:space-y-2">
-              <button class="btn btn-dark w-full">Edit</button>
-              <button class="btn btn-dark w-full">Delete</button>
-            </div>
-          </div>
-          <div class="flex flex-col sm:flex-row items-end justify-between border border-black rounded-md p-5 space-y-2">
-            <div class="flex flex-col space-y-0.5">
-              <p>SAHIL NAYANI</p>
-              <p>Sahil InfoTech</p>
-              <p>17,marutidham Soc,sec-2,lajamani chowk,motavarachha,surat</p>
-              <p>SURAT 394101</p>
-              <p>Gujarat</p>
-              <p>India</p>
-            </div>
-            <div class="flex sm:flex-col space-x-2 sm:space-x-0 sm:space-y-2">
-              <button class="btn btn-dark w-full">Edit</button>
-              <button class="btn btn-dark w-full">Delete</button>
-            </div>
-          </div>
-          <div class="flex flex-col sm:flex-row items-end justify-between border border-black rounded-md p-5 space-y-2">
-            <div class="flex flex-col space-y-0.5">
-              <p>SAHIL NAYANI</p>
-              <p>Sahil InfoTech</p>
-              <p>17,marutidham Soc,sec-2,lajamani chowk,motavarachha,surat</p>
-              <p>SURAT 394101</p>
-              <p>Gujarat</p>
-              <p>India</p>
-            </div>
-            <div class="flex sm:flex-col space-x-2 sm:space-x-0 sm:space-y-2">
-              <button class="btn btn-dark w-full">Edit</button>
-              <button class="btn btn-dark w-full">Delete</button>
-            </div>
-          </div>
-          <div class="flex flex-col sm:flex-row items-end justify-between border border-black rounded-md p-5 space-y-2">
-            <div class="flex flex-col space-y-0.5">
-              <p>SAHIL NAYANI</p>
-              <p>Sahil InfoTech</p>
-              <p>17,marutidham Soc,sec-2,lajamani chowk,motavarachha,surat</p>
-              <p>SURAT 394101</p>
-              <p>Gujarat</p>
-              <p>India</p>
-            </div>
-            <div class="flex sm:flex-col space-x-2 sm:space-x-0 sm:space-y-2">
-              <button class="btn btn-dark w-full">Edit</button>
-              <button class="btn btn-dark w-full">Delete</button>
-            </div>
-          </div>
-          <div class="flex flex-col sm:flex-row items-end justify-between border border-black rounded-md p-5 space-y-2">
-            <div class="flex flex-col space-y-0.5">
-              <p>SAHIL NAYANI</p>
-              <p>Sahil InfoTech</p>
-              <p>17,marutidham Soc,sec-2,lajamani chowk,motavarachha,surat</p>
-              <p>SURAT 394101</p>
-              <p>Gujarat</p>
-              <p>India</p>
-            </div>
-            <div class="flex sm:flex-col space-x-2 sm:space-x-0 sm:space-y-2">
-              <button class="btn btn-dark w-full">Edit</button>
-              <button class="btn btn-dark w-full">Delete</button>
-            </div>
-          </div>
-          <div class="flex flex-col sm:flex-row items-end justify-between border border-black rounded-md p-5 space-y-2">
-            <div class="flex flex-col space-y-0.5">
-              <p>SAHIL NAYANI</p>
-              <p>Sahil InfoTech</p>
-              <p>17,marutidham Soc,sec-2,lajamani chowk,motavarachha,surat</p>
-              <p>SURAT 394101</p>
-              <p>Gujarat</p>
-              <p>India</p>
-            </div>
-            <div class="flex sm:flex-col space-x-2 sm:space-x-0 sm:space-y-2">
-              <button class="btn btn-dark w-full">Edit</button>
-              <button class="btn btn-dark w-full">Delete</button>
-            </div>
-          </div>
-        </div>
-        <div class="w-full lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-5 text-left lg:p-5">
-          <div class="sm:col-span-2">
-            <h2 class="text-3xl font-play font-bold text-black xl:text-4xl dark:text-white">Add / Update Address</h2>
-            <span class="block w-60 h-1 btn-dark mt-3 mb-7"></span>
-          </div>
-          <div class="flex flex-col space-y-2">
-            <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200" for="FirstName">First Name</label>
-            <input type="text" name="first-name" id="FirstName" placeholder="First Name" class="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" />
-          </div>
-          <div class="flex flex-col space-y-2">
-            <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200" for="LastName">Last Name</label>
-            <input type="text" name="last-name" id="LastName" placeholder="Last Name" class="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" />
-          </div>
-          <div class="flex flex-col space-y-2 sm:col-span-2">
-            <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200" for="Company">Company</label>
-            <input type="text" name="company" id="Company" placeholder="Company" class="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" />
-          </div>
-          <div class="flex flex-col space-y-2 sm:col-span-2">
-            <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200" for="Address1">Address 1</label>
-            <input type="text" name="address-1" id="Address1" placeholder="Address 1" class="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" />
-          </div>
-          <div class="flex flex-col space-y-2 sm:col-span-2">
-            <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200" for="Address2">Address 2</label>
-            <input type="text" name="address-2" id="Address2" placeholder="Address 2" class="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" />
-          </div>
-          <div class="flex flex-col space-y-2">
-            <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200" for="City">City</label>
-            <input type="text" name="city" id="City" placeholder="City" class="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" />
-          </div>
-          <div class="flex flex-col space-y-2">
-            <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200" for="PostCode">Post Code</label>
-            <input type="text" name="post-code" id="PostCode" placeholder="Post Code" class="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" />
-          </div>
-          <div class="flex flex-col space-y-2">
-            <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200" for="Country">Country</label>
-            <input type="text" name="country" id="Country" placeholder="Country" class="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" />
-          </div>
-          <div class="flex flex-col space-y-2">
-            <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200" for="RegionState">Region / State</label>
-            <input type="text" name="region-state" id="RegionState" placeholder="Region / State" class="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" />
-          </div>
-          <div class="flex flex-col space-y-2 sm:col-span-2">
-            <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Default Address</label>
-            <div class="flex items-center space-x-7">
-              <label class="flex items-center space-x-2 cursor-pointer">
-                <input type="radio" name="default-address" value="Yes" />
-                <span>Yes</span>
-              </label>
-              <label class="flex items-center space-x-2 cursor-pointer">
-                <input type="radio" name="default-address" value="No" />
-                <span>No</span>
-              </label>
-            </div>
-          </div>
-          <button class="btn btn-dark w-full py-4 sm:col-span-2">SAVE</button>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- My Addresses [E] -->
-
-  <!-- Class Gold Touch [S] -->
-  <div class="relative overflow-hidden">
-    <video class="absolute inset-0 w-full h-full scale-105 z-10 object-cover" src="assets/videos/class-gold-touch.mp4" autoplay loop muted></video>
-    <div class="flex items-center justify-center px-5 md:px-9 text-slate-900 h-80 space-x-6 relative z-10">
-      <!-- <h2 class="font-play text-2xl md:text-5xl xl:text-7xl pl-60">Class</h2> -->
-      <!-- <div class=""><img src="assets/images/logo/diamond.png" class="h-12 xl:h-24" alt=""></div> -->
-      <!-- <h2 class="font-play text-2xl md:text-5xl xl:text-7xl pl-28">GoldTouch</h2> -->
-    </div>
-  </div>
-  <!-- Class Gold Touch [E] -->
+  <!-- Cart [E] -->
 
   <!-- Contact [S] -->
   <section class="bg-white dark:bg-gray-900">
@@ -626,12 +509,12 @@
   <div id="cartDrawer" class="cart-drawer hidden flex-col justify-between tracking-widest w-full">
     <div class="d-head">
       <div class="flex items-center justify-between py-2.5 px-5">
-        <p class="mb-0 text-base font-play font-semibold tracking-150">YOUR CART</p>
+        <p class="mb-0 text-base font-play font-semibold tracking-wider">YOUR CART</p>
         <svg onclick="removeClass('body', 'open-drawer');" class="w-6 h-6 cursor-pointer hover:opacity-75" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
         </svg>
       </div>
-      <div class="bg-gray-100 offer-bar p-2.5 text-xs tracking-150 text-center">ADD $15.50 TO GET FREE SHIPPING IN THE US</div>
+      <div class="bg-gray-100 offer-bar p-2.5 text-xs tracking-wider text-center">ADD $15.50 TO GET FREE SHIPPING IN THE US</div>
     </div>
     <div class="d-body">
       <div class="cart-list">
@@ -693,19 +576,19 @@
                 </svg>
                 <div class="media-body">
                   <p class="mb-0 text-base font-bold font-play tracking-wider">YOU HAVE</p>
-                  <h6 class="mb-0 text-xs tracking-150">1000 REWARD POINTS</h6>
+                  <h6 class="mb-0 text-xs tracking-wider">1000 REWARD POINTS</h6>
                 </div>
               </div>
               <a href="#" class="btn btn-dark ml-5">USE</a>
             </div>
           </div>
           <div class="flex justify-between mb-5">
-            <div class="lbl text-uppercase text-10 tracking-150 font-ProximaBold">Sub Total</div>
-            <div class="amount cart_total text-10 tracking-150 font-ProximaBold">$450.00</div>
+            <div class="lbl text-uppercase text-xs tracking-wider font-play">Sub Total</div>
+            <div class="amount cart_total text-xs tracking-wider font-play">$450.00</div>
           </div>
           <div class="flex justify-between mb-5">
-            <div class="lbl text-uppercase text-10 tracking-150 font-ProximaBold">Total</div>
-            <div class="amount cart_total text-10 tracking-150 font-ProximaBold">$450.00</div>
+            <div class="lbl text-uppercase text-xs tracking-wider font-play">Total</div>
+            <div class="amount cart_total text-xs tracking-wider font-play">$450.00</div>
           </div>
         </div>
         <div class="summ-blk pt-2.5 px-5">
@@ -713,7 +596,7 @@
             <button class="btn btn-dark w-full text-base" type="buttom" name="checkout">CHECKOUT</button>
           </div>
           <div class="text-center mt-3.5">
-            <a href="#" class="continue text-sm font-ProximaBold tracking-150">CONTINUE SHOPPING</a>
+            <a href="#" class="continue text-sm font-play tracking-wider">CONTINUE SHOPPING</a>
           </div>
         </div>
         
